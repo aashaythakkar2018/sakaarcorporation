@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Strengths - Sakaar Group</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#DCA90A',secondary:'#2A3342'},borderRadius:{'none':'0px','sm':'8px',DEFAULT:'12px','md':'16px','lg':'20px','xl':'24px','2xl':'28px','3xl':'32px','full':'9999px','button':'12px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+.view-toggle.active {
+background-color: #DCA90A;
+color: white;
+}
+.view-toggle {
+transition: all 0.3s ease;
+}
+.view-toggle:hover:not(.active) {
+background-color: #f3f4f6;
+}
+body {
+font-family: 'Poppins', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Playfair Display', serif;
+}
+.hero-section {
+background-image: linear-gradient(to right, rgba(255, 255, 255, 0.95) 40%, rgba(255, 255, 255, 0.7) 60%, rgba(255, 255, 255, 0) 100%), url('https://readdy.ai/api/search-image?query=Modern%2520corporate%2520office%2520with%2520professional%2520team%2520working%2520on%2520advanced%2520technology%252C%2520elegant%2520interior%2520design%252C%2520glass%2520walls%252C%2520natural%2520lighting%252C%2520state-of-the-art%2520equipment%252C%2520collaborative%2520environment%252C%2520business%2520professionals%2520in%2520formal%2520attire%252C%2520high-quality%2520corporate%2520photography&width=1920&height=1080&seq=32&orientation=landscape');
+background-size: cover;
+background-position: center;
+}
+.strength-card {
+transition: all 0.3s ease;
+}
+.strength-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.counter-container {
+transition: all 0.3s ease;
+}
+.counter-container:hover {
+transform: translateY(-5px);
+}
+.testimonial-card {
+transition: all 0.3s ease;
+}
+.testimonial-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.tab-button.active {
+color: #DCA90A;
+border-color: #DCA90A;
+}
+</style>
+</head>
+<body class="bg-white">
+<!-- Header Navigation -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+<div class="container mx-auto px-4 py-4">
+<div class="flex justify-between items-center">
+<a href="#" class="flex items-center">
+<img src="https://static.readdy.ai/image/b262a2b76905a2198fef3b5c4022af50/0927180c35ec356cd3bfd48faeb4a0cb.png" alt="Sakaar Corporation Logo" class="h-16">
+</a>
+<nav class="hidden md:flex space-x-8">
+<a href="./index.html" class="text-secondary hover:text-primary font-medium transition-colors">Home</a>
+<a href="./About-Us.html" class="text-secondary hover:text-primary font-medium transition-colors">About Us</a>
+<div class="relative group">
+<a href="./Our-Businesses.html" class="text-secondary hover:text-primary font-medium transition-colors flex items-center">
+Our Businesses
+<i class="ri-arrow-down-s-line ml-1"></i>
+</a>
+<div class="absolute left-0 mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+<div class="py-2 bg-white rounded-lg shadow-xl border border-gray-100">
+<a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">Real Estate Division</a>
+<a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">Oil Division</a>
+<a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">Gas Division</a>
+<div class="my-2 border-t border-gray-100"></div>
+<a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">View All Businesses</a>
+</div>
+</div>
+</div>
+<a href="./Our-Strengths-Overview.html" class="text-primary border-b-2 border-primary font-medium transition-colors">Our Strengths</a>
+<a href="" class="text-secondary hover:text-primary font-medium transition-colors">Contact</a>
+</nav>
+<div class="md:hidden w-6 h-6 flex items-center justify-center">
+<i class="ri-menu-line text-xl text-secondary"></i>
+</div>
+<div class="hidden md:flex items-center space-x-4">
+<a href="#" class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">Sales Enquiry</a>
+<a href="#" class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">Become a Vendor</a>
+</div>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="hero-section w-full h-[600px] flex items-center">
+<div class="container mx-auto px-4">
+<div class="max-w-2xl">
+<h1 class="text-4xl md:text-6xl font-bold text-secondary mb-6">Our Strengths</h1>
+<p class="text-xl text-gray-700 mb-8 leading-relaxed">Discover the competitive advantages and core competencies that make Sakaar Group a leader across multiple industries.</p>
+</div>
+</div>
+</section>
+<!-- Core Strengths Section -->
+<section id="core-strengths" class="py-20">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Our Core Strengths</h2>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">Sakaar Group's competitive advantages are built on decades of experience, strategic investments, and unwavering commitment to excellence across all our business divisions.</p>
+<div class="w-24 h-1 bg-primary mx-auto mt-4"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+<!-- Real Estate Division -->
+<div class="strength-card bg-white rounded-lg shadow-lg overflow-hidden">
+<div class="h-48 bg-gray-100 relative">
+<img src="https://readdy.ai/api/search-image?query=Modern%2520luxury%2520real%2520estate%2520development%2520with%2520contemporary%2520architecture%252C%2520glass%2520facades%252C%2520professional%2520photography%252C%2520elegant%2520design%252C%2520high-end%2520commercial%2520property%252C%2520natural%2520lighting%252C%2520minimalist%2520aesthetic%252C%2520urban%2520setting%252C%2520clean%2520lines%252C%2520professional%2520real%2520estate%2520photography&width=600&height=400&seq=33&orientation=landscape" alt="Real Estate Division" class="w-full h-full object-cover object-top">
+<div class="absolute top-4 left-4 w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-md">
+<i class="ri-building-4-line text-primary text-2xl"></i>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-2xl font-bold text-secondary mb-4">Real Estate Excellence</h3>
+<div class="space-y-4">
+<div class="flex items-start">
+<div class="w-8 h-8 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p class="text-gray-700"><span class="font-semibold">50,000+ sq. ft.</span> of leased properties across strategic locations</p>
+</div>
+<div class="flex items-start">
+<div class="w-8 h-8 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p class="text-gray-700"><span class="font-semibold">3,00,000+ sq. ft.</span> of completed construction with modern amenities</p>
+</div>
+<div class="flex items-start">
+<div class="w-8 h-8 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p class="text-gray-700"><span class="font-semibold">500+ channel partners</span> and clients in our extensive network</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Oil Division -->
+<div class="strength-card bg-white rounded-lg shadow-lg overflow-hidden">
+<div class="h-48 bg-gray-100 relative">
+<img src="https://readdy.ai/api/search-image?query=Modern%2520oil%2520storage%2520facility%2520with%2520industrial%2520tanks%252C%2520clean%2520environment%252C%2520professional%2520photography%252C%2520distribution%2520center%252C%2520high-quality%2520equipment%252C%2520safety%2520standards%252C%2520corporate%2520industrial%2520photography%252C%2520oil%2520industry%2520infrastructure%252C%2520well-maintained%2520facility%252C%2520business%2520operations&width=600&height=400&seq=34&orientation=landscape" alt="Oil Division" class="w-full h-full object-cover object-top">
+<div class="absolute top-4 left-4 w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-md">
+<i class="ri-oil-line text-primary text-2xl"></i>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-2xl font-bold text-secondary mb-4">Oil Division Leadership</h3>
+<div class="space-y-4">
+<div class="flex items-start">
+<div class="w-8 h-8 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p class="text-gray-700"><span class="font-semibold">Strong delivery networks</span> with strategic distribution infrastructure</p>
+</div>
+<div class="flex items-start">
+<div class="w-8 h-8 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p class="text-gray-700"><span class="font-semibold">350+ clients</span> across various industries in the oil division</p>
+</div>
+<div class="flex items-start">
+<div class="w-8 h-8 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p class="text-gray-700"><span class="font-semibold">100+ grades of oils</span> to meet diverse industry requirements</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Gas Division -->
+<div class="strength-card bg-white rounded-lg shadow-lg overflow-hidden">
+<div class="h-48 bg-gray-100 relative">
+<img src="https://readdy.ai/api/search-image?query=Modern%2520gas%2520distribution%2520center%2520with%2520cylinders%252C%2520delivery%2520vehicles%252C%2520professional%2520photography%252C%2520clean%2520facility%252C%2520industrial%2520setting%252C%2520safety%2520standards%252C%2520corporate%2520industrial%2520photography%252C%2520gas%2520industry%2520infrastructure%252C%2520well-maintained%2520facility%252C%2520business%2520operations&width=600&height=400&seq=35&orientation=landscape" alt="Gas Division" class="w-full h-full object-cover object-top">
+<div class="absolute top-4 left-4 w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-md">
+<i class="ri-gas-station-line text-primary text-2xl"></i>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-2xl font-bold text-secondary mb-4">Gas Division Strength</h3>
+<div class="space-y-4">
+<div class="flex items-start">
+<div class="w-8 h-8 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p class="text-gray-700"><span class="font-semibold">In-house distribution team</span> with dedicated fleet of vehicles</p>
+</div>
+<div class="flex items-start">
+<div class="w-8 h-8 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p class="text-gray-700"><span class="font-semibold">Centrally located storage</span> infrastructure for efficient distribution</p>
+</div>
+<div class="flex items-start">
+<div class="w-8 h-8 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p class="text-gray-700"><span class="font-semibold">20,000+ clients</span> served with reliable gas supply solutions</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Detailed Strengths Section with Tabs -->
+<section class="py-20 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Detailed Business Strengths</h2>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">Explore the specific advantages and capabilities that set each of our business divisions apart from the competition.</p>
+<div class="w-24 h-1 bg-primary mx-auto mt-4"></div>
+</div>
+<!-- Tab Navigation -->
+<div class="flex justify-center mb-12">
+<div class="inline-flex bg-white rounded-full p-1 shadow-md">
+<button class="tab-button active px-6 py-3 rounded-full text-secondary font-medium whitespace-nowrap" data-tab="real-estate">Real Estate</button>
+<button class="tab-button px-6 py-3 rounded-full text-secondary font-medium whitespace-nowrap" data-tab="oil-division">Oil Division</button>
+<button class="tab-button px-6 py-3 rounded-full text-secondary font-medium whitespace-nowrap" data-tab="gas-division">Gas Division</button>
+</div>
+</div>
+<!-- Tab Content -->
+<div class="tab-content-container">
+<!-- Real Estate Tab -->
+<div id="real-estate" class="tab-content active">
+<div class="bg-white rounded-lg shadow-lg p-8 md:p-12">
+<div class="flex flex-col lg:flex-row gap-12">
+<div class="lg:w-1/2">
+<div class="sticky top-24">
+<h3 class="text-3xl font-bold text-secondary mb-6">Real Estate Excellence</h3>
+<div class="w-16 h-1 bg-primary mb-8"></div>
+<div class="space-y-8 mb-8">
+<div class="bg-gray-50 p-6 rounded-lg hover:shadow-md transition-shadow">
+<h4 class="text-xl font-semibold text-secondary mb-4 flex items-center">
+<div class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-3">
+<i class="ri-building-line text-primary"></i>
+</div>
+Premium Property Portfolio
+</h4>
+<p class="text-gray-700 leading-relaxed">Our real estate division maintains a diverse portfolio of premium properties across strategic locations, offering exceptional value to our clients and partners. With over 50,000 sq. ft. of leased properties and 2,00,000+ sq. ft. of completed construction, we have established ourselves as a trusted name in the real estate sector.</p>
+</div>
+<div class="bg-gray-50 p-6 rounded-lg hover:shadow-md transition-shadow">
+<h4 class="text-xl font-semibold text-secondary mb-4 flex items-center">
+<div class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-3">
+<i class="ri-team-line text-primary"></i>
+</div>
+Extensive Partner Network
+</h4>
+<p class="text-gray-700 leading-relaxed">Our strength lies in our extensive network of over 500 channel partners and clients, allowing us to provide comprehensive real estate solutions across various segments. This collaborative approach enables us to deliver exceptional value and service to our customers</p>
+</div>
+<div class="bg-gray-50 p-6 rounded-lg hover:shadow-md transition-shadow">
+<h4 class="text-xl font-semibold text-secondary mb-4 flex items-center">
+<div class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-3">
+<i class="ri-award-line text-primary"></i>
+</div>
+Quality Construction Standards
+</h4>
+<p class="text-gray-700 leading-relaxed">We adhere to the highest quality standards in all our construction projects, ensuring durability, safety, and aesthetic excellence. Our commitment to quality has earned us recognition and trust from clients and industry experts alike.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:w-1/2">
+<div class="space-y-8">
+<div class="mb-8">
+<img src="https://readdy.ai/api/search-image?query=Modern%2520real%2520estate%2520development%2520with%2520multiple%2520buildings%252C%2520professional%2520photography%252C%2520architectural%2520excellence%252C%2520premium%2520commercial%2520property%252C%2520elegant%2520design%252C%2520landscaped%2520surroundings%252C%2520high-end%2520finish%252C%2520corporate%2520real%2520estate%2520photography%252C%2520business%2520district%2520setting&width=600&height=400&seq=36&orientation=landscape" alt="Real Estate Portfolio" class="w-full h-auto rounded-lg shadow-md">
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="counter-container bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center">
+<i class="ri-building-4-line text-primary text-xl"></i>
+</div>
+<div class="text-3xl font-bold text-primary">50,000+</div>
+</div>
+<p class="text-gray-700 font-medium">Square Feet Leased</p>
+</div>
+<div class="counter-container bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center">
+<i class="ri-home-4-line text-primary text-xl"></i>
+</div>
+<div class="text-3xl font-bold text-primary">3,00,000+</div>
+</div>
+<p class="text-gray-700 font-medium">Square Feet Constructed</p>
+</div>
+<div class="counter-container bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center">
+<i class="ri-team-line text-primary text-xl"></i>
+</div>
+<div class="text-3xl font-bold text-primary">500+</div>
+</div>
+<p class="text-gray-700 font-medium">Channel Partners</p>
+</div>
+<div class="counter-container bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center">
+<i class="ri-award-line text-primary text-xl"></i>
+</div>
+<div class="text-3xl font-bold text-primary">10+</div>
+</div>
+<p class="text-gray-700 font-medium">Years of Excellence</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Oil Division Tab -->
+<div id="oil-division" class="tab-content hidden">
+<div class="bg-white rounded-lg shadow-lg p-8 md:p-12">
+<div class="flex flex-col lg:flex-row gap-12">
+<div class="lg:w-1/2">
+<div class="sticky top-24">
+<h3 class="text-3xl font-bold text-secondary mb-6">Oil Division Leadership</h3>
+<div class="w-16 h-1 bg-primary mb-8"></div>
+<div class="space-y-6 mb-8">
+<div class="bg-gray-50 p-6 rounded-lg hover:shadow-md transition-shadow">
+<h4 class="text-xl font-semibold text-secondary mb-4 flex items-center">
+<div class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-3">
+<i class="ri-truck-line text-primary"></i>
+</div>
+Robust Distribution Network
+</h4>
+<p class="text-gray-700 leading-relaxed">Our oil division boasts a robust and efficient distribution network that ensures timely delivery to our clients across Surat District. With strategically located storage facilities and a dedicated fleet, we maintain consistent supply chains even during peak demand periods.</p>
+</div>
+<div class="bg-gray-50 p-6 rounded-lg hover:shadow-md transition-shadow">
+<h4 class="text-xl font-semibold text-secondary mb-4 flex items-center">
+<div class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-3">
+<i class="ri-database-2-line text-primary"></i>
+</div>
+Comprehensive Product Range
+</h4>
+<p class="text-gray-700 leading-relaxed">We deal in over 100 grades of oils, catering to diverse industry requirements from automotive to industrial applications. Our extensive product range allows us to be a one-stop solution for all oils and greases related needs of our clients.</p>
+</div>
+<div class="bg-gray-50 p-6 rounded-lg hover:shadow-md transition-shadow">
+<h4 class="text-xl font-semibold text-secondary mb-4 flex items-center">
+<div class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-3">
+<i class="ri-customer-service-2-line text-primary"></i>
+</div>
+Client-Centric Approach
+</h4>
+<p class="text-gray-700 leading-relaxed">With over 350 clients in our oil division, we have developed a deep understanding of various industry requirements. Our client-centric approach focuses on providing customized solutions, technical support, and consistent quality assurance.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:w-1/2">
+<div class="space-y-8">
+<div class="mb-8">
+<img src="https://readdy.ai/api/search-image?query=Modern%2520oil%2520storage%2520and%2520distribution%2520facility%252C%2520industrial%2520setting%252C%2520professional%2520photography%252C%2520clean%2520environment%252C%2520tankers%2520and%2520storage%2520tanks%252C%2520efficient%2520operations%252C%2520corporate%2520industrial%2520photography%252C%2520business%2520operations%252C%2520oil%2520industry%2520infrastructure&width=600&height=400&seq=38&orientation=landscape" alt="Oil Division Operations" class="w-full h-auto rounded-lg shadow-md">
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="counter-container bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center">
+<i class="ri-team-line text-primary text-xl"></i>
+</div>
+<div class="text-3xl font-bold text-primary">350+</div>
+</div>
+<p class="text-gray-700 font-medium">Satisfied Clients</p>
+</div>
+<div class="counter-container bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center">
+<i class="ri-oil-line text-primary text-xl"></i>
+</div>
+<div class="text-3xl font-bold text-primary">100+</div>
+</div>
+<p class="text-gray-700 font-medium">Oil Grades</p>
+</div>
+<div class="counter-container bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center">
+<i class="ri-truck-line text-primary text-xl"></i>
+</div>
+<div class="text-3xl font-bold text-primary">5+</div>
+</div>
+<p class="text-gray-700 font-medium">Distribution Vehicle Fleet</p>
+</div>
+<div class="counter-container bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center">
+<i class="ri-store-2-line text-primary text-xl"></i>
+</div>
+<div class="text-3xl font-bold text-primary">15+</div>
+</div>
+<p class="text-gray-700 font-medium">Industrial Segments</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Gas Division Tab -->
+<div id="gas-division" class="tab-content hidden">
+<div class="bg-white rounded-lg shadow-lg p-8 md:p-12">
+<div class="flex flex-col lg:flex-row gap-12">
+<div class="lg:w-1/2">
+<h3 class="text-3xl font-bold text-secondary mb-6">Gas Division Strength</h3>
+<div class="w-16 h-1 bg-primary mb-8"></div>
+<div class="space-y-8 mb-8">
+<div>
+<h4 class="text-xl font-semibold text-secondary mb-4 flex items-center">
+<i class="ri-truck-line text-primary mr-3"></i>
+In-house Distribution Fleet
+</h4>
+<p class="text-gray-700 leading-relaxed">Our gas division operates with a dedicated in-house cylinder distribution team and fleet of vehicles, ensuring timely and safe delivery to our clients. This integrated approach allows us to maintain high service standards and respond quickly to client needs.</p>
+</div>
+<div>
+<h4 class="text-xl font-semibold text-secondary mb-4 flex items-center">
+<i class="ri-map-pin-line text-primary mr-3"></i>
+Strategic Infrastructure
+</h4>
+<p class="text-gray-700 leading-relaxed">With centrally located storage infrastructure, we optimize distribution efficiency and minimize delivery times. Our strategic facilities are designed with the highest safety standards and equipped with modern monitoring systems.</p>
+</div>
+<div>
+<h4 class="text-xl font-semibold text-secondary mb-4 flex items-center">
+<i class="ri-group-line text-primary mr-3"></i>
+Extensive Client Base
+</h4>
+<p class="text-gray-700 leading-relaxed">Serving over 20,000 clients ranging from residential to industrial users, our gas division has built a reputation for reliability and service excellence. Our diverse client base demonstrates our ability to cater to various segments with different requirements.</p>
+</div>
+</div>
+</div>
+<div class="lg:w-1/2">
+<div class="mb-8">
+<img src="https://readdy.ai/api/search-image?query=Modern%2520gas%2520cylinder%2520storage%2520and%2520distribution%2520facility%252C%2520organized%2520rows%2520of%2520cylinders%252C%2520delivery%2520trucks%252C%2520professional%2520photography%252C%2520clean%2520environment%252C%2520safety%2520standards%252C%2520industrial%2520setting%252C%2520corporate%2520photography%252C%2520business%2520operations&width=600&height=400&seq=40&orientation=landscape" alt="Gas Division Operations" class="w-full h-auto rounded-lg shadow-md">
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="counter-container bg-gray-50 p-6 rounded-lg">
+<div class="text-3xl font-bold text-primary mb-2">20,000+</div>
+<p class="text-gray-700">Active Clients</p>
+</div>
+<div class="counter-container bg-gray-50 p-6 rounded-lg">
+<div class="text-3xl font-bold text-primary mb-2">15+</div>
+<p class="text-gray-700">Distribution Vehicles</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Quality Standards Section -->
+<!-- Awards & Recognition Section -->
+<!-- Call to Action Section -->
+<section class="py-20 bg-white">
+<div class="container mx-auto px-4">
+<div class="bg-secondary rounded-lg shadow-xl overflow-hidden">
+<div class="flex flex-col md:flex-row">
+<div class="md:w-2/3 p-8 md:p-12">
+<h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Experience Our Strengths?</h2>
+<p class="text-xl text-gray-200 mb-8 leading-relaxed">Partner with Sakaar Group and leverage our expertise, infrastructure, and commitment to excellence for your business success.</p>
+<div class="flex flex-wrap gap-4">
+<a href="" class="bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">Contact Us</a>
+</div>
+</div>
+<div class="md:w-1/3 bg-primary flex items-center justify-center p-8">
+<div class="text-center">
+<div class="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+<i class="ri-customer-service-2-line text-white text-3xl"></i>
+</div>
+<p class="text-white text-xl font-semibold mb-2">24/7 Support</p>
+<p class="text-white opacity-80">Our dedicated team is always available to assist you</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="text-white pt-16 pb-8" style="background-color: #422B0F;">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+<div>
+<h3 class="text-xl font-bold mb-6 text-white">About Sakaar Group</h3>
+<p class="text-gray-300 mb-8 leading-relaxed">Sakaar Group is a leading Indian conglomerate with diversified businesses across consumer centric Real Estate developments, B2B Industrial Fuels Solutions & Retail Gas distribution networks.</p>
+<div class="flex space-x-3">
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded bg-white bg-opacity-10 hover:bg-primary transition-colors">
+<i class="ri-linkedin-fill text-white text-sm"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded bg-white bg-opacity-10 hover:bg-primary transition-colors">
+<i class="ri-facebook-fill text-white text-sm"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded bg-white bg-opacity-10 hover:bg-primary transition-colors">
+<i class="ri-instagram-fill text-white text-sm"></i>
+</a>
+</div>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-6 text-white">Our Companies</h3>
+<ul class="space-y-4">
+<li><a href="#" class="text-gray-300 hover:text-white transition-colors">Sakaar Corp</a></li>
+<li><a href="#" class="text-gray-300 hover:text-white transition-colors">Kaymig Agencies</a></li>
+<li><a href="#" class="text-gray-300 hover:text-white transition-colors">Swastik Oil Company</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-6 text-white">Quick Links</h3>
+<ul class="space-y-4">
+<li><a href="./About-Us.html" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+<li><a href="#" class="text-gray-300 hover:text-white transition-colors">Our Strengths</a></li>
+<li><a href="#" class="text-gray-300 hover:text-white transition-colors">CSR</a></li>
+<li><a href="" class="text-gray-300 hover:text-white transition-colors">Contact Us</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-gray-600">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+<p class="text-gray-400 text-sm mb-4 md:mb-0">&copy; 2025 Sakaar Group. All rights reserved.</p>
+<div class="flex flex-wrap gap-6">
+<a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
+<a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>
+<a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Cookie Policy</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script id="header-script">
+document.addEventListener('DOMContentLoaded', function() {
+// Sticky Header
+const header = document.querySelector('header');
+window.addEventListener('scroll', function() {
+if (window.scrollY > 100) {
+header.classList.add('shadow-md');
+} else {
+header.classList.remove('shadow-md');
+}
+});
+});
+</script>
+<script id="tab-script">
+document.addEventListener('DOMContentLoaded', function() {
+const viewToggles = document.querySelectorAll('.view-toggle');
+const contentContainer = document.querySelector('.flex.flex-col.lg\\:flex-row');
+viewToggles.forEach(toggle => {
+toggle.addEventListener('click', () => {
+viewToggles.forEach(btn => btn.classList.remove('active'));
+toggle.classList.add('active');
+const view = toggle.getAttribute('data-view');
+if (view === 'grid') {
+contentContainer.classList.remove('flex-col', 'lg:flex-row');
+contentContainer.classList.add('grid', 'grid-cols-1', 'lg:grid-cols-2', 'gap-8');
+} else {
+contentContainer.classList.remove('grid', 'grid-cols-1', 'lg:grid-cols-2', 'gap-8');
+contentContainer.classList.add('flex-col', 'lg:flex-row');
+}
+});
+});
+// Tab Functionality
+const tabButtons = document.querySelectorAll('.tab-button');
+const tabContents = document.querySelectorAll('.tab-content');
+tabButtons.forEach(button => {
+button.addEventListener('click', () => {
+// Remove active class from all buttons and contents
+tabButtons.forEach(btn => btn.classList.remove('active'));
+tabContents.forEach(content => content.classList.add('hidden'));
+// Add active class to clicked button and show corresponding content
+button.classList.add('active');
+const tabId = button.getAttribute('data-tab');
+document.getElementById(tabId).classList.remove('hidden');
+});
+});
+});
+</script>
+<script id="charts-script">
+document.addEventListener('DOMContentLoaded', function() {
+});
+</script>
+<script id="smooth-scroll-script">
+document.addEventListener('DOMContentLoaded', function() {
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href');
+if (targetId === '#') return;
+const targetElement = document.querySelector(targetId);
+if (targetElement) {
+window.scrollTo({
+top: targetElement.offsetTop - 100,
+behavior: 'smooth'
+});
+}
+});
+});
+});
+</script>
+</body>
+</html>

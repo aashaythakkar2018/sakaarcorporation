@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Swastik Oil Company - Saakar Group</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#DCA90A',secondary:'#2A3342'},borderRadius:{'none':'0px','sm':'8px',DEFAULT:'12px','md':'16px','lg':'20px','xl':'24px','2xl':'28px','3xl':'32px','full':'9999px','button':'12px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Poppins', sans-serif;
+}
+.group:hover .group-hover\:block {
+display: block;
+}
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Playfair Display', serif;
+}
+.hero-section {
+background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.3) 100%), url('https://readdy.ai/api/search-image?query=Modern%2520edible%2520oil%2520production%2520facility%2520with%2520stainless%2520steel%2520equipment%252C%2520clean%2520manufacturing%2520environment%252C%2520golden%2520oil%2520processing%252C%2520quality%2520control%2520systems%252C%2520professional%2520workers%2520in%2520food-grade%2520uniforms%252C%2520bright%2520well-lit%2520facility%252C%2520state-of-the-art%2520technology%252C%2520premium%2520oil%2520bottling%2520line%252C%2520high-quality%2520industrial%2520photography&width=1920&height=800&seq=1&orientation=landscape');
+background-size: cover;
+background-position: center;
+}
+.product-card {
+transition: all 0.3s ease;
+}
+.product-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.testimonial-card {
+transition: all 0.3s ease;
+}
+.testimonial-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.feature-card {
+transition: all 0.3s ease;
+}
+.feature-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.team-card {
+transition: all 0.3s ease;
+}
+.team-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.custom-checkbox {
+display: flex;
+align-items: center;
+cursor: pointer;
+}
+.custom-checkbox input {
+position: absolute;
+opacity: 0;
+cursor: pointer;
+}
+.checkmark {
+height: 20px;
+width: 20px;
+background-color: #fff;
+border: 2px solid #ddd;
+border-radius: 4px;
+margin-right: 10px;
+position: relative;
+}
+.custom-checkbox input:checked ~ .checkmark {
+background-color: #DCA90A;
+border-color: #DCA90A;
+}
+.checkmark:after {
+content: "";
+position: absolute;
+display: none;
+}
+.custom-checkbox input:checked ~ .checkmark:after {
+display: block;
+}
+.custom-checkbox .checkmark:after {
+left: 6px;
+top: 2px;
+width: 5px;
+height: 10px;
+border: solid white;
+border-width: 0 2px 2px 0;
+transform: rotate(45deg);
+}
+.custom-switch {
+position: relative;
+display: inline-block;
+width: 50px;
+height: 24px;
+}
+.custom-switch input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #ccc;
+transition: .4s;
+border-radius: 34px;
+}
+.slider:before {
+position: absolute;
+content: "";
+height: 16px;
+width: 16px;
+left: 4px;
+bottom: 4px;
+background-color: white;
+transition: .4s;
+border-radius: 50%;
+}
+input:checked + .slider {
+background-color: #DCA90A;
+}
+input:checked + .slider:before {
+transform: translateX(26px);
+}
+</style>
+</head>
+<body class="bg-white">
+<!-- Header Navigation -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+<div class="container mx-auto px-4 py-4">
+<div class="flex justify-between items-center">
+<a href="./index.html" class="h-16 w-48">
+<img src="https://static.readdy.ai/image/b262a2b76905a2198fef3b5c4022af50/6ddaa7b872530b7787504394c520a25a.png" alt="Saakar Group" class="h-full w-full object-contain">
+</a>
+<nav class="hidden md:flex space-x-8">
+<a href="" class="text-secondary hover:text-primary font-medium transition-colors">Home</a>
+<a href="./About-Us.html" class="text-secondary hover:text-primary font-medium transition-colors">About Us</a>
+<div class="relative group">
+<a href="./Our-Businesses.html" class="text-secondary hover:text-primary font-medium transition-colors flex items-center">
+Our Businesses
+<i class="ri-arrow-down-s-line ml-1"></i>
+</a>
+<div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg py-2 hidden group-hover:block">
+<a href="#" class="flex items-center px-4 py-2 text-secondary hover:bg-gray-50">
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-building-2-line text-primary"></i>
+</div>
+<span>Sakaar Corp</span>
+</a>
+<a href="#" class="flex items-center px-4 py-2 text-secondary hover:bg-gray-50">
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-drop-line text-primary"></i>
+</div>
+<span>Swastik Oil Company</span>
+</a>
+<a href="#" class="flex items-center px-4 py-2 text-secondary hover:bg-gray-50">
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-store-2-line text-primary"></i>
+</div>
+<span>Kaymig Agencies</span>
+</a>
+</div>
+</div>
+<a href="./Our-Businesses.html" class="text-secondary hover:text-primary font-medium transition-colors">Our Strengths</a>
+<a href="./Contact-Us.html" class="text-secondary hover:text-primary font-medium transition-colors">Contact</a>
+</nav>
+<div class="md:hidden w-6 h-6 flex items-center justify-center">
+<i class="ri-menu-line text-xl text-secondary"></i>
+</div>
+<div class="hidden md:flex items-center space-x-4">
+<a href="#contact" class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">Business Inquiry</a>
+<a href="./Our-Businesses.html" class="border-2 border-secondary text-secondary px-6 py-2 !rounded-button font-medium hover:bg-secondary hover:text-white transition-colors whitespace-nowrap">Back to Overview</a>
+</div>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="hero-section w-full h-[600px] flex items-center">
+<div class="container mx-auto px-4 w-full">
+<div class="max-w-3xl text-white">
+<h1 class="text-4xl md:text-6xl font-bold mb-6">Swastik Oil Company</h1>
+<p class="text-xl mb-8 leading-relaxed">Premium edible oils crafted with precision, purity, and passion. Delivering exceptional quality from farm to table since 1992.</p>
+<div class="flex flex-wrap gap-4">
+<a href="#products" class="bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">Explore Our Products</a>
+<a href="#contact" class="bg-white text-secondary px-6 py-3 !rounded-button font-medium hover:bg-gray-100 transition-colors whitespace-nowrap">Business Inquiry</a>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-20">
+<div class="container mx-auto px-4">
+<div class="flex flex-col lg:flex-row items-center gap-12">
+<div class="lg:w-1/2">
+<img src="https://readdy.ai/api/search-image?query=Modern%2520oil%2520bottling%2520facility%2520with%2520premium%2520glass%2520bottles%2520on%2520conveyor%2520belt%252C%2520golden%2520oil%2520being%2520filled%2520into%2520elegant%2520packaging%252C%2520quality%2520control%2520inspection%2520points%252C%2520clean%2520manufacturing%2520environment%252C%2520bright%2520lighting%252C%2520stainless%2520steel%2520equipment%252C%2520professional%2520industrial%2520photography&width=600&height=600&seq=2&orientation=squarish" alt="Swastik Oil Production Facility" class="w-full h-auto rounded-lg shadow-xl">
+</div>
+<div class="lg:w-1/2">
+<h2 class="text-3xl md:text-4xl font-bold text-secondary mb-6">Our Legacy of Excellence</h2>
+<p class="text-lg text-gray-700 mb-6 leading-relaxed">Founded in 1965, Swastik Oil Company has grown to become one of the most trusted distributors and traders of premium industrial fuels. We have been distributors of GS Caltex, Indian Oil Corporation and Reliance in the past and are currently Industrial Lube Distributors of Hindustan Petroleum Corporation since 2004 and have been smoothly functioning with the company since then.
+</p>
+<div class="mb-8">
+<h4 class="text-xl font-bold text-secondary mb-4">Core Competencies:</h4>
+<ul class="space-y-3">
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-3 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary text-sm"></i>
+</div>
+<p class="text-gray-700">Vast experience has led to technical seniority.</p>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-3 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary text-sm"></i>
+</div>
+<p class="text-gray-700">Technical support of sample testing to each and every client.</p>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-3 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary text-sm"></i>
+</div>
+<p class="text-gray-700">Strong distribution fleet, leading to reduced lead time for supplies.</p>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-3 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary text-sm"></i>
+</div>
+<p class="text-gray-700">Try to solve the pain point of the customers hence building long term relationship with the clients.</p>
+</li>
+</ul>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="flex items-center">
+<div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4">
+<i class="ri-award-line text-primary text-xl"></i>
+</div>
+<div>
+<h4 class="font-bold text-secondary">30+ Years</h4>
+<p class="text-gray-600">of Excellence</p>
+</div>
+</div>
+<div class="flex items-center">
+<div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4">
+<i class="ri-global-line text-primary text-xl"></i>
+</div>
+<div>
+<h4 class="font-bold text-secondary">8 Countries</h4>
+<p class="text-gray-600">Export Markets</p>
+</div>
+</div>
+<div class="flex items-center">
+<div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4">
+<i class="ri-store-2-line text-primary text-xl"></i>
+</div>
+<div>
+<h4 class="font-bold text-secondary">12,000+</h4>
+<p class="text-gray-600">Retail Partners</p>
+</div>
+</div>
+<div class="flex items-center">
+<div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4">
+<i class="ri-user-heart-line text-primary text-xl"></i>
+</div>
+<div>
+<h4 class="font-bold text-secondary">5 Million+</h4>
+<p class="text-gray-600">Happy Customers</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Products Section -->
+<section id="products" class="py-20 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Our Product Portfolio</h2>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">Discover our range of premium edible oils crafted to enhance your culinary experience with purity and nutrition.</p>
+<div class="w-24 h-1 bg-primary mx-auto mt-4"></div>
+<div class="flex justify-center mt-8 bg-white rounded-full inline-flex mx-auto shadow-md p-1">
+<button class="px-8 py-2 rounded-full text-white bg-primary" data-tab="retail">Lubricating Oils</button>
+<button class="px-8 py-2 rounded-full text-secondary hover:text-primary" data-tab="bulk">Greases</button>
+<button class="px-8 py-2 rounded-full text-secondary hover:text-primary" data-tab="private">Base Oils</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="productGrid">
+<!-- Base Oils - Group 1 -->
+<div class="product-card bg-white rounded-lg overflow-hidden shadow-lg base-oils">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Industrial%20base%20oil%20drums%20and%20containers%20in%20professional%20setting%2C%20clear%20amber%20fluid%2C%20high%20quality%20industrial%20lubricant%2C%20clean%20manufacturing%20environment%2C%20quality%20control%20testing%20equipment%2C%20precise%20filtration%20system%2C%20technical%20grade%20oil%2C%20professional%20product%20photography&width=600&height=400&seq=15&orientation=landscape" alt="Group 1 Base Oils" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-2xl font-bold text-secondary mb-3">Group 1 - N 150 – 500</h3>
+<p class="text-gray-600 mb-4">Premium base oils ideal for industrial lubricants and process oils applications.</p>
+<div class="mb-6">
+<div class="flex items-start mb-2">
+<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary text-sm"></i>
+</div>
+<p class="text-gray-700">High Viscosity Index</p>
+</div>
+<div class="flex items-start mb-2">
+<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary text-sm"></i>
+</div>
+<p class="text-gray-700">Low Volatility</p>
+</div>
+<div class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary text-sm"></i>
+</div>
+<p class="text-gray-700">Good Oxidation Stability</p>
+</div>
+</div>
+<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+View Details
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+</div>
+<!-- Base Oils - Group 2 -->
+<div class="product-card bg-white rounded-lg overflow-hidden shadow-lg base-oils">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Professional%20industrial%20base%20oil%20drums%20and%20containers%2C%20premium%20grade%20clear%20amber%20fluid%2C%20high-quality%20technical%20lubricant%2C%20laboratory%20testing%20equipment%2C%20clean%20manufacturing%20environment%2C%20precise%20filtration%20systems%20visible%2C%20industrial%20grade%20packaging%2C%20technical%20documentation&width=600&height=400&seq=16&orientation=landscape" alt="Group 2 Base Oils" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-2xl font-bold text-secondary mb-3">Group 2 - SN 150 – 500</h3>
+<p class="text-gray-600 mb-4">High-performance base oils for premium lubricant formulations.</p>
+<div class="mb-6">
+<div class="flex items-start mb-2">
+<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary text-sm"></i>
+</div>
+<p class="text-gray-700">Superior Purity</p>
+</div>
+<div class="flex items-start mb-2">
+<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary text-sm"></i>
+</div>
+<p class="text-gray-700">Enhanced Performance</p>
+</div>
+<div class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary text-sm"></i>
+</div>
+<p class="text-gray-700">Excellent Stability</p>
+</div>
+</div>
+<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+View Details
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+</div>
+<!-- Bright Stock -->
+<div class="product-card bg-white rounded-lg overflow-hidden shadow-lg base-oils">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Industrial%20bright%20stock%20base%20oil%20drums%20and%20containers%20in%20professional%20setting%2C%20high%20viscosity%20amber%20fluid%2C%20premium%20grade%20technical%20lubricant%2C%20specialized%20filtration%20equipment%2C%20clean%20manufacturing%20facility%2C%20quality%20control%20testing%20instruments%2C%20clear%20golden%20liquid%2C%20professional%20product%20photography&width=600&height=400&seq=17&orientation=landscape" alt="Bright Stock Base Oil" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-2xl font-bold text-secondary mb-3">Bright Stock 460</h3>
+<p class="text-gray-600 mb-4">High-viscosity base oil for specialized industrial applications.</p>
+<div class="mb-6">
+<div class="flex items-start mb-2">
+<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary text-sm"></i>
+</div>
+<p class="text-gray-700">High Viscosity Grade</p>
+</div>
+<div class="flex items-start mb-2">
+<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary text-sm"></i>
+</div>
+<p class="text-gray-700">Superior Film Strength</p>
+</div>
+<div class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary text-sm"></i>
+</div>
+<p class="text-gray-700">Excellent Solvency</p>
+</div>
+</div>
+<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+View Details
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+</div>
+<!-- Hydraulic Oils -->
+<div class="product-card bg-white rounded-lg overflow-hidden shadow-lg lubricating-oils">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Industrial%20hydraulic%20oil%20containers%20with%20professional%20packaging%2C%20clear%20amber%20fluid%2C%20technical%20grade%20lubricant%2C%20clean%20manufacturing%20environment%2C%20quality%20control%20testing%20equipment%2C%20industrial%20machinery%20background%2C%20professional%20product%20photography&width=600&height=400&seq=6&orientation=landscape" alt="Hydraulic Oils" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-2xl font-bold text-secondary mb-3">Hydraulic Oils</h3>
+<p class="text-gray-600 mb-4">High-performance hydraulic oils designed for optimal system efficiency and equipment protection.</p>
+<div class="mb-6">
+<div class="flex items-start mb-2">
+<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary text-sm"></i>
+</div>
+<p class="text-gray-700">Anti-Wear Properties</p>
+</div>
+<div class="flex items-start mb-2">
+<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary text-sm"></i>
+</div>
+<p class="text-gray-700">Oxidation Stability</p>
+</div>
+<div class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary text-sm"></i>
+</div>
+<p class="text-gray-700">Multi-Grade Options</p>
+</div>
+</div>
+<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+View Details
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+</div>
+<!-- Gear Box Oils -->
+<!-- Heat Transfer Oils -->
+<div class="product-card bg-white rounded-lg overflow-hidden shadow-lg lubricating-oils">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Industrial%20heat%20transfer%20oil%20system%2C%20thermal%20fluid%20containers%2C%20high%20temperature%20resistant%20oil%2C%20industrial%20heating%20equipment%2C%20professional%20manufacturing%20facility%2C%20technical%20grade%20thermal%20oil&width=600&height=400&seq=8&orientation=landscape" alt="Heat Transfer Oils" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-2xl font-bold text-secondary mb-3">Heat Transfer Oils</h3>
+<p class="text-gray-600 mb-4">Specialized oils for efficient heat transfer in industrial processes.</p>
+<div class="mb-6">
+<div class="flex items-start mb-2">
+<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary text-sm"></i>
+</div>
+<p class="text-gray-700">High Temperature Stability</p>
+</div>
+<div class="flex items-start mb-2">
+<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary text-sm"></i>
+</div>
+<p class="text-gray-700">Extended Service Life</p>
+</div>
+<div class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary text-sm"></i>
+</div>
+<p class="text-gray-700">Excellent Heat Conductivity</p>
+</div>
+</div>
+<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+View Details
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+</div>
+<!-- Specialty Oils -->
+<div class="product-card bg-white rounded-lg overflow-hidden shadow-lg lubricating-oils">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Specialized%20industrial%20lubricant%20containers%2C%20custom%20formulation%20oils%2C%20high-performance%20technical%20fluids%2C%20advanced%20manufacturing%20facility%2C%20precision%20equipment%2C%20quality%20testing%20laboratory&width=600&height=400&seq=14&orientation=landscape" alt="Specialty Oils" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-2xl font-bold text-secondary mb-3">Gear Box Oils</h3>
+<p class="text-gray-600 mb-4">Custom-formulated oils for specific industrial applications and requirements.</p>
+<div class="mb-6">
+<div class="flex items-start mb-2">
+<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary text-sm"></i>
+</div>
+<p class="text-gray-700">Custom Formulations</p>
+</div>
+<div class="flex items-start mb-2">
+<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary text-sm"></i>
+</div>
+<p class="text-gray-700">Application-Specific Solutions</p>
+</div>
+<div class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary text-sm"></i>
+</div>
+<p class="text-gray-700">Technical Support Available</p>
+</div>
+</div>
+<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+View Details
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+</div>
+<!-- Turbine Oils -->
+<div class="product-card bg-white rounded-lg overflow-hidden shadow-lg">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Industrial%20turbine%20oil%20system%2C%20power%20generation%20equipment%2C%20premium%20lubricant%20containers%2C%20technical%20grade%20oil%2C%20professional%20power%20plant%20environment%2C%20quality%20control%20testing&width=600&height=400&seq=9&orientation=landscape" alt="Turbine Oils" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-2xl font-bold text-secondary mb-3">Turbine Oils</h3>
+<p class="text-gray-600 mb-4">Premium turbine oils for reliable power generation equipment performance.</p>
+<div class="mb-6">
+<div class="flex items-start mb-2">
+<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary text-sm"></i>
+</div>
+<p class="text-gray-700">Superior Oxidation Resistance</p>
+</div>
+<div class="flex items-start mb-2">
+<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary text-sm"></i>
+</div>
+<p class="text-gray-700">Water Separation Properties</p>
+</div>
+<div class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary text-sm"></i>
+</div>
+<p class="text-gray-700">Anti-Foam Characteristics</p>
+</div>
+</div>
+<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+View Details
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+</div>
+<!-- Specialty Oils -->
+<div class="product-card bg-white rounded-lg overflow-hidden shadow-lg">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Specialized%20industrial%20lubricant%20containers%2C%20custom%20formulation%20oils%2C%20high-performance%20technical%20fluids%2C%20advanced%20manufacturing%20facility%2C%20precision%20equipment%2C%20quality%20testing%20laboratory&width=600&height=400&seq=10&orientation=landscape" alt="Specialty Oils" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-2xl font-bold text-secondary mb-3">Gear Box Oils</h3>
+<p class="text-gray-600 mb-4">Custom-formulated oils for specific industrial applications and requirements.</p>
+<div class="mb-6">
+<div class="flex items-start mb-2">
+<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary text-sm"></i>
+</div>
+<p class="text-gray-700">Custom Formulations</p>
+</div>
+<div class="flex items-start mb-2">
+<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary text-sm"></i>
+</div>
+<p class="text-gray-700">Application-Specific Solutions</p>
+</div>
+<div class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary text-sm"></i>
+</div>
+<p class="text-gray-700">Technical Support Available</p>
+</div>
+</div>
+<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+View Details
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Sustainability Section -->
+<section class="py-20 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Our Esteemed Clients</h2>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">Trusted by leading companies across industries for our quality products and reliable service.</p>
+<div class="w-24 h-1 bg-primary mx-auto mt-4"></div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 mb-12">
+<div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+<img src="https://static.readdy.ai/image/b262a2b76905a2198fef3b5c4022af50/client-logos/ongc.png" alt="ONGC" class="h-16 w-auto">
+</div>
+<div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+<img src="https://static.readdy.ai/image/b262a2b76905a2198fef3b5c4022af50/client-logos/adani.png" alt="Adani Ports and Logistics" class="h-16 w-auto">
+</div>
+<div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+<img src="https://static.readdy.ai/image/b262a2b76905a2198fef3b5c4022af50/client-logos/ultratech.png" alt="UltraTech" class="h-16 w-auto">
+</div>
+<div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+<img src="https://static.readdy.ai/image/b262a2b76905a2198fef3b5c4022af50/client-logos/lt.png" alt="Larsen & Toubro" class="h-16 w-auto">
+</div>
+<div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+<img src="https://static.readdy.ai/image/b262a2b76905a2198fef3b5c4022af50/client-logos/amns.png" alt="AM/NS India" class="h-16 w-auto">
+</div>
+<div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+<img src="https://static.readdy.ai/image/b262a2b76905a2198fef3b5c4022af50/client-logos/jcb.png" alt="JCB" class="h-16 w-auto">
+</div>
+<div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+<img src="https://static.readdy.ai/image/b262a2b76905a2198fef3b5c4022af50/client-logos/batliboi.png" alt="Batliboi" class="h-16 w-auto">
+</div>
+<div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+<img src="https://static.readdy.ai/image/b262a2b76905a2198fef3b5c4022af50/client-logos/avvl.png" alt="AVVL Agri Business" class="h-16 w-auto">
+</div>
+<div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+<img src="https://static.readdy.ai/image/b262a2b76905a2198fef3b5c4022af50/client-logos/citizen.png" alt="Citizen" class="h-16 w-auto">
+</div>
+<div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+<img src="https://static.readdy.ai/image/b262a2b76905a2198fef3b5c4022af50/client-logos/weavetech.png" alt="Weavetech" class="h-16 w-auto">
+</div>
+<div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+<img src="https://static.readdy.ai/image/b262a2b76905a2198fef3b5c4022af50/client-logos/bindal.png" alt="Bindal" class="h-16 w-auto">
+</div>
+<div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+<img src="https://static.readdy.ai/image/b262a2b76905a2198fef3b5c4022af50/client-logos/ctx.png" alt="CTX Lifesciences" class="h-16 w-auto">
+</div>
+<div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+<img src="https://static.readdy.ai/image/b262a2b76905a2198fef3b5c4022af50/client-logos/ascolite.png" alt="Ascolite" class="h-16 w-auto">
+</div>
+<div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+<img src="https://static.readdy.ai/image/b262a2b76905a2198fef3b5c4022af50/client-logos/mahavir.png" alt="Mahavir Synthesis" class="h-16 w-auto">
+</div>
+<div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+<img src="https://static.readdy.ai/image/b262a2b76905a2198fef3b5c4022af50/client-logos/rbl.png" alt="Ranjit Buildcon Limited" class="h-16 w-auto">
+</div>
+</div>
+</div>
+</section>
+</section>
+<!-- Customer Testimonials Section -->
+<!-- Contact Section -->
+<section class="py-20 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Product Range</h2>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">Discover our comprehensive range of industrial oils and fluids engineered for optimal performance and reliability.</p>
+<div class="w-24 h-1 bg-primary mx-auto mt-4"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Anti Wear Hydraulic Oils -->
+<div class="bg-white rounded-lg shadow-lg overflow-hidden">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Modern%20industrial%20hydraulic%20system%20with%20blue%20metal%20framework%2C%20multiple%20pumps%20and%20control%20units%20arranged%20systematically%2C%20clean%20professional%20environment%2C%20technical%20equipment%20setup%2C%20high-quality%20industrial%20machinery&width=600&height=400&seq=20&orientation=landscape" alt="Anti Wear Hydraulic Oils" class="w-full h-full object-cover">
+</div>
+<div class="p-6">
+<h3 class="text-2xl font-bold text-secondary mb-3">Anti Wear Hydraulic Oils</h3>
+<p class="text-gray-600 mb-4">Includes additives for maximum protection in heavy-duty applications. Provides outstanding resistance to sludge formation and chemical stability.</p>
+<div class="space-y-2 mb-4">
+<p class="text-gray-700">• HP ENKLO 32, 44, 68</p>
+<p class="text-gray-700">• HP ENKLO HLP 32, 44, 68</p>
+<p class="text-gray-700">• HP ENKLO HVLP 32, 44, 68</p>
+</div>
+<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+Learn More
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+</div>
+<!-- Industrial Gearbox Oils -->
+<div class="bg-white rounded-lg shadow-lg overflow-hidden">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Industrial%20gearbox%20system%20with%20precision%20machinery%2C%20professional%20grade%20equipment%2C%20technical%20installation%2C%20clean%20manufacturing%20environment&width=600&height=400&seq=23&orientation=landscape" alt="Industrial Gearbox Oils" class="w-full h-full object-cover">
+</div>
+<div class="p-6">
+<h3 class="text-2xl font-bold text-secondary mb-3">Industrial Gearbox Oils</h3>
+<p class="text-gray-600 mb-4">High-performance concentrate suitable for all types of gearboxes, including heavy duty applications. Ideal for both manual and automatic transmissions.</p>
+<div class="space-y-2 mb-4">
+<p class="text-gray-700">• HP PARTHAN EP 68, 100, 150, 220</p>
+<p class="text-gray-700">• HP PARTHAN EP 320, 460, 680, 1000</p>
+</div>
+<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+Learn More
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+</div>
+<!-- Heat Transfer Fluids -->
+<div class="bg-white rounded-lg shadow-lg overflow-hidden">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Industrial%20heat%20transfer%20system%20with%20complex%20piping%2C%20thermal%20equipment%2C%20professional%20grade%20machinery%2C%20temperature%20control%20units%2C%20technical%20installation%2C%20clean%20industrial%20setting&width=600&height=400&seq=21&orientation=landscape" alt="Heat Transfer Fluids" class="w-full h-full object-cover">
+</div>
+<div class="p-6">
+<h3 class="text-2xl font-bold text-secondary mb-3">Heat Transfer Fluids</h3>
+<p class="text-gray-600 mb-4">A heat transfer fluid that takes part in heat transfer by serving as an intermediary in cooling on one side of a process. High boiling point and high heat capacity.</p>
+<div class="space-y-2 mb-4">
+<p class="text-gray-700">• HP HYTHERM 500, 600 (MINERAL OIL)</p>
+<p class="text-gray-700">• HP HYTHERM 600 PLUS (SEMI SYNTHETIC OIL)</p>
+<p class="text-gray-700">• HP HYTHERM ALPHA (SYNTHETIC OIL)</p>
+<p class="text-gray-700">• HP HYTHERM GAMMA (SYNTHETIC OIL)</p>
+</div>
+<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+Learn More
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+</div>
+<!-- Transformer Oils -->
+<div class="bg-white rounded-lg shadow-lg overflow-hidden">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Industrial%20power%20transformer%20installation%2C%20high%20voltage%20electrical%20equipment%2C%20professional%20grade%20transformer%20unit%2C%20technical%20machinery%2C%20clean%20industrial%20environment&width=600&height=400&seq=22&orientation=landscape" alt="Transformer Oils" class="w-full h-full object-cover">
+</div>
+<div class="p-6">
+<h3 class="text-2xl font-bold text-secondary mb-3">Transformer Oils</h3>
+<p class="text-gray-600 mb-4">Transformer oil or insulating oil is an oil that is stable at high temperatures and has excellent electrical insulating properties. Used in oil-filled transformers and high-voltage equipment.</p>
+<div class="space-y-2 mb-4">
+<p class="text-gray-700">• HP TRANSFORMER OIL (exceeds IS 335)</p>
+</div>
+<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+Learn More
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+</div>
+<!-- Turbine Oils -->
+<div class="bg-white rounded-lg shadow-lg overflow-hidden">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Industrial%20turbine%20system%2C%20power%20generation%20equipment%2C%20professional%20grade%20machinery%2C%20technical%20installation%2C%20clean%20manufacturing%20environment&width=600&height=400&seq=28&orientation=landscape" alt="Turbine Oils" class="w-full h-full object-cover">
+</div>
+<div class="p-6">
+<h3 class="text-2xl font-bold text-secondary mb-3">Turbine Oils</h3>
+<p class="text-gray-600 mb-4">Turbine oil formulations are designed simple, they are a mixture of base oil and following ingredients: Base oil, corrosion inhibitors, oxidation inhibitors, defoamants, and demulsifiers.</p>
+<div class="space-y-2 mb-4">
+<p class="text-gray-700">• HP TURBINOL 32, 46, 68</p>
+<p class="text-gray-700">• HP TURBINOL XT 32, 46, 68</p>
+</div>
+<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+Learn More
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+</div>
+<!-- Refrigeration Compressor Oils -->
+<div class="bg-white rounded-lg shadow-lg overflow-hidden">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Industrial%20refrigeration%20compressor%20system%2C%20professional%20cooling%20equipment%2C%20technical%20machinery%2C%20clean%20manufacturing%20environment&width=600&height=400&seq=25&orientation=landscape" alt="Refrigeration Compressor Oils" class="w-full h-full object-cover">
+</div>
+<div class="p-6">
+<h3 class="text-2xl font-bold text-secondary mb-3">Refrigeration Compressor Oils</h3>
+<p class="text-gray-600 mb-4">The lubricant not only must be able to lubricate all the parts inside the compressor but also handle the refrigerant with which it is in contact in refrigeration and air-conditioning systems.</p>
+<div class="space-y-2 mb-4">
+<p class="text-gray-700">• HP SEETUL N 68</p>
+<p class="text-gray-700">• HP SEETUL N 68 (P)</p>
+</div>
+<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+Learn More
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+</div>
+<!-- Spindle Oils -->
+<div class="bg-white rounded-lg shadow-lg overflow-hidden">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=High-precision%20spindle%20machinery%2C%20industrial%20spindle%20system%2C%20technical%20equipment%2C%20clean%20manufacturing%20environment&width=600&height=400&seq=26&orientation=landscape" alt="Spindle Oils" class="w-full h-full object-cover">
+</div>
+<div class="p-6">
+<h3 class="text-2xl font-bold text-secondary mb-3">Spindle Oils</h3>
+<p class="text-gray-600 mb-4">Spindle Oil is anti-wear oil that is formulated for use in the lubrication of high speed spindle bearings in precision grinders and other machine tools that require the use of low viscosity oils.</p>
+<div class="space-y-2 mb-4">
+<p class="text-gray-700">• HP SPINTEK 5, 10, 12, 15, 22</p>
+</div>
+<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+Learn More
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+</div>
+<!-- Cutting Fluid -->
+<div class="bg-white rounded-lg shadow-lg overflow-hidden">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Industrial%20cutting%20fluid%20application%2C%20metalworking%20machinery%2C%20precision%20cutting%20equipment%2C%20clean%20manufacturing%20environment&width=600&height=400&seq=29&orientation=landscape" alt="Cutting Fluid" class="w-full h-full object-cover">
+</div>
+<div class="p-6">
+<h3 class="text-2xl font-bold text-secondary mb-3">Cutting Fluid</h3>
+<p class="text-gray-600 mb-4">Cutting fluid is a type of coolant and lubricant designed specifically for metalworking processes, such as machining and stamping.</p>
+<div class="space-y-2 mb-4">
+<p class="text-gray-700">• HP KOOLKUT 40, 70</p>
+</div>
+<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+Learn More
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+</div>
+<!-- Quenching Oils -->
+<div class="bg-white rounded-lg shadow-lg overflow-hidden">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Industrial%20metal%20quenching%20system%2C%20heat%20treatment%20equipment%2C%20technical%20machinery%2C%20clean%20manufacturing%20environment&width=600&height=400&seq=27&orientation=landscape" alt="Quenching Oils" class="w-full h-full object-cover">
+</div>
+<div class="p-6">
+<h3 class="text-2xl font-bold text-secondary mb-3">Quenching Oils</h3>
+<p class="text-gray-600 mb-4">The term quenching is used to refer to the controlled cooling of steel components in a fluid to give specified properties. The hardness and other physical properties obtained depend upon the composition of the steel.</p>
+<div class="space-y-2 mb-4">
+<p class="text-gray-700">• HP METAQUENCH 39, 42, 40, 43, 44, 85, 86</p>
+</div>
+<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+Learn More
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="contact" class="py-20 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Get In Touch</h2>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">Interested in our products or services? Reach out to us for more information or business inquiries.</p>
+<div class="w-24 h-1 bg-primary mx-auto mt-4"></div>
+</div>
+<div class="flex flex-col lg:flex-row gap-12">
+<div class="lg:w-1/2">
+<div class="bg-white p-10 rounded-lg shadow-lg">
+<h3 class="text-2xl font-bold text-secondary mb-6">Business Inquiry</h3>
+<form>
+<div class="mb-6">
+<label for="name" class="block text-gray-700 font-medium mb-2">Full Name</label>
+<input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-primary" placeholder="Your name">
+</div>
+<div class="mb-6">
+<label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+<input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-primary" placeholder="Your email">
+</div>
+<div class="mb-6">
+<label for="company" class="block text-gray-700 font-medium mb-2">Company Name</label>
+<input type="text" id="company" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-primary" placeholder="Your company">
+</div>
+<div class="mb-6">
+<label for="inquiry" class="block text-gray-700 font-medium mb-2">Inquiry Type</label>
+<div class="relative">
+<select id="inquiry" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-primary appearance-none pr-8">
+<option value="">Select inquiry type</option>
+<option value="retail">Retail Partnership</option>
+<option value="bulk">Bulk Purchase</option>
+<option value="export">Export Inquiry</option>
+<option value="private-label">Private Labeling</option>
+<option value="other">Other</option>
+</select>
+<div class="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
+<i class="ri-arrow-down-s-line text-gray-500"></i>
+</div>
+</div>
+</div>
+<div class="mb-6">
+<label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+<textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-primary" placeholder="Tell us about your requirements"></textarea>
+</div>
+<div class="mb-6">
+<label class="custom-checkbox">
+<input type="checkbox">
+<span class="checkmark"></span>
+<span class="text-gray-700">I agree to receive communications from Swastik Oil Company</span>
+</label>
+</div>
+<button type="submit" class="bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap w-full">Submit Inquiry</button>
+</form>
+</div>
+</div>
+<div class="lg:w-1/2">
+<div class="bg-white p-10 rounded-lg shadow-lg mb-8">
+<h3 class="text-2xl font-bold text-secondary mb-6">Contact Information</h3>
+<div class="space-y-6">
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 mt-1 flex-shrink-0">
+<i class="ri-building-line text-primary"></i>
+</div>
+<div>
+<h4 class="font-bold text-secondary mb-1">Corporate Headquarters</h4>
+<p class="text-gray-600">Swastik Tower, Plot No. 45, GIDC,<br>Ahmedabad - 382445, Gujarat, India</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 mt-1 flex-shrink-0">
+<i class="ri-phone-line text-primary"></i>
+</div>
+<div>
+<h4 class="font-bold text-secondary mb-1">Phone</h4>
+<p class="text-gray-600">+91 79 2345 6789 (General Inquiries)</p>
+<p class="text-gray-600">+91 79 2345 6780 (Sales Department)</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 mt-1 flex-shrink-0">
+<i class="ri-mail-line text-primary"></i>
+</div>
+<div>
+<h4 class="font-bold text-secondary mb-1">Email</h4>
+<p class="text-gray-600">info@swastikoil.com</p>
+<p class="text-gray-600">sales@swastikoil.com</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 mt-1 flex-shrink-0">
+<i class="ri-time-line text-primary"></i>
+</div>
+<div>
+<h4 class="font-bold text-secondary mb-1">Business Hours</h4>
+<p class="text-gray-600">Monday to Friday: 9:00 AM - 6:00 PM</p>
+<p class="text-gray-600">Saturday: 9:00 AM - 1:00 PM</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white p-10 rounded-lg shadow-lg">
+<h3 class="text-2xl font-bold text-secondary mb-6">Connect With Us</h3>
+<div class="flex items-center space-x-4 mb-6">
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white hover:bg-opacity-90 transition-colors">
+<i class="ri-linkedin-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white hover:bg-opacity-90 transition-colors">
+<i class="ri-twitter-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white hover:bg-opacity-90 transition-colors">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white hover:bg-opacity-90 transition-colors">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white hover:bg-opacity-90 transition-colors">
+<i class="ri-youtube-fill"></i>
+</a>
+</div>
+<div class="mb-6">
+<h4 class="font-bold text-secondary mb-3">Subscribe to Our Newsletter</h4>
+<form class="flex">
+<input type="email" placeholder="Your email address" class="px-4 py-2 w-full rounded-l border-none text-gray-800">
+<button type="submit" class="bg-primary text-white px-4 py-2 rounded-r hover:bg-opacity-90 transition-colors whitespace-nowrap">Subscribe</button>
+</form>
+</div>
+<div class="flex items-center">
+<label class="custom-switch mr-3">
+<input type="checkbox">
+<span class="slider"></span>
+</label>
+<span class="text-gray-700">I agree to receive marketing communications</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-secondary text-white pt-20 pb-10">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+<div>
+<h3 class="text-xl font-bold mb-6">About Swastik Oil</h3>
+<p class="text-gray-300 mb-6">Swastik Oil Company is a leading manufacturer of premium edible oils, committed to quality, innovation, and sustainability as part of the esteemed Saakar Group.</p>
+<div class="flex space-x-4">
+<a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-10 hover:bg-primary transition-colors">
+<i class="ri-linkedin-fill text-xs text-white"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-10 hover:bg-primary transition-colors">
+<i class="ri-twitter-fill text-xs text-white"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-10 hover:bg-primary transition-colors">
+<i class="ri-facebook-fill text-xs text-white"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-10 hover:bg-primary transition-colors">
+<i class="ri-instagram-fill text-xs text-white"></i>
+</a>
+</div>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-6">Our Products</h3>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Premium Cooking Oils</a></li>
+<li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Specialty & Organic Oils</a></li>
+<li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Bulk Supply Options</a></li>
+<li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Private Labeling</a></li>
+<li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Product Catalog</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-6">Quick Links</h3>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-300 hover:text-primary transition-colors">About Us</a></li>
+<li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Manufacturing Process</a></li>
+<li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Sustainability</a></li>
+<li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Distribution Network</a></li>
+<li><a href="./Our-Businesses.html" class="text-gray-300 hover:text-primary transition-colors">Saakar Group Businesses</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-6">Contact Us</h3>
+<ul class="space-y-3">
+<li class="flex items-start">
+<i class="ri-map-pin-line mr-3 mt-1"></i>
+<span>Swastik Tower, Plot No. 45, GIDC, Ahmedabad - 382445, Gujarat, India</span>
+</li>
+<li class="flex items-start">
+<i class="ri-phone-line mr-3 mt-1"></i>
+<span>+91 79 2345 6789</span>
+</li>
+<li class="flex items-start">
+<i class="ri-mail-line mr-3 mt-1"></i>
+<span>info@swastikoil.com</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-gray-700">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400 text-sm mb-4 md:mb-0">&copy; 2025 Swastik Oil Company. All rights reserved.</p>
+<div class="flex space-x-6">
+<a href="#" class="text-gray-400 hover:text-primary text-sm transition-colors">Privacy Policy</a>
+<a href="#" class="text-gray-400 hover:text-primary text-sm transition-colors">Terms of Service</a>
+<a href="#" class="text-gray-400 hover:text-primary text-sm transition-colors">Cookie Policy</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script id="customCheckboxScript">
+document.addEventListener('DOMContentLoaded', function() {
+// Custom checkbox functionality
+const checkboxes = document.querySelectorAll('.custom-checkbox input[type="checkbox"]');
+checkboxes.forEach(checkbox => {
+checkbox.addEventListener('change', function() {
+const checkmark = this.nextElementSibling;
+if (this.checked) {
+checkmark.classList.add('checked');
+} else {
+checkmark.classList.remove('checked');
+}
+});
+});
+});
+</script>
+<script id="stickyHeaderScript">
+document.addEventListener('DOMContentLoaded', function() {
+// Sticky Header
+const header = document.querySelector('header');
+window.addEventListener('scroll', function() {
+if (window.scrollY > 100) {
+header.classList.add('shadow-md');
+} else {
+header.classList.remove('shadow-md');
+}
+});
+});
+</script>
+<script id="productTabsScript">
+document.addEventListener('DOMContentLoaded', function() {
+const tabButtons = document.querySelectorAll('[data-tab]');
+const productGrid = document.getElementById('productGrid');
+const defaultTab = 'retail';
+const lubricatingProducts = document.querySelectorAll('.lubricating-oils');
+const baseOilProducts = document.querySelectorAll('.base-oils');
+const turbineOilProducts = Array.from(document.querySelectorAll('.product-card')).filter(card =>
+card.querySelector('h3')?.textContent.includes('Turbine Oils')
+);
+const gearBoxOilProducts = Array.from(document.querySelectorAll('.product-card')).filter(card =>
+card.querySelector('h3')?.textContent.includes('Gear Box Oils')
+);
+const greaseProducts = `
+<!-- High Temperature Grease -->
+<div class="product-card bg-white rounded-lg overflow-hidden shadow-lg greases">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Industrial%20high%20temperature%20grease%20in%20professional%20packaging%2C%20technical%20grade%20lubricant%2C%20specialized%20grease%20application%2C%20industrial%20machinery%2C%20clean%20manufacturing%20environment%2C%20quality%20testing%20equipment%2C%20professional%20product%20photography&width=600&height=400&seq=11&orientation=landscape" alt="High Temperature Grease" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-2xl font-bold text-secondary mb-3">High Temperature Grease</h3>
+<p class="text-gray-600 mb-4">Advanced grease formulation designed for extreme temperature applications and heavy-duty industrial use.</p>
+<div class="mb-6">
+<div class="flex items-start mb-2">
+<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary text-sm"></i>
+</div>
+<p class="text-gray-700">Temperature Range up to 280°C</p>
+</div>
+<div class="flex items-start mb-2">
+<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary text-sm"></i>
+</div>
+<p class="text-gray-700">Excellent Oxidation Stability</p>
+</div>
+<div class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary text-sm"></i>
+</div>
+<p class="text-gray-700">Extended Service Life</p>
+</div>
+</div>
+<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+View Details
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+</div>
+<!-- Multi Purpose Grease -->
+<div class="product-card bg-white rounded-lg overflow-hidden shadow-lg greases">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Multi%20purpose%20industrial%20grease%20containers%2C%20versatile%20lubricant%20packaging%2C%20professional%20grade%20grease%2C%20industrial%20machinery%20applications%2C%20clean%20manufacturing%20facility%2C%20quality%20control%20testing%2C%20technical%20product%20photography&width=600&height=400&seq=12&orientation=landscape" alt="Multi Purpose Grease" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-2xl font-bold text-secondary mb-3">Multi Purpose Grease</h3>
+<p class="text-gray-600 mb-4">Versatile grease suitable for various industrial applications, providing reliable lubrication and protection.</p>
+<div class="mb-6">
+<div class="flex items-start mb-2">
+<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary text-sm"></i>
+</div>
+<p class="text-gray-700">Wide Application Range</p>
+</div>
+<div class="flex items-start mb-2">
+<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary text-sm"></i>
+</div>
+<p class="text-gray-700">Good Mechanical Stability</p>
+</div>
+<div class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary text-sm"></i>
+</div>
+<p class="text-gray-700">Water Resistance</p>
+</div>
+</div>
+<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+View Details
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+</div>
+<!-- Lithium Complex Grease -->
+<div class="product-card bg-white rounded-lg overflow-hidden shadow-lg greases">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Lithium%20complex%20grease%20in%20industrial%20packaging%2C%20premium%20technical%20lubricant%2C%20specialized%20grease%20formulation%2C%20industrial%20machinery%20components%2C%20clean%20manufacturing%20environment%2C%20quality%20testing%20laboratory%2C%20professional%20product%20photography&width=600&height=400&seq=13&orientation=landscape" alt="Lithium Complex Grease" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-2xl font-bold text-secondary mb-3">Lithium Complex Grease</h3>
+<p class="text-gray-600 mb-4">Premium lithium complex grease offering superior performance and extended service life in demanding conditions.</p>
+<div class="mb-6">
+<div class="flex items-start mb-2">
+<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary text-sm"></i>
+</div>
+<p class="text-gray-700">High Drop Point</p>
+</div>
+<div class="flex items-start mb-2">
+<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary text-sm"></i>
+</div>
+<p class="text-gray-700">Excellent Load Carrying</p>
+</div>
+<div class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary text-sm"></i>
+</div>
+<p class="text-gray-700">Shear Stability</p>
+</div>
+</div>
+<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+View Details
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+</div>
+`;
+function showTab(tabId) {
+tabButtons.forEach(button => {
+if (button.dataset.tab === tabId) {
+button.classList.add('bg-primary', 'text-white');
+button.classList.remove('text-secondary', 'hover:text-primary');
+} else {
+button.classList.remove('bg-primary', 'text-white');
+button.classList.add('text-secondary', 'hover:text-primary');
+}
+});
+const lubricatingOils = productGrid.querySelectorAll('.lubricating-oils');
+const greases = productGrid.querySelectorAll('.greases');
+const baseOils = productGrid.querySelectorAll('.base-oils');
+if (tabId === 'retail') {
+lubricatingOils.forEach(card => card.style.display = 'block');
+greases.forEach(card => card.style.display = 'none');
+baseOils.forEach(card => card.style.display = 'none');
+if (!productGrid.querySelector('.greases')) {
+productGrid.insertAdjacentHTML('beforeend', greaseProducts);
+productGrid.querySelectorAll('.greases').forEach(card => card.style.display = 'none');
+}
+} else if (tabId === 'bulk') {
+lubricatingOils.forEach(card => card.style.display = 'none');
+baseOils.forEach(card => card.style.display = 'none');
+if (!productGrid.querySelector('.greases')) {
+productGrid.insertAdjacentHTML('beforeend', greaseProducts);
+}
+productGrid.querySelectorAll('.greases').forEach(card => card.style.display = 'block');
+} else if (tabId === 'private') {
+lubricatingOils.forEach(card => card.style.display = 'none');
+greases.forEach(card => card.style.display = 'none');
+baseOils.forEach(card => card.style.display = 'block');
+document.querySelectorAll('.product-card').forEach(card => {
+const title = card.querySelector('h3').textContent;
+if (title.includes('Turbine Oils') || title.includes('Gear Box Oils')) {
+card.style.display = 'none';
+}
+});
+}
+}
+tabButtons.forEach(button => {
+button.addEventListener('click', () => {
+const tabId = button.dataset.tab;
+showTab(tabId);
+});
+});
+showTab(defaultTab);
+});
+</script>
+<script id="smoothScrollScript">
+document.addEventListener('DOMContentLoaded', function() {
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href');
+if (targetId === '#') return;
+const targetElement = document.querySelector(targetId);
+if (targetElement) {
+window.scrollTo({
+top: targetElement.offsetTop - 100,
+behavior: 'smooth'
+});
+}
+});
+});
+});
+</script>
+</body>
+</html>

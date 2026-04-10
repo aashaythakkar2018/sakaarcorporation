@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us - Saakar Group</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#DCA90A',secondary:'#422B0F'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Poppins', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Playfair Display', serif;
+}
+input:focus, textarea:focus, select:focus {
+outline: none;
+border-color: #DCA90A;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+.contact-header {
+background-image: linear-gradient(to right, rgba(255, 255, 255, 0.95) 40%, rgba(255, 255, 255, 0.7) 70%, rgba(255, 255, 255, 0.5) 100%), url('https://readdy.ai/api/search-image?query=Professional%2520corporate%2520office%2520environment%2520with%2520customer%2520service%2520representatives%2520at%2520desks%252C%2520modern%2520interior%2520design%252C%2520warm%2520lighting%252C%2520clean%2520and%2520organized%2520workspace%252C%2520business%2520professionals%2520in%2520formal%2520attire%252C%2520communication%2520technology%252C%2520professional%2520photography%252C%2520high-quality%2520corporate%2520image&width=1920&height=600&seq=11&orientation=landscape');
+background-size: cover;
+background-position: center right;
+}
+.custom-radio {
+display: flex;
+align-items: center;
+cursor: pointer;
+}
+.custom-radio input {
+position: absolute;
+opacity: 0;
+cursor: pointer;
+}
+.radio-mark {
+height: 20px;
+width: 20px;
+background-color: #fff;
+border: 2px solid #DCA90A;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.custom-radio input:checked ~ .radio-mark:after {
+content: "";
+display: block;
+width: 10px;
+height: 10px;
+background-color: #DCA90A;
+border-radius: 50%;
+}
+.custom-select {
+position: relative;
+}
+.custom-select select {
+appearance: none;
+-webkit-appearance: none;
+-moz-appearance: none;
+}
+.custom-select:after {
+content: "\ea4e";
+font-family: remixicon !important;
+position: absolute;
+right: 15px;
+top: 50%;
+transform: translateY(-50%);
+color: #DCA90A;
+pointer-events: none;
+}
+.custom-checkbox {
+display: flex;
+align-items: center;
+cursor: pointer;
+}
+.custom-checkbox input {
+position: absolute;
+opacity: 0;
+cursor: pointer;
+}
+.checkmark {
+height: 20px;
+width: 20px;
+background-color: #fff;
+border: 2px solid #DCA90A;
+border-radius: 4px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.custom-checkbox input:checked ~ .checkmark:after {
+content: "";
+display: block;
+width: 10px;
+height: 10px;
+background-color: #DCA90A;
+border-radius: 2px;
+}
+.custom-switch {
+position: relative;
+display: inline-block;
+width: 50px;
+height: 24px;
+}
+.custom-switch input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+.switch-slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #ccc;
+transition: .4s;
+border-radius: 24px;
+}
+.switch-slider:before {
+position: absolute;
+content: "";
+height: 18px;
+width: 18px;
+left: 3px;
+bottom: 3px;
+background-color: white;
+transition: .4s;
+border-radius: 50%;
+}
+input:checked + .switch-slider {
+background-color: #DCA90A;
+}
+input:checked + .switch-slider:before {
+transform: translateX(26px);
+}
+</style>
+</head>
+<body class="bg-white">
+<!-- Header Navigation -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+<div class="container mx-auto px-4 py-4">
+<div class="flex justify-between items-center">
+<a href="./index.html" class="flex items-center">
+<img src="https://static.readdy.ai/image/b262a2b76905a2198fef3b5c4022af50/1542ebb884d7cb77831744719bd6a32b.png" alt="Saakar Corporation" class="h-16 w-48">
+</a>
+<nav class="hidden md:flex space-x-8">
+<a href="./index.html" class="text-secondary hover:text-primary font-medium transition-colors">Home</a>
+<a href="./About-Us.html" class="text-secondary hover:text-primary font-medium transition-colors">About Us</a>
+<div class="relative">
+<button id="businessesDropdown" class="text-secondary hover:text-primary font-medium transition-colors flex items-center">
+Our Businesses
+<i class="ri-arrow-down-s-line ml-1 transition-transform duration-200"></i>
+</button>
+<div id="businessesMenu" class="hidden absolute top-full left-0 mt-2 w-64 bg-white shadow-lg rounded-lg border border-gray-200 z-50">
+<div class="py-2">
+<a href="#" class="flex items-center px-4 py-3 hover:bg-gray-50 transition-colors">
+<div class="w-8 h-8 flex items-center justify-center bg-primary bg-opacity-10 rounded mr-3">
+<i class="ri-building-line text-primary"></i>
+</div>
+<span class="text-secondary font-medium">Sakaar Corporation</span>
+</a>
+<a href="#" class="flex items-center px-4 py-3 hover:bg-gray-50 transition-colors">
+<div class="w-8 h-8 flex items-center justify-center bg-primary bg-opacity-10 rounded mr-3">
+<i class="ri-drop-line text-primary"></i>
+</div>
+<span class="text-secondary font-medium">Swastik Oil Company</span>
+</a>
+<a href="#" class="flex items-center px-4 py-3 hover:bg-gray-50 transition-colors">
+<div class="w-8 h-8 flex items-center justify-center bg-primary bg-opacity-10 rounded mr-3">
+<i class="ri-store-line text-primary"></i>
+</div>
+<span class="text-secondary font-medium">Kaymig Agencies</span>
+</a>
+</div>
+</div>
+</div>
+<a href="./Our-Strengths-Overview.html" class="text-secondary hover:text-primary font-medium transition-colors">Our Strengths</a>
+<a href="./Contact-Us.html" class="text-primary font-medium transition-colors">Contact</a>
+</nav>
+<div class="md:hidden w-6 h-6 flex items-center justify-center">
+<i class="ri-menu-line text-xl text-secondary"></i>
+</div>
+<div class="hidden md:flex items-center space-x-4">
+<a href="#contact-form" class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">Sales Enquiry</a>
+<a href="#contact-form" class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">Become a Vendor</a>
+</div>
+</div>
+</div>
+</header>
+<!-- Contact Header Section -->
+<section class="contact-header w-full h-[300px] flex items-center">
+<div class="container mx-auto px-4">
+<div class="max-w-2xl">
+<h1 class="text-4xl md:text-5xl font-bold text-secondary mb-4">Contact Us</h1>
+<p class="text-lg text-gray-700 mb-8">We're here to help and answer any questions you might have. We look forward to hearing from you.</p>
+</div>
+</div>
+</section>
+<!-- Main Contact Section -->
+<section class="py-16">
+<div class="container mx-auto px-4">
+<div class="flex flex-col lg:flex-row gap-12">
+<!-- Contact Form -->
+<div class="lg:w-1/2" id="contact-form">
+<div class="bg-white shadow-lg rounded-lg p-8">
+<h2 class="text-3xl font-bold text-secondary mb-6">Get In Touch</h2>
+<p class="text-gray-600 mb-8">Fill out the form below, and our team will get back to you as soon as possible.</p>
+<form id="contactForm">
+<div class="space-y-6">
+<!-- Full Name -->
+<div>
+<label for="fullName" class="block text-gray-700 font-medium mb-2">Full Name <span class="text-red-500">*</span></label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<i class="ri-user-line text-gray-400"></i>
+</div>
+<input type="text" id="fullName" name="fullName" class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded" placeholder="John Smith" required>
+</div>
+</div>
+<!-- Email -->
+<div>
+<label for="email" class="block text-gray-700 font-medium mb-2">Email Address <span class="text-red-500">*</span></label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<i class="ri-mail-line text-gray-400"></i>
+</div>
+<input type="email" id="email" name="email" class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded" placeholder="john.smith@example.com" required>
+</div>
+</div>
+<!-- Phone -->
+<div>
+<label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number <span class="text-red-500">*</span></label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<i class="ri-phone-line text-gray-400"></i>
+</div>
+<input type="tel" id="phone" name="phone" class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded" placeholder="+91 98765 43210" required>
+</div>
+</div>
+<!-- Company Name -->
+<div>
+<label for="company" class="block text-gray-700 font-medium mb-2">Company Name <span class="text-gray-400 text-sm font-normal">(Optional)</span></label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<i class="ri-building-line text-gray-400"></i>
+</div>
+<input type="text" id="company" name="company" class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded" placeholder="Your Company Ltd.">
+</div>
+</div>
+<!-- Subject -->
+<div>
+<label for="subject" class="block text-gray-700 font-medium mb-2">Subject <span class="text-red-500">*</span></label>
+<div class="custom-select">
+<select id="subject" name="subject" class="w-full pl-4 pr-10 py-3 border border-gray-300 rounded text-gray-700" required>
+<option value="" disabled selected>Select a subject</option>
+<option value="sales">Sales Inquiry</option>
+<option value="vendor">Vendor Registration</option>
+<option value="general">General Query</option>
+</select>
+</div>
+</div>
+<!-- Companies Interest -->
+<div>
+<label class="block text-gray-700 font-medium mb-3">Which company are you interested in? <span class="text-red-500">*</span></label>
+<div class="space-y-3">
+<label class="custom-checkbox">
+<input type="checkbox" name="companies" value="Sakaar Corporation">
+<span class="checkmark"></span>
+<span class="ml-3 text-gray-700">Sakaar Corporation</span>
+</label>
+<label class="custom-checkbox">
+<input type="checkbox" name="companies" value="Kaymig Agency">
+<span class="checkmark"></span>
+<span class="ml-3 text-gray-700">Kaymig Agency</span>
+</label>
+<label class="custom-checkbox">
+<input type="checkbox" name="companies" value="Swastik Oil Company">
+<span class="checkmark"></span>
+<span class="ml-3 text-gray-700">Swastik Oil Company</span>
+</label>
+</div>
+<div id="companiesError" class="hidden text-red-500 text-sm mt-2">Please select at least one company.</div>
+</div>
+<!-- Message -->
+<div>
+<label for="message" class="block text-gray-700 font-medium mb-2">Message <span class="text-red-500">*</span></label>
+<div class="relative">
+<textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded" placeholder="Please provide details about your inquiry..." required></textarea>
+</div>
+</div>
+<div id="formMessage" class="hidden text-center py-3 rounded"></div>
+<!-- Submit Button -->
+<button type="submit" class="bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap w-full flex items-center justify-center">
+<span>Submit Message</span>
+<i class="ri-send-plane-line ml-2"></i>
+</button>
+</div>
+</form>
+</div>
+</div>
+<!-- Contact Information -->
+<div class="lg:w-1/2">
+<div class="bg-gray-50 rounded-lg p-8 h-full">
+<h2 class="text-3xl font-bold text-secondary mb-6">Contact Information</h2>
+<p class="text-gray-600 mb-8">We're always ready to assist you. Reach out to us through any of the following channels.</p>
+<div class="space-y-8 mb-10">
+<!-- Group Address -->
+<div class="flex items-start">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4">
+<i class="ri-building-4-line text-primary text-xl"></i>
+</div>
+<div>
+<h4 class="font-bold text-secondary mb-1">Group Address</h4>
+<p class="text-gray-600">150, Sakaar Signature<br>Opp Kakadia Complex, Beside Axis bank,<br>Parle Point, Ghod Dod Road,<br>Surat - 395007</p>
+</div>
+</div>
+<!-- Sakaar Corporation -->
+<div class="flex items-start">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4">
+<i class="ri-map-pin-line text-primary text-xl"></i>
+</div>
+<div>
+<h4 class="font-bold text-secondary mb-1">Sakaar Corporation</h4>
+<p class="text-gray-600">150, Sakaar Signature<br>Opp Kakadia Complex, Beside Axis bank,<br>Parle Point, Ghod Dod Road,<br>Surat - 395007</p>
+<p class="text-gray-600 mt-1">Contact: +91 98257 87778</p>
+</div>
+</div>
+<!-- Swastik Oil Company -->
+<div class="flex items-start">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4">
+<i class="ri-map-pin-line text-primary text-xl"></i>
+</div>
+<div>
+<h4 class="font-bold text-secondary mb-1">Swastik Oil Company</h4>
+<p class="text-gray-600">519, Sachin GIDC, Road no. - 5,<br>Sachin, Surat - 394230</p>
+<p class="text-gray-600 mt-1">Contact: +91 98255 61300</p>
+</div>
+</div>
+<!-- Business Hours -->
+<div class="flex items-start">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4">
+<i class="ri-time-line text-primary text-xl"></i>
+</div>
+<div>
+<h4 class="font-bold text-secondary mb-1">Business Hours</h4>
+<p class="text-gray-600">Monday to Saturday: 10.00 am to 7.00 pm<br>Sunday: 10.00 am to 4.00 pm</p>
+<p class="text-gray-500 text-sm mt-1">All times are Indian Standard Time (IST)</p>
+</div>
+</div>
+</div>
+<!-- Social Media -->
+<div>
+<h4 class="font-bold text-secondary mb-4">Connect With Us</h4>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-primary bg-opacity-10 hover:bg-primary hover:text-white transition-colors">
+<i class="ri-linkedin-fill text-primary"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-primary bg-opacity-10 hover:bg-primary hover:text-white transition-colors">
+<i class="ri-twitter-fill text-primary"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-primary bg-opacity-10 hover:bg-primary hover:text-white transition-colors">
+<i class="ri-facebook-fill text-primary"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-primary bg-opacity-10 hover:bg-primary hover:text-white transition-colors">
+<i class="ri-instagram-fill text-primary"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-16 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Frequently Asked Questions</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Find answers to common questions about our services and partnerships.</p>
+<div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
+</div>
+<div class="max-w-3xl mx-auto">
+<div class="space-y-6">
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<button class="faq-toggle w-full px-6 py-4 text-left font-bold text-secondary flex justify-between items-center">
+<span>How can I become a vendor for Saakar Group?</span>
+<i class="ri-arrow-down-s-line text-primary text-2xl transition-transform"></i>
+</button>
+<div class="faq-content px-6 py-4 border-t border-gray-100 hidden">
+<p class="text-gray-600">To become a vendor, fill out the contact form on this page and select "Vendor Registration" as the subject. Our vendor relations team will review your application and contact you within 3-5 business days to discuss potential partnership opportunities.</p>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<button class="faq-toggle w-full px-6 py-4 text-left font-bold text-secondary flex justify-between items-center">
+<span>How can I apply for a job at Saakar Group?</span>
+<i class="ri-arrow-down-s-line text-primary text-2xl transition-transform"></i>
+</button>
+<div class="faq-content px-6 py-4 border-t border-gray-100 hidden">
+<p class="text-gray-600">For career opportunities, please visit our Careers page on the website. You can also email your resume to careers@saakargroup.com with the position you're interested in mentioned in the subject line. Our HR team reviews all applications and will contact qualified candidates for further discussion.</p>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<button class="faq-toggle w-full px-6 py-4 text-left font-bold text-secondary flex justify-between items-center">
+<span>How can I schedule a meeting with your business development team?</span>
+<i class="ri-arrow-down-s-line text-primary text-2xl transition-transform"></i>
+</button>
+<div class="faq-content px-6 py-4 border-t border-gray-100 hidden">
+<p class="text-gray-600">To schedule a meeting with our business development team, please fill out the contact form with your specific requirements and select "Sales Inquiry" as the subject. A team member will reach out to you within 48 hours to arrange a suitable time for a discussion either in person, via video conference, or phone call.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-secondary text-white pt-16 pb-8">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+<div>
+<h3 class="text-xl font-bold mb-6">About Saakar Group</h3>
+<p class="text-gray-300 mb-6">Saakar Group is a leading Indian conglomerate with diversified businesses across B2B solutions, distribution networks, and consumer products.</p>
+<div class="flex space-x-4">
+<a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-10 hover:bg-primary transition-colors">
+<i class="ri-linkedin-fill text-xs text-white"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-10 hover:bg-primary transition-colors">
+<i class="ri-twitter-fill text-xs text-white"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-10 hover:bg-primary transition-colors">
+<i class="ri-facebook-fill text-xs text-white"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-10 hover:bg-primary transition-colors">
+<i class="ri-instagram-fill text-xs text-white"></i>
+</a>
+</div>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-6">Our Companies</h3>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Saakar Corp</a></li>
+<li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Kaymig Agencies</a></li>
+<li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Swastik Oil Company</a></li>
+<li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Our Businesses</a></li>
+<li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Partner With Us</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-6">Quick Links</h3>
+<ul class="space-y-3">
+<li><a href="./About-Us.html" class="text-gray-300 hover:text-primary transition-colors">About Us</a></li>
+<li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Leadership Team</a></li>
+<li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Careers</a></li>
+<li><a href="#" class="text-gray-300 hover:text-primary transition-colors">News & Media</a></li>
+<li><a href="./Contact-Us.html" class="text-gray-300 hover:text-primary transition-colors">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-6">Newsletter</h3>
+<p class="text-gray-300 mb-4">Subscribe to our newsletter to receive updates and news.</p>
+<form class="mb-4">
+<div class="flex">
+<input type="email" placeholder="Your email address" class="px-4 py-2 w-full rounded-l border-none text-gray-800">
+<button type="submit" class="bg-primary text-white px-4 py-2 rounded-r hover:bg-opacity-90 transition-colors whitespace-nowrap">Subscribe</button>
+</div>
+</form>
+<p class="text-gray-400 text-sm">By subscribing, you agree to our Privacy Policy.</p>
+</div>
+</div>
+<div class="pt-8 border-t border-gray-700">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400 text-sm mb-4 md:mb-0">&copy; 2025 Saakar Group. All rights reserved.</p>
+<div class="flex space-x-6">
+<a href="#" class="text-gray-400 hover:text-primary text-sm transition-colors">Privacy Policy</a>
+<a href="#" class="text-gray-400 hover:text-primary text-sm transition-colors">Terms of Service</a>
+<a href="#" class="text-gray-400 hover:text-primary text-sm transition-colors">Cookie Policy</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// Sticky Header
+const header = document.querySelector('header');
+window.addEventListener('scroll', function() {
+if (window.scrollY > 100) {
+header.classList.add('shadow-md');
+} else {
+header.classList.remove('shadow-md');
+}
+});
+// Businesses Dropdown
+const businessesDropdown = document.getElementById('businessesDropdown');
+const businessesMenu = document.getElementById('businessesMenu');
+const dropdownIcon = businessesDropdown.querySelector('i');
+businessesDropdown.addEventListener('click', function(e) {
+e.preventDefault();
+const isHidden = businessesMenu.classList.contains('hidden');
+if (isHidden) {
+businessesMenu.classList.remove('hidden');
+dropdownIcon.style.transform = 'rotate(180deg)';
+} else {
+businessesMenu.classList.add('hidden');
+dropdownIcon.style.transform = 'rotate(0deg)';
+}
+});
+// Close dropdown when clicking outside
+document.addEventListener('click', function(e) {
+if (!businessesDropdown.contains(e.target) && !businessesMenu.contains(e.target)) {
+businessesMenu.classList.add('hidden');
+dropdownIcon.style.transform = 'rotate(0deg)';
+}
+});
+// Form Submission Handler
+const contactForm = document.getElementById('contactForm');
+const formMessage = document.getElementById('formMessage');
+contactForm.addEventListener('submit', function(e) {
+e.preventDefault();
+
+// Validate companies selection
+const companiesCheckboxes = document.querySelectorAll('input[name="companies"]:checked');
+const companiesError = document.getElementById('companiesError');
+
+if (companiesCheckboxes.length === 0) {
+companiesError.classList.remove('hidden');
+companiesError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+return;
+} else {
+companiesError.classList.add('hidden');
+}
+
+// Simulate form submission
+formMessage.textContent = 'Thank you for your message. We will contact you soon.';
+formMessage.classList.remove('hidden', 'bg-red-100', 'text-red-700');
+formMessage.classList.add('bg-green-100', 'text-green-700', 'p-4');
+// Reset form
+contactForm.reset();
+// Scroll to message
+formMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+});
+// FAQ Toggles
+const faqToggles = document.querySelectorAll('.faq-toggle');
+faqToggles.forEach(toggle => {
+toggle.addEventListener('click', function() {
+const content = this.nextElementSibling;
+const icon = this.querySelector('i');
+// Toggle content visibility
+if (content.classList.contains('hidden')) {
+content.classList.remove('hidden');
+icon.style.transform = 'rotate(180deg)';
+} else {
+content.classList.add('hidden');
+icon.style.transform = 'rotate(0)';
+}
+});
+});
+});
+</script>
+</body>
+</html>

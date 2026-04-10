@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sakaar Group - Leading Indian Conglomerate</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#DCA90A',secondary:'#422B0F'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Poppins', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Playfair Display', serif;
+}
+.hero-section {
+background-image: linear-gradient(to right, rgba(255, 255, 255, 0.95) 40%, rgba(255, 255, 255, 0.7) 60%, rgba(255, 255, 255, 0) 100%), url('https://readdy.ai/api/search-image?query=Professional%20corporate%20office%20building%20with%20modern%20architecture%2C%20glass%20facade%2C%20elegant%20entrance%2C%20lush%20landscaping%2C%20blue%20sky%2C%20professional%20photography%2C%20high-quality%20corporate%20image%2C%20clean%20lines%2C%20prestigious%20business%20district%2C%20soft%20natural%20lighting&width=1920&height=1080&seq=1&orientation=landscape');
+background-size: cover;
+background-position: center right;
+}
+.business-card {
+transition: all 0.3s ease;
+}
+.business-card:hover {
+transform: translateY(-10px);
+box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.team-card {
+transition: all 0.3s ease;
+}
+.team-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.team-card:hover .team-overlay {
+opacity: 1;
+}
+.team-overlay {
+opacity: 0;
+transition: all 0.3s ease;
+}
+input:focus, textarea:focus {
+outline: none;
+border-color: #DCA90A;
+}
+.custom-checkbox {
+display: flex;
+align-items: center;
+cursor: pointer;
+}
+.custom-checkbox input {
+position: absolute;
+opacity: 0;
+cursor: pointer;
+}
+.checkmark {
+height: 20px;
+width: 20px;
+background-color: #fff;
+border: 2px solid #DCA90A;
+border-radius: 4px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.custom-checkbox input:checked ~ .checkmark:after {
+content: "";
+display: block;
+width: 10px;
+height: 10px;
+background-color: #DCA90A;
+border-radius: 2px;
+}
+</style>
+</head>
+<body class="bg-white">
+<!-- Header Navigation -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+<div class="container mx-auto px-4 py-4">
+<div class="flex justify-between items-center">
+<a href="#" class="flex items-center">
+<img src="https://static.readdy.ai/image/b262a2b76905a2198fef3b5c4022af50/1542ebb884d7cb77831744719bd6a32b.png" alt="Sakaar Corporation" class="h-16 w-48">
+</a>
+<nav class="hidden md:flex space-x-8">
+<a href="./index.html" class="text-secondary hover:text-primary font-medium transition-colors">Home</a>
+<a href="./About-Us.html" class="text-secondary hover:text-primary font-medium transition-colors">About Us</a>
+<div class="relative" id="businessDropdown">
+<button class="text-secondary hover:text-primary font-medium transition-colors flex items-center" id="businessDropdownBtn">
+Our Businesses
+<i class="ri-arrow-down-s-line ml-1 transition-transform duration-300" id="dropdownArrow"></i>
+</button>
+<div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg opacity-0 invisible transition-all duration-300 z-50" id="dropdownMenu">
+<a href="./Saakar-Corp.html" class="flex items-center px-6 py-4 text-secondary hover:text-primary hover:bg-gray-50 transition-colors">
+<i class="ri-building-line mr-3 text-primary"></i>
+<span>Sakaar Corporation</span>
+</a>
+<a href="./Swastik-Oil-Company.html" class="flex items-center px-6 py-4 text-secondary hover:text-primary hover:bg-gray-50 transition-colors">
+<i class="ri-drop-line mr-3 text-primary"></i>
+<span>Swastik Oil Company</span>
+</a>
+<a href="./Kaymig-Agency.html" class="flex items-center px-6 py-4 text-secondary hover:text-primary hover:bg-gray-50 transition-colors">
+<i class="ri-store-2-line mr-3 text-primary"></i>
+<span>Kaymig Agencies</span>
+</a>
+</div>
+</div>
+<a href="./Our-Strengths-Overview.html" class="text-secondary hover:text-primary font-medium transition-colors">Our Strengths</a>
+<a href="./CSR.html" class="text-secondary hover:text-primary font-medium transition-colors">CSR</a>
+<a href="./Contact-Us.html" class="text-secondary hover:text-primary font-medium transition-colors">Contact</a>
+</nav>
+<div class="md:hidden w-6 h-6 flex items-center justify-center">
+<i class="ri-menu-line text-xl text-secondary"></i>
+</div>
+<div class="hidden md:flex items-center space-x-4">
+<a href="#contact" class="bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap text-sm w-[160px] text-center">Sales Enquiry</a>
+<a href="#contact" class="bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap text-sm w-[180px] text-center">Become a Vendor</a>
+</div>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="hero-section w-full h-[600px] flex items-center">
+<div class="container mx-auto px-4">
+<div class="max-w-2xl">
+<h1 class="text-4xl md:text-5xl font-bold text-secondary mb-4">Building Legacies, Crafting Futures</h1>
+<p class="text-lg text-gray-700 mb-8">Sakaar Group is a leading Indian conglomerate with diversified businesses across consumer centric Real Estate developments, B2B Industrial Fuels Solutions & Retail Gas distribution networks.</p>
+<div class="flex flex-wrap gap-4">
+<a href="./Our-Strengths-Overview.html" class="bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">Our Strengths</a>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section id="about" class="py-20 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-4xl md:text-5xl font-bold text-secondary mb-4">About Sakaar Group</h2>
+<div class="w-24 h-1 bg-primary mx-auto"></div>
+</div>
+<div class="flex flex-col md:flex-row gap-10 items-center">
+<div class="md:w-1/2">
+<img src="https://readdy.ai/api/search-image?query=Professional%20business%20meeting%20in%20a%20modern%20conference%20room%2C%20diverse%20executives%20discussing%20strategy%2C%20corporate%20environment%2C%20professional%20attire%2C%20business%20documents%20on%20table%2C%20collaborative%20atmosphere%2C%20natural%20lighting%2C%20professional%20photography&width=600&height=400&seq=2&orientation=landscape" alt="About Saakar Group" class="rounded-lg shadow-lg w-full h-auto object-cover">
+</div>
+<div class="md:w-1/2">
+<h3 class="text-3xl font-bold text-secondary mb-6">Our Legacy of Excellence</h3>
+<p class="text-lg text-gray-700 mb-6 leading-relaxed text-justify">Established since 1963, the industrial fuels and gas distribution vertical has grown from a small distribution business into a large trading and distribution business with a wide variety of petroleum products in liquid and gaseous forms spread across multiple industries. The new generation ventured into Real estate development vertical in 2013, giving birth to Sakaar Corporation. Since then, Sakaar Group has become a unique organisation which caters to the B2B segment in liquid fuels, B2C segment in gaseous fuels and makes thoughtfully crafted real estate developments fluffing the needs of diversified customer base. With operations spanning across multiple industries, we have established ourselves as a trusted partner for businesses and consumers alike.</p>
+<p class="text-lg text-gray-700 mb-6 leading-relaxed text-justify">Our journey is defined by our commitment to quality, innovation, and ethical business practices. We believe in creating sustainable value for all our stakeholders while contributing to the overall growth of the society.
+</p>
+<div class="grid grid-cols-2 gap-6">
+<div class="flex items-start">
+<div class="w-14 h-14 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-3">
+<i class="ri-award-line text-2xl text-primary"></i>
+</div>
+<div>
+<h4 class="text-3xl font-bold text-secondary"><span class="counter" data-target="60">0</span>+</h4>
+<p class="text-lg text-gray-600">Years of Excellence</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-14 h-14 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-3">
+<i class="ri-team-line text-2xl text-primary"></i>
+</div>
+<div>
+<h4 class="text-3xl font-bold text-secondary"><span class="counter" data-target="15">0</span>+</h4>
+<p class="text-lg text-gray-600">Industrial Sectors</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-14 h-14 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-3">
+<i class="ri-building-2-line text-2xl text-primary"></i>
+</div>
+<div>
+<h4 class="text-3xl font-bold text-secondary"><span class="counter" data-target="25000">0</span>+</h4>
+<p class="text-lg text-gray-600">Customers Across All verticles</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-14 h-14 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-3">
+<i class="ri-customer-service-2-line text-2xl text-primary"></i>
+</div>
+<div>
+<h4 class="text-3xl font-bold text-secondary"><span class="counter" data-target="500">0</span>+</h4>
+<p class="text-lg text-gray-600">Business Associates </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Businesses Section -->
+<section id="businesses" class="py-20">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Our Business Verticals</h2>
+<p class="text-base text-gray-600 max-w-2xl mx-auto">Discover our diversified portfolio of businesses that cater to various sectors of the Indian economy.</p>
+<div class="w-24 h-1 bg-primary mx-auto mt-4"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Saakar Corp -->
+<div class="business-card bg-white rounded-lg overflow-hidden shadow-lg">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Modern%20corporate%20office%20interior%20with%20business%20professionals%20in%20meeting%2C%20corporate%20environment%2C%20B2B%20solutions%20visualization%2C%20industrial%20services%20representation%2C%20professional%20photography%2C%20high-quality%20corporate%20image&width=400&height=300&seq=3&orientation=landscape" alt="Sakaar Corp" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-4">
+<i class="ri-building-line text-primary text-xl"></i>
+</div>
+<a href="./Saakar-Corp.html" class="flex items-center text-sm text-primary hover:text-opacity-80 transition-colors whitespace-nowrap">
+View More
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+<h3 class="text-xl font-bold text-secondary mb-2"><a href="./Saakar-Corp.html" class="hover:text-primary transition-colors">Sakaar Corporation</a></h3>
+<p class="text-gray-600 mb-4 text-justify">Our flagship company of Real estate developments is an epitome of anticipating & understanding human needs and transforming them into thoughtfully crafted structures. Our group has earned a reputation for delivering superior quality structures based on deep understanding of customer needs. Our diversified portfolio of projects spans across below categories</p>
+<ul class="mb-6 space-y-2">
+<li class="flex items-center">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<span class="text-sm text-gray-600">Commercial Developments</span>
+</li>
+<li class="flex items-center">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<span class="text-sm text-gray-600">Residential Land Plotting Developments</span>
+</li>
+<li class="flex items-center">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<span class="text-sm text-gray-600">Industrial Warehousing</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Swastik Oil Company -->
+<div class="business-card bg-white rounded-lg overflow-hidden shadow-lg">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Modern%20edible%20oil%20manufacturing%20facility%20with%20quality%20control%20processes%2C%20agricultural%20products%2C%20oil%20processing%20equipment%2C%20bottling%20line%2C%20agro-based%20products%2C%20professional%20photography%2C%20high-quality%20corporate%20image&width=400&height=300&seq=5&orientation=landscape" alt="Swastik Oil Company" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-4">
+<i class="ri-drop-line text-primary text-xl"></i>
+</div>
+<a href="./Swastik-Oil-Company.html" class="flex items-center text-sm text-primary hover:text-opacity-80 transition-colors whitespace-nowrap">
+View More
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+<h3 class="text-xl font-bold text-secondary mb-2"><a href="./Swastik-Oil-Company.html" class="hover:text-primary transition-colors">Swastik Oil Company</a></h3>
+<p class="text-gray-600 mb-4 text-justify">A leading player in catering to the Industrial Fuels requirements for the area of Surat City. Our efficient delivery services and authenticity of products have ensured strong client base from MSMEs to Public Limited Enterprises. Our primary products include</p>
+<ul class="mb-6 space-y-2">
+<li class="flex items-center">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<span class="text-sm text-gray-600">Industrial Lubricating Oils</span>
+</li>
+<li class="flex items-center">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<span class="text-sm text-gray-600">Industrial Greases</span>
+</li>
+<li class="flex items-center">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<span class="text-sm text-gray-600">Base Oils</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Kaymig Agencies -->
+<div class="business-card bg-white rounded-lg overflow-hidden shadow-lg">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Distribution%20warehouse%20with%20organized%20shelves%20of%20consumer%20goods%2C%20workers%20managing%20inventory%2C%20logistics%20operations%2C%20FMCG%20products%2C%20commercial%20partnerships%20visualization%2C%20professional%20photography%2C%20high-quality%20corporate%20image&width=400&height=300&seq=4&orientation=landscape" alt="Kaymig Agencies" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-4">
+<i class="ri-store-2-line text-primary text-xl"></i>
+</div>
+<a href="./Kaymig-Agency.html" class="flex items-center text-sm text-primary hover:text-opacity-80 transition-colors whitespace-nowrap">
+View More
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+<h3 class="text-xl font-bold text-secondary mb-2"><a href="./Kaymig-Agency.html" class="hover:text-primary transition-colors">Kaymig Agencies</a></h3>
+<p class="text-gray-600 mb-4 text-justify">A marvel of distribution network specializing in timely delivery of LPG gas bottles to the retail consumers. With the least amount of lead time and backlogs, our company has garnered a name for its efficiency and strong consumer relationships. Our primary category includes
+</p>
+<ul class="mb-6 space-y-2">
+<li class="flex items-center">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<span class="text-sm text-gray-600">Domestic distribution</span>
+</li>
+<li class="flex items-center">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-check-line text-primary"></i>
+</div>
+<span class="text-sm text-gray-600">Non – Domestic distribution</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us Section -->
+<section id="why-us" class="py-20 bg-secondary text-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Our strengths
+</h2>
+<p class="text-gray-300 max-w-2xl mx-auto">Our commitment to excellence and core values set us apart in the industry.</p>
+<div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+<div class="bg-white bg-opacity-5 p-6 rounded-lg">
+<div class="w-12 h-12 flex items-center justify-center bg-primary rounded-full mb-4">
+<i class="ri-shield-check-line text-white text-xl"></i>
+</div>
+<h3 class="text-xl font-bold mb-2">Trust & Reliability</h3>
+<p class="text-gray-300">Built on decades of trusted relationships with partners and customers.</p>
+</div>
+<div class="bg-white bg-opacity-5 p-6 rounded-lg">
+<div class="w-12 h-12 flex items-center justify-center bg-primary rounded-full mb-4">
+<i class="ri-medal-line text-white text-xl"></i>
+</div>
+<h3 class="text-xl font-bold mb-2">Quality Assurance</h3>
+<p class="text-gray-300">Rigorous quality control processes across all our business verticals.</p>
+</div>
+<div class="bg-white bg-opacity-5 p-6 rounded-lg">
+<div class="w-12 h-12 flex items-center justify-center bg-primary rounded-full mb-4">
+<i class="ri-team-line text-white text-xl"></i>
+</div>
+<h3 class="text-xl font-bold mb-2">Expert Team</h3>
+<p class="text-gray-300">Seasoned professionals with deep industry knowledge and expertise.</p>
+</div>
+<div class="bg-white bg-opacity-5 p-6 rounded-lg">
+<div class="w-12 h-12 flex items-center justify-center bg-primary rounded-full mb-4">
+<i class="ri-recycle-line text-white text-xl"></i>
+</div>
+<h3 class="text-xl font-bold mb-2">Transparency </h3>
+<p class="text-gray-300">Complete transparency with respect to business operations and financial transactions.</p>
+</div>
+</div>
+</div>
+<div>
+<div class="bg-white bg-opacity-5 p-8 rounded-lg">
+<h3 class="text-2xl font-bold mb-6">Our Core Values</h3>
+<div class="space-y-6">
+<div class="flex items-start">
+<div class="w-8 h-8 flex items-center justify-center bg-primary rounded-full mr-4 mt-1">
+<i class="ri-heart-line text-white"></i>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-1">Integrity</h4>
+<p class="text-gray-300">We conduct our business with the highest ethical standards and transparency.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-8 h-8 flex items-center justify-center bg-primary rounded-full mr-4 mt-1">
+<i class="ri-lightbulb-line text-white"></i>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-1">Innovation</h4>
+<p class="text-gray-300">We continuously seek new ways to improve and deliver better solutions.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-8 h-8 flex items-center justify-center bg-primary rounded-full mr-4 mt-1">
+<i class="ri-group-line text-white"></i>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-1">Collaboration</h4>
+<p class="text-gray-300">We believe in building strong partnerships with our business associates.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-8 h-8 flex items-center justify-center bg-primary rounded-full mr-4 mt-1">
+<i class="ri-award-line text-white"></i>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-1">Excellence</h4>
+<p class="text-gray-300">We strive for excellence in everything we do, from products to services.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Chairman's Vision Section -->
+<!-- Contact Section -->
+<section id="contact" class="py-20">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Get in Touch</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Interested in partnering with Sakaar Group? Reach out to us today.</p>
+<div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
+</div>
+<div class="flex flex-col lg:flex-row gap-12">
+<div class="lg:w-1/2">
+<div class="bg-white shadow-lg rounded-lg p-8">
+<h3 class="text-2xl font-bold text-secondary mb-6">Enquiry Form</h3>
+<form action="#" method="POST" id="vendorForm">
+<div class="space-y-6">
+<div>
+<label for="name" class="block text-gray-700 font-medium mb-2">Name</label>
+<input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary" placeholder="Your full name" required>
+</div>
+<div>
+<label for="contact_number" class="block text-gray-700 font-medium mb-2">Contact Number</label>
+<input type="tel" id="contact_number" name="contact_number" class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary" placeholder="+91 98765 43210" required>
+</div>
+<div>
+<label for="description" class="block text-gray-700 font-medium mb-2">Description</label>
+<textarea id="description" name="description" rows="4" maxlength="500" class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary resize-none" placeholder="Please describe your requirements"></textarea>
+<div class="text-right text-sm text-gray-500 mt-1">
+<span id="charCount">0</span>/500 characters
+</div>
+</div>
+<div id="formMessage" class="hidden text-center py-3 rounded"></div>
+<button type="submit" class="bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap w-full">Submit Enquiry</button>
+</div>
+</form>
+</div>
+</div>
+<div class="lg:w-1/2">
+<div class="bg-gray-50 rounded-lg p-8 h-full">
+<h3 class="text-2xl font-bold text-secondary mb-6">Contact Information</h3>
+<div class="space-y-8">
+<div class="flex items-start">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4">
+<i class="ri-map-pin-line text-primary text-xl"></i>
+</div>
+<div>
+<h4 class="font-bold text-secondary mb-1">Corporate Headquarters</h4>
+<p class="text-gray-600">150, Sakaar Signature<br>Opp Kakadia Complex, Beside Axis bank, Parle Point, Ghod Dod Road, Surat - 395007.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4">
+<i class="ri-phone-line text-primary text-xl"></i>
+</div>
+<div>
+<h4 class="font-bold text-secondary mb-1">Phone Numbers</h4>
+<p class="text-gray-600">+91 9825787778 (Sakaar Corporation)<br>+91 9825561300 (Swastik Oil Company)<br>+91 9913181410 (Kaymig Agency)</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4">
+<i class="ri-mail-line text-primary text-xl"></i>
+</div>
+<div>
+<h4 class="font-bold text-secondary mb-1">Email Addresses</h4>
+<p class="text-gray-600">sakaar.surat@gmail.com<br>swastikoil10@gmail.com<br>kaymigindane10@gmail.com</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4">
+<i class="ri-time-line text-primary text-xl"></i>
+</div>
+<div>
+<h4 class="font-bold text-secondary mb-1">Business Hours</h4>
+<p class="text-gray-600">Monday to Saturday: 10:00 AM to 7:00 PM<br>Sunday: 10:00 AM to 4:00 PM</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-secondary text-white pt-16 pb-8">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+<div class="md:col-span-1">
+<h3 class="text-xl font-bold mb-6">About Sakaar Group</h3>
+<p class="text-gray-300 mb-6">Sakaar Group is a leading Indian conglomerate with diversified businesses across consumer centric Real Estate developments, B2B Industrial Fuels Solutions & Retail Gas distribution networks.
+</p>
+<div class="flex space-x-4">
+<a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-10 hover:bg-primary transition-colors">
+<i class="ri-linkedin-fill text-xs text-white"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-10 hover:bg-primary transition-colors">
+<i class="ri-facebook-fill text-xs text-white"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-10 hover:bg-primary transition-colors">
+<i class="ri-instagram-fill text-xs text-white"></i>
+</a>
+</div>
+</div>
+<div class="md:col-span-1">
+<h3 class="text-xl font-bold mb-6">Our Companies</h3>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Sakaar Corp</a></li>
+<li><a href="./Kaymig-Agency.html" class="text-gray-300 hover:text-primary transition-colors">Kaymig Agencies</a></li>
+<li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Swastik Oil Company</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h3 class="text-xl font-bold mb-6">Quick Links</h3>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-300 hover:text-primary transition-colors">About Us</a></li>
+<li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Our Strengths</a></li>
+<li><a href="./CSR.html" class="text-gray-300 hover:text-primary transition-colors">CSR</a></li>
+<li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Contact Us</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-gray-700">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400 text-sm mb-4 md:mb-0">&copy; 2025 Sakaar Group. All rights reserved.</p>
+<div class="flex space-x-6">
+<a href="#" class="text-gray-400 hover:text-primary text-sm transition-colors">Privacy Policy</a>
+<a href="#" class="text-gray-400 hover:text-primary text-sm transition-colors">Terms of Service</a>
+<a href="#" class="text-gray-400 hover:text-primary text-sm transition-colors">Cookie Policy</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// Dropdown Toggle
+const businessDropdownBtn = document.getElementById('businessDropdownBtn');
+const dropdownMenu = document.getElementById('dropdownMenu');
+const dropdownArrow = document.getElementById('dropdownArrow');
+businessDropdownBtn.addEventListener('click', function(e) {
+e.stopPropagation();
+dropdownMenu.classList.toggle('opacity-0');
+dropdownMenu.classList.toggle('invisible');
+dropdownArrow.classList.toggle('rotate-180');
+});
+document.addEventListener('click', function(e) {
+if (!document.getElementById('businessDropdown').contains(e.target)) {
+dropdownMenu.classList.add('opacity-0', 'invisible');
+dropdownArrow.classList.remove('rotate-180');
+}
+});
+// Sticky Header
+const header = document.querySelector('header');
+window.addEventListener('scroll', function() {
+if (window.scrollY > 100) {
+header.classList.add('shadow-md');
+} else {
+header.classList.remove('shadow-md');
+}
+});
+// Counter Animation
+const counters = document.querySelectorAll('.counter');
+const speed = 200;
+const startCounting = (entries, observer) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+const counter = entry.target;
+const target = parseInt(counter.getAttribute('data-target'));
+let count = 0;
+const updateCount = () => {
+const increment = target / speed;
+if (count < target) {
+count += increment;
+counter.innerText = Math.floor(count);
+setTimeout(updateCount, 1);
+} else {
+counter.innerText = target;
+}
+};
+updateCount();
+observer.unobserve(counter);
+}
+});
+};
+const observer = new IntersectionObserver(startCounting, {
+threshold: 0.5
+});
+counters.forEach(counter => observer.observe(counter));
+// Custom Checkbox Functionality
+const checkboxes = document.querySelectorAll('.custom-checkbox input[type="checkbox"]');
+checkboxes.forEach(checkbox => {
+checkbox.addEventListener('change', function() {
+const checkmark = this.nextElementSibling;
+if (this.checked) {
+checkmark.classList.add('bg-primary', 'border-primary');
+} else {
+checkmark.classList.remove('bg-primary', 'border-primary');
+}
+});
+});
+// Character Counter
+document.addEventListener('DOMContentLoaded', function() {
+const textarea = document.getElementById('description');
+const charCount = document.getElementById('charCount');
+textarea.addEventListener('input', function() {
+const remaining = this.value.length;
+charCount.textContent = remaining;
+if (remaining > 500) {
+this.value = this.value.substring(0, 500);
+charCount.textContent = 500;
+}
+});
+});
+// Form Submission Handler
+const vendorForm = document.getElementById('vendorForm');
+const formMessage = document.getElementById('formMessage');
+vendorForm.addEventListener('submit', function(e) {
+e.preventDefault();
+const formData = new FormData(vendorForm);
+const messageDiv = document.getElementById('formMessage');
+fetch(vendorForm.action, {
+method: 'POST',
+body: new URLSearchParams(formData),
+headers: {
+'Content-Type': 'application/x-www-form-urlencoded',
+},
+})
+.then(response => {
+if (response.ok) {
+messageDiv.textContent = 'Thank you for your enquiry. We will contact you soon.';
+messageDiv.classList.remove('hidden', 'bg-red-100', 'text-red-700');
+messageDiv.classList.add('bg-green-100', 'text-green-700');
+vendorForm.reset();
+} else {
+throw new Error('Form submission failed');
+}
+})
+.catch(error => {
+messageDiv.textContent = 'An error occurred. Please try again later.';
+messageDiv.classList.remove('hidden', 'bg-green-100', 'text-green-700');
+messageDiv.classList.add('bg-red-100', 'text-red-700');
+});
+});
+});
+</script>
+</body>
+</html>

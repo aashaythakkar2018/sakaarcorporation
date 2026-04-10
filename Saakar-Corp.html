@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saakar Corp - B2B Solutions & Industrial Services</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#DCA90A',secondary:'#422B0F'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Poppins', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Playfair Display', serif;
+}
+.hero-section {
+background-image: linear-gradient(to right, rgba(66, 43, 15, 0.9) 0%, rgba(66, 43, 15, 0.8) 40%, rgba(66, 43, 15, 0.6) 60%, rgba(66, 43, 15, 0.4) 80%, rgba(66, 43, 15, 0.2) 100%), url('https://readdy.ai/api/search-image?query=Modern%2520industrial%2520facility%2520with%2520advanced%2520automation%2520equipment%252C%2520robotic%2520arms%252C%2520conveyor%2520systems%252C%2520engineers%2520monitoring%2520control%2520panels%252C%2520clean%2520manufacturing%2520environment%252C%2520high-tech%2520machinery%252C%2520blue-tinted%2520lighting%252C%2520professional%2520corporate%2520photography%252C%2520B2B%2520industrial%2520services%2520visualization&width=1920&height=1080&seq=101&orientation=landscape');
+background-size: cover;
+background-position: center right;
+}
+.service-card {
+transition: all 0.3s ease;
+}
+.service-card:hover {
+transform: translateY(-10px);
+box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.case-card {
+transition: all 0.3s ease;
+}
+.case-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.team-card {
+transition: all 0.3s ease;
+}
+.team-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.team-card:hover .team-overlay {
+opacity: 1;
+}
+.team-overlay {
+opacity: 0;
+transition: all 0.3s ease;
+}
+input:focus, textarea:focus {
+outline: none;
+border-color: #DCA90A;
+}
+.testimonial-card {
+transition: all 0.3s ease;
+}
+.testimonial-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+</style>
+</head>
+<body class="bg-white">
+<!-- Header Navigation -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+<div class="container mx-auto px-4 py-4">
+<div class="flex justify-between items-center">
+<a href="./index.html" class="flex items-center">
+<img src="https://static.readdy.ai/image/b262a2b76905a2198fef3b5c4022af50/c4c4532d24152b9b82e12812af395d8d.jpeg" alt="Saakar Corp Logo" class="h-16 w-48 object-contain">
+</a>
+<nav class="hidden md:flex space-x-8">
+<a href="./index.html" class="text-secondary hover:text-primary font-medium transition-colors">Home</a>
+<a href="./About-Us.html" class="text-secondary hover:text-primary font-medium transition-colors">About Us</a>
+<div class="relative group">
+<a href="./Our-Businesses.html" class="text-secondary hover:text-primary font-medium transition-colors flex items-center">
+Our Businesses
+<i class="ri-arrow-down-s-line ml-1"></i>
+</a>
+<div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg py-2 hidden group-hover:block">
+<a href="#" class="block px-4 py-2 text-secondary hover:bg-gray-50 hover:text-primary transition-colors">
+<div class="flex items-center">
+<i class="ri-building-line mr-3"></i>
+<span>Saakar Corp</span>
+</div>
+</a>
+<a href="#" class="block px-4 py-2 text-secondary hover:bg-gray-50 hover:text-primary transition-colors">
+<div class="flex items-center">
+<i class="ri-oil-line mr-3"></i>
+<span>Swastik Oil Company</span>
+</div>
+</a>
+<a href="#" class="block px-4 py-2 text-secondary hover:bg-gray-50 hover:text-primary transition-colors">
+<div class="flex items-center">
+<i class="ri-store-2-line mr-3"></i>
+<span>Kaymig Agencies</span>
+</div>
+</a>
+</div>
+</div>
+<a href="./Our-Strengths-Overview.html" class="text-secondary hover:text-primary font-medium transition-colors">Our Strengths</a>
+<a href="./Contact-Us.html" class="text-secondary hover:text-primary font-medium transition-colors">Contact</a>
+<a href="#" class="text-secondary hover:text-primary font-medium transition-colors">Back to Overview</a>
+</nav>
+<div class="md:hidden w-6 h-6 flex items-center justify-center">
+<i class="ri-menu-line text-xl text-secondary"></i>
+</div>
+<div class="hidden md:flex items-center space-x-4">
+<a href="#contact" class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">Contact Us</a>
+</div>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="hero-section w-full h-[600px] flex items-center">
+<div class="container mx-auto px-4">
+<div class="max-w-2xl text-white">
+<h1 class="text-4xl md:text-5xl font-bold mb-4">Saakar Corp</h1>
+<h2 class="text-xl md:text-2xl font-bold mb-6">Header Line to be mentioend here .....</h2>
+<div class="flex flex-wrap gap-4">
+<a href="#contact" class="bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">Get a Quote</a>
+<a href="#services" class="border-2 border-white text-white px-6 py-3 !rounded-button font-medium hover:bg-white hover:text-secondary transition-colors whitespace-nowrap">View Services</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Overview Section -->
+<section id="overview" class="py-20 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold text-secondary mb-4">Company Overview</h2>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">Delivering excellence in B2B solutions and industrial services since 1998.</p>
+<div class="w-24 h-1 bg-primary mx-auto mt-4"></div>
+</div>
+<div class="flex flex-col lg:flex-row gap-12 items-center">
+<div class="lg:w-1/2">
+<h3 class="text-3xl font-bold text-secondary mb-6">Our Legacy of Excellence
+</h3>
+<p class="text-lg text-gray-700 mb-6 leading-relaxed">At Sakaar Corporation, we look upon Real Estate as an Art: The Art of anticipating and addressing human needs and transforming them into beautiful structures.</p>
+<div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 mb-6">
+<h4 class="text-xl font-bold text-secondary mb-4">Core Values</h4>
+<div class="space-y-4">
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 mt-1">
+<i class="ri-check-line text-primary"></i>
+</div>
+<div>
+<h5 class="font-bold text-gray-800">Innovation</h5>
+<p class="text-gray-600">Constantly seeking new ways to solve complex business challenges.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 mt-1">
+<i class="ri-check-line text-primary"></i>
+</div>
+<div>
+<h5 class="font-bold text-gray-800">Excellence</h5>
+<p class="text-gray-600">Delivering superior quality in every project and service we provide.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 mt-1">
+<i class="ri-check-line text-primary"></i>
+</div>
+<div>
+<h5 class="font-bold text-gray-800">Integrity</h5>
+<p class="text-gray-600">Operating with transparency, honesty, and ethical business practices.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-8 ml-auto">
+<div class="flex items-start bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-3">
+<i class="ri-award-line text-xl text-primary"></i>
+</div>
+<div>
+<h4 class="text-2xl font-bold text-secondary">10+ Years</h4>
+<p class="text-base text-gray-600">of Excellence</p>
+</div>
+</div>
+<div class="flex items-start bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-3">
+<i class="ri-building-line text-xl text-primary"></i>
+</div>
+<div>
+<h4 class="text-2xl font-bold text-secondary">50,000+ sq. ft.</h4>
+<p class="text-base text-gray-600">of leased properties</p>
+</div>
+</div>
+<div class="flex items-start bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-3">
+<i class="ri-home-4-line text-xl text-primary"></i>
+</div>
+<div>
+<h4 class="text-2xl font-bold text-secondary">3,00,000+ sq. ft.</h4>
+<p class="text-base text-gray-600">of construction</p>
+</div>
+</div>
+<div class="flex items-start bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-3">
+<i class="ri-team-line text-xl text-primary"></i>
+</div>
+<div>
+<h4 class="text-2xl font-bold text-secondary">500+ partners</h4>
+<p class="text-base text-gray-600">in our network</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:w-1/2">
+<div class="space-y-6">
+<div class="rounded-lg overflow-hidden shadow-lg">
+<img src="https://readdy.ai/api/search-image?query=Modern%2520corporate%2520office%2520with%2520business%2520professionals%2520in%2520meeting%252C%2520discussing%2520strategy%2520over%2520digital%2520displays%252C%2520clean%2520contemporary%2520design%252C%2520glass%2520walls%252C%2520natural%2520lighting%252C%2520professional%2520corporate%2520environment%252C%2520high-quality%2520business%2520setting&width=600&height=400&seq=102&orientation=landscape" alt="Saakar Corp Office" class="w-full h-auto object-cover object-top">
+</div>
+<div class="rounded-lg overflow-hidden shadow-lg">
+<img src="https://readdy.ai/api/search-image?query=Modern%20industrial%20workspace%20with%20engineers%20and%20technicians%20collaborating%20on%20advanced%20manufacturing%20equipment%2C%20clean%20facility%2C%20high-tech%20machinery%2C%20professional%20industrial%20photography%2C%20bright%20lighting%2C%20quality%20control%20environment&width=600&height=400&seq=103&orientation=landscape" alt="Saakar Corp Manufacturing" class="w-full h-auto object-cover object-top">
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section id="properties" class="py-20">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold text-secondary mb-4">Our Projects</h2>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">Explore our diverse portfolio of premium properties across different categories</p>
+<div class="w-24 h-1 bg-primary mx-auto mt-4"></div>
+</div>
+<div class="flex justify-center mb-12">
+<div class="bg-white rounded-full p-1 shadow-md inline-flex">
+<button class="property-tab px-8 py-3 rounded-full text-gray-600 hover:text-secondary transition-colors whitespace-nowrap" data-category="commercial">Commercial</button>
+<button class="property-tab px-8 py-3 rounded-full text-gray-600 hover:text-secondary transition-colors whitespace-nowrap" data-category="residential">Residential</button>
+<button class="property-tab px-8 py-3 rounded-full text-primary bg-primary bg-opacity-10 whitespace-nowrap" data-category="industrial">Industrial</button>
+</div>
+</div>
+<div class="property-content" id="commercial-properties" style="display: none;">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-white rounded-lg overflow-hidden shadow-lg">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Modern%20office%20building%20exterior%20with%20glass%20facade%2C%20contemporary%20architecture%2C%20business%20district%2C%20professional%20commercial%20real%20estate%20photography%2C%20daytime%2C%20clear%20sky&width=400&height=300&seq=201&orientation=landscape" alt="Office Space" class="w-full h-full object-cover">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-secondary mb-2">Sakaar Textile House</h3>
+<p class="text-gray-600 mb-4">Modern office spaces with state-of-the-art facilities in prime locations.</p>
+<div class="flex items-center">
+<span class="text-primary font-medium">Starting from 2000 sq.ft</span>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-lg overflow-hidden shadow-lg">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Modern%20retail%20shopping%20mall%20interior%2C%20spacious%20walkways%2C%20glass%20storefronts%2C%20high%20ceiling%2C%20professional%20commercial%20real%20estate%20photography%2C%20bright%20lighting&width=400&height=300&seq=202&orientation=landscape" alt="Retail Space" class="w-full h-full object-cover">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-secondary mb-2">Sakaar Signature</h3>
+<p class="text-gray-600 mb-4">Strategic retail locations with high footfall and excellent visibility.</p>
+<div class="flex items-center justify-between">
+<span class="text-primary font-medium">Starting from 500 sq.ft</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="property-content" id="industrial-properties">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-white rounded-lg overflow-hidden shadow-lg">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Modern%20industrial%20warehouse%20exterior%2C%20large%20loading%20docks%2C%20clean%20facility%2C%20professional%20industrial%20real%20estate%20photography%2C%20daytime&width=400&height=300&seq=204&orientation=landscape" alt="Warehouse Space" class="w-full h-full object-cover">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-secondary mb-2">Sakaar 519</h3>
+<p class="text-gray-600 mb-4">Spacious warehouses with modern logistics infrastructure.</p>
+<div class="flex items-center">
+<span class="text-primary font-medium">10,000 - 50,000 sq.ft</span>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-lg overflow-hidden shadow-lg">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Modern%20manufacturing%20facility%2C%20clean%20factory%20floor%2C%20industrial%20equipment%2C%20professional%20industrial%20real%20estate%20photography%2C%20bright%20lighting&width=400&height=300&seq=205&orientation=landscape" alt="Manufacturing Space" class="w-full h-full object-cover">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-secondary mb-2">Sakaar 34/2</h3>
+<p class="text-gray-600 mb-4">Purpose-built facilities for manufacturing operations.</p>
+<div class="flex items-center justify-between">
+<span class="text-primary font-medium">20,000 - 100,000 sq.ft</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="property-content" id="residential-properties" style="display: none;">
+<div class="grid grid-cols-1 gap-8 max-w-2xl mx-auto">
+<div class="bg-white rounded-lg overflow-hidden shadow-lg">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Luxury%20apartment%20complex%2C%20modern%20residential%20building%2C%20landscaped%20gardens%2C%20professional%20real%20estate%20photography%2C%20daytime&width=400&height=300&seq=207&orientation=landscape" alt="Luxury Apartments" class="w-full h-full object-cover">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-secondary mb-2">Sakaar Ananta</h3>
+<p class="text-gray-600 mb-4">Premium residential apartments with world-class amenities.</p>
+<div class="flex items-center">
+<span class="text-primary font-medium">2, 3 & 4 BHK</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+const tabs = document.querySelectorAll('.property-tab');
+const contents = document.querySelectorAll('.property-content');
+tabs.forEach(tab => {
+tab.addEventListener('click', () => {
+const category = tab.getAttribute('data-category');
+// Update tab styles
+tabs.forEach(t => {
+t.classList.remove('bg-primary', 'bg-opacity-10', 'text-primary');
+t.classList.add('text-gray-600', 'hover:text-secondary');
+});
+tab.classList.remove('text-gray-600', 'hover:text-secondary');
+tab.classList.add('bg-primary', 'bg-opacity-10', 'text-primary');
+// Show/hide content
+contents.forEach(content => {
+if (content.id === `${category}-properties`) {
+content.style.display = 'block';
+} else {
+content.style.display = 'none';
+}
+});
+});
+});
+});
+</script>
+<!-- Performance Metrics Section -->
+<!-- Case Studies Section -->
+<!-- Testimonials Section -->
+<section class="py-20 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold text-secondary mb-4">Our Journey</h2>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">A timeline of our major milestones and achievements</p>
+<div class="w-24 h-1 bg-primary mx-auto mt-4"></div>
+</div>
+<div class="relative">
+<div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-primary bg-opacity-20"></div>
+<div class="space-y-16">
+<div class="relative">
+<div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-primary rounded-full"></div>
+<div class="ml-auto mr-[calc(50%+2rem)] md:mr-[calc(50%+4rem)] p-6 bg-white rounded-lg shadow-lg w-full md:w-[calc(50%-4rem)]">
+<h3 class="text-xl font-bold text-secondary">2024</h3>
+<p class="text-gray-600 mt-2">Completion of Sakaar 34/2</p>
+</div>
+</div>
+<div class="relative">
+<div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-primary rounded-full"></div>
+<div class="mr-auto ml-[calc(50%+2rem)] md:ml-[calc(50%+4rem)] p-6 bg-white rounded-lg shadow-lg w-full md:w-[calc(50%-4rem)]">
+<h3 class="text-xl font-bold text-secondary">2023</h3>
+<p class="text-gray-600 mt-2">Completion of Sakaar Ananta</p>
+</div>
+</div>
+<div class="relative">
+<div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-primary rounded-full"></div>
+<div class="ml-auto mr-[calc(50%+2rem)] md:mr-[calc(50%+4rem)] p-6 bg-white rounded-lg shadow-lg w-full md:w-[calc(50%-4rem)]">
+<h3 class="text-xl font-bold text-secondary">2019</h3>
+<p class="text-gray-600 mt-2">Completion of Sakaar 519</p>
+</div>
+</div>
+<div class="relative">
+<div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-primary rounded-full"></div>
+<div class="mr-auto ml-[calc(50%+2rem)] md:ml-[calc(50%+4rem)] p-6 bg-white rounded-lg shadow-lg w-full md:w-[calc(50%-4rem)]">
+<h3 class="text-xl font-bold text-secondary">2017</h3>
+<p class="text-gray-600 mt-2">Completion of Sakaar Signature</p>
+</div>
+</div>
+<div class="relative">
+<div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-primary rounded-full"></div>
+<div class="ml-auto mr-[calc(50%+2rem)] md:mr-[calc(50%+4rem)] p-6 bg-white rounded-lg shadow-lg w-full md:w-[calc(50%-4rem)]">
+<h3 class="text-xl font-bold text-secondary">2016</h3>
+<p class="text-gray-600 mt-2">Completion of Sakaar Textile House</p>
+</div>
+</div>
+<div class="relative">
+<div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-primary rounded-full"></div>
+<div class="mr-auto ml-[calc(50%+2rem)] md:ml-[calc(50%+4rem)] p-6 bg-white rounded-lg shadow-lg w-full md:w-[calc(50%-4rem)]">
+<h3 class="text-xl font-bold text-secondary">2013</h3>
+<p class="text-gray-600 mt-2">Establishment of Sakaar Corp</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold text-secondary mb-4">Get in Touch</h2>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">Interested in our services? Contact us today for a consultation.</p>
+<div class="w-24 h-1 bg-primary mx-auto mt-4"></div>
+</div>
+<div class="flex flex-col lg:flex-row gap-12">
+<div class="lg:w-1/2">
+<div class="bg-white shadow-lg rounded-lg p-8">
+<h3 class="text-2xl font-bold text-secondary mb-6">Request a Consultation</h3>
+<form>
+<div class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label for="name" class="block text-gray-700 font-medium mb-2">Full Name</label>
+<input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary" placeholder="Your name">
+</div>
+<div>
+<label for="company" class="block text-gray-700 font-medium mb-2">Company Name</label>
+<input type="text" id="company" class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary" placeholder="Your company">
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+<input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary" placeholder="Your email">
+</div>
+<div>
+<label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+<input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary" placeholder="Your phone">
+</div>
+</div>
+<div>
+<label for="service" class="block text-gray-700 font-medium mb-2">Service of Interest</label>
+<div class="relative">
+<select id="service" class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary appearance-none pr-8">
+<option value="" selected disabled>Select a service</option>
+<option value="automation">Industrial Automation</option>
+<option value="consulting">Corporate Consulting</option>
+<option value="solutions">Business Solutions</option>
+<option value="technology">Technology Integration</option>
+</select>
+<div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+<i class="ri-arrow-down-s-line text-gray-400"></i>
+</div>
+</div>
+</div>
+<div>
+<label for="message" class="block text-gray-700 font-medium mb-2">Your Message</label>
+<textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary" placeholder="Tell us about your project or requirements"></textarea>
+</div>
+<div class="flex items-center">
+<input type="checkbox" id="consent" class="mr-2">
+<label for="consent" class="text-gray-600 text-sm">I agree to receive communications from Saakar Corp.</label>
+</div>
+<button type="submit" class="bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap w-full">Submit Request</button>
+</div>
+</form>
+</div>
+</div>
+<div class="lg:w-1/2">
+<div class="bg-white rounded-lg p-8 shadow-lg mb-8">
+<h3 class="text-2xl font-bold text-secondary mb-6">Contact Information</h3>
+<div class="space-y-6">
+<div class="flex items-start">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4">
+<i class="ri-map-pin-line text-primary text-xl"></i>
+</div>
+<div>
+<h4 class="font-bold text-secondary mb-1">Corporate Headquarters</h4>
+<p class="text-gray-600">Saakar Corp Tower, 12th Floor,<br>Bandra Kurla Complex, Mumbai - 400051,<br>Maharashtra, India</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4">
+<i class="ri-phone-line text-primary text-xl"></i>
+</div>
+<div>
+<h4 class="font-bold text-secondary mb-1">Phone Numbers</h4>
+<p class="text-gray-600">+91 22 4567 8900 (Main Office)<br>+91 98765 43210 (Sales Inquiries)</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4">
+<i class="ri-mail-line text-primary text-xl"></i>
+</div>
+<div>
+<h4 class="font-bold text-secondary mb-1">Email Addresses</h4>
+<p class="text-gray-600">info@saakarcorp.com<br>sales@saakarcorp.com</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4">
+<i class="ri-time-line text-primary text-xl"></i>
+</div>
+<div>
+<h4 class="font-bold text-secondary mb-1">Business Hours</h4>
+<p class="text-gray-600">Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 1:00 PM<br>Sunday: Closed</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-secondary text-white pt-16 pb-8">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+<div>
+<h3 class="text-xl font-bold mb-6">About Sakaar Group</h3>
+<p class="text-gray-300 mb-8 leading-relaxed">Sakaar Group is a leading Indian conglomerate with diversified businesses across consumer centric Real Estate developments, B2B Industrial Fuels Solutions & Retail Gas distribution networks.</p>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded bg-white bg-opacity-10 hover:bg-primary transition-colors">
+<i class="ri-linkedin-fill text-sm text-white"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded bg-white bg-opacity-10 hover:bg-primary transition-colors">
+<i class="ri-facebook-fill text-sm text-white"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded bg-white bg-opacity-10 hover:bg-primary transition-colors">
+<i class="ri-instagram-fill text-sm text-white"></i>
+</a>
+</div>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-6">Our Companies</h3>
+<ul class="space-y-4">
+<li><a href="#" class="text-gray-300 hover:text-white transition-colors">Sakaar Corp</a></li>
+<li><a href="#" class="text-gray-300 hover:text-white transition-colors">Kaymig Agencies</a></li>
+<li><a href="#" class="text-gray-300 hover:text-white transition-colors">Swastik Oil Company</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-6">Quick Links</h3>
+<ul class="space-y-4">
+<li><a href="./About-Us.html" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+<li><a href="./Our-Strengths-Overview.html" class="text-gray-300 hover:text-white transition-colors">Our Strengths</a></li>
+<li><a href="#" class="text-gray-300 hover:text-white transition-colors">CSR</a></li>
+<li><a href="./Contact-Us.html" class="text-gray-300 hover:text-white transition-colors">Contact Us</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-gray-700">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400 text-sm mb-4 md:mb-0">&copy; 2025 Sakaar Group. All rights reserved.</p>
+<div class="flex space-x-8">
+<a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
+<a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>
+<a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Cookie Policy</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// Responsive charts
+window.addEventListener('resize', function() {
+});
+});
+</script>
+</body>
+</html>
