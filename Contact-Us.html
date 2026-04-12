@@ -190,9 +190,9 @@ Our Businesses
 <a href="./Our-Strengths-Overview.html" class="text-secondary hover:text-primary font-medium transition-colors">Our Strengths</a>
 <a href="./Contact-Us.html" class="text-primary font-medium transition-colors">Contact</a>
 </nav>
-<div class="md:hidden w-6 h-6 flex items-center justify-center">
-<i class="ri-menu-line text-xl text-secondary"></i>
-</div>
+<button class="md:hidden w-10 h-10 flex items-center justify-center" id="mobileMenuBtn" aria-label="Open menu">
+<i class="ri-menu-line text-2xl text-secondary"></i>
+</button>
 <div class="hidden md:flex items-center space-x-4">
 <a href="#contact-form" class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">Sales Enquiry</a>
 <a href="#contact-form" class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">Become a Vendor</a>
@@ -200,6 +200,49 @@ Our Businesses
 </div>
 </div>
 </header>
+<!-- Mobile Menu Overlay -->
+<div id="mobileMenu" class="fixed inset-0 z-[60] hidden">
+<div id="mobileMenuBackdrop" class="absolute inset-0 bg-black bg-opacity-50"></div>
+<div id="mobileMenuPanel" class="absolute top-0 right-0 w-[80%] max-w-[320px] h-full bg-white shadow-2xl transform translate-x-full transition-transform duration-300 overflow-y-auto">
+<div class="flex items-center justify-between p-4 border-b border-gray-100">
+<img src="https://static.readdy.ai/image/b262a2b76905a2198fef3b5c4022af50/1542ebb884d7cb77831744719bd6a32b.png" alt="Sakaar Corporation" class="h-10 w-auto">
+<button id="mobileMenuClose" class="w-10 h-10 flex items-center justify-center" aria-label="Close menu">
+<i class="ri-close-line text-2xl text-secondary"></i>
+</button>
+</div>
+<nav class="p-4">
+<a href="./index.html" class="block py-3 px-4 text-secondary hover:text-primary font-medium border-b border-gray-100">Home</a>
+<a href="./About-Us.html" class="block py-3 px-4 text-secondary hover:text-primary font-medium border-b border-gray-100">About Us</a>
+<div class="border-b border-gray-100">
+<button class="w-full flex items-center justify-between py-3 px-4 text-secondary hover:text-primary font-medium" id="mobileBusinessToggle">
+<span>Our Businesses</span>
+<i class="ri-arrow-down-s-line transition-transform duration-300" id="mobileBusinessArrow"></i>
+</button>
+<div class="hidden pl-4 pb-2" id="mobileBusinessSub">
+<a href="./Our-Businesses.html" class="flex items-center py-2 px-4 text-gray-600 hover:text-primary">
+<i class="ri-grid-line mr-3 text-primary"></i>Overview
+</a>
+<a href="./Saakar-Corp.html" class="flex items-center py-2 px-4 text-gray-600 hover:text-primary">
+<i class="ri-building-line mr-3 text-primary"></i>Sakaar Corporation
+</a>
+<a href="./Swastik-Oil-Company.html" class="flex items-center py-2 px-4 text-gray-600 hover:text-primary">
+<i class="ri-drop-line mr-3 text-primary"></i>Swastik Oil Company
+</a>
+<a href="./Kaymig-Agency.html" class="flex items-center py-2 px-4 text-gray-600 hover:text-primary">
+<i class="ri-store-2-line mr-3 text-primary"></i>Kaymig Agencies
+</a>
+</div>
+</div>
+<a href="./Our-Strengths-Overview.html" class="block py-3 px-4 text-secondary hover:text-primary font-medium border-b border-gray-100">Our Strengths</a>
+<a href="./CSR.html" class="block py-3 px-4 text-secondary hover:text-primary font-medium border-b border-gray-100">CSR</a>
+<a href="./Contact-Us.html" class="block py-3 px-4 text-secondary hover:text-primary font-medium border-b border-gray-100">Contact</a>
+</nav>
+<div class="p-4 space-y-3">
+<a href="./Contact-Us.html" class="block w-full bg-primary text-white text-center py-3 rounded-lg font-medium hover:bg-opacity-90 transition-colors">Sales Enquiry</a>
+<a href="./Contact-Us.html" class="block w-full border-2 border-primary text-primary text-center py-3 rounded-lg font-medium hover:bg-primary hover:text-white transition-colors">Become a Vendor</a>
+</div>
+</div>
+</div>
 <!-- Contact Header Section -->
 <section class="contact-header w-full h-[300px] flex items-center">
 <div class="container mx-auto px-4">
@@ -568,6 +611,36 @@ icon.style.transform = 'rotate(0)';
 });
 });
 });
+</script>
+<script>
+// Mobile Menu
+var mobileMenuBtn = document.getElementById('mobileMenuBtn');
+var mobileMenu = document.getElementById('mobileMenu');
+var mobileMenuClose = document.getElementById('mobileMenuClose');
+var mobileMenuBackdrop = document.getElementById('mobileMenuBackdrop');
+var mobileMenuPanel = document.getElementById('mobileMenuPanel');
+var mobileBusinessToggle = document.getElementById('mobileBusinessToggle');
+var mobileBusinessSub = document.getElementById('mobileBusinessSub');
+var mobileBusinessArrow = document.getElementById('mobileBusinessArrow');
+function openMobileMenu() {
+  mobileMenu.classList.remove('hidden');
+  setTimeout(function() { mobileMenuPanel.classList.remove('translate-x-full'); }, 10);
+  document.body.style.overflow = 'hidden';
+}
+function closeMobileMenu() {
+  mobileMenuPanel.classList.add('translate-x-full');
+  setTimeout(function() { mobileMenu.classList.add('hidden'); }, 300);
+  document.body.style.overflow = '';
+}
+if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', openMobileMenu);
+if (mobileMenuClose) mobileMenuClose.addEventListener('click', closeMobileMenu);
+if (mobileMenuBackdrop) mobileMenuBackdrop.addEventListener('click', closeMobileMenu);
+if (mobileBusinessToggle) {
+  mobileBusinessToggle.addEventListener('click', function() {
+    mobileBusinessSub.classList.toggle('hidden');
+    mobileBusinessArrow.classList.toggle('rotate-180');
+  });
+}
 </script>
 </body>
 </html>
