@@ -95,23 +95,23 @@ background-size: contain;
 <nav class="hidden lg:flex items-center space-x-8">
 <a href="./index.html" class="text-secondary hover:text-primary font-medium transition-colors">Home</a>
 <a href="./About-Us.html" class="text-primary font-medium transition-colors">About Us</a>
-<div class="relative group">
-<button class="text-secondary hover:text-primary font-medium transition-colors flex items-center">
+<div class="relative group" id="businessDropdown">
+<button class="text-secondary hover:text-primary font-medium transition-colors flex items-center" id="businessDropdownBtn">
 Our Businesses
-<i class="ri-arrow-down-s-line ml-1"></i>
+<i class="ri-arrow-down-s-line ml-1 transition-transform duration-300" id="dropdownArrow"></i>
 </button>
-<div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-<a href="/saakar-corp" class="flex items-center px-4 py-3 text-secondary hover:text-primary hover:bg-gray-50">
-<i class="ri-building-line mr-3"></i>
-Saakar Corp
+<div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50" id="dropdownMenu">
+<a href="./Saakar-Corp.html" class="flex items-center px-6 py-4 text-secondary hover:text-primary hover:bg-gray-50 transition-colors">
+<i class="ri-building-line mr-3 text-primary"></i>
+<span>Sakaar Corporation</span>
 </a>
-<a href="/swastik-oil-company" class="flex items-center px-4 py-3 text-secondary hover:text-primary hover:bg-gray-50">
-<i class="ri-oil-line mr-3"></i>
-Swastik Oil Company
+<a href="./Swastik-Oil-Company.html" class="flex items-center px-6 py-4 text-secondary hover:text-primary hover:bg-gray-50 transition-colors">
+<i class="ri-drop-line mr-3 text-primary"></i>
+<span>Swastik Oil Company</span>
 </a>
-<a href="/kaymig-agencies" class="flex items-center px-4 py-3 text-secondary hover:text-primary hover:bg-gray-50">
-<i class="ri-store-2-line mr-3"></i>
-Kaymig Agencies
+<a href="./Kaymig-Agency.html" class="flex items-center px-6 py-4 text-secondary hover:text-primary hover:bg-gray-50 transition-colors">
+<i class="ri-store-2-line mr-3 text-primary"></i>
+<span>Kaymig Agencies</span>
 </a>
 </div>
 </div>
@@ -210,11 +210,11 @@ Our journey is defined by our commitment to quality, innovation, and ethical bus
 <div class="relative">
 <img src="https://readdy.ai/api/search-image?query=Professional%20portrait%20of%20a%20distinguished%20Indian%20business%20chairman%20in%20his%2060s%2C%20wearing%20a%20formal%20navy%20blue%20suit%2C%20confident%20pose%2C%20warm%20smile%2C%20office%20setting%2C%20professional%20corporate%20headshot%2C%20high-end%20photography&width=400&height=500&seq=1&orientation=portrait" alt="Chairman Portrait" class="w-full rounded-lg shadow-xl">
 <div class="absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-white px-8 py-3 rounded-full shadow-lg">
-<h4 class="text-xl font-bold text-secondary whitespace-nowrap">Mr. Rajesh Agarwal</h4>
+<h4 class="text-xl font-bold text-secondary whitespace-nowrap">Shrivas B. Gheewala</h4>
 </div>
 </div>
 <div class="text-center mt-10">
-<p class="text-primary font-medium">Chairman & Founder</p>
+<p class="text-primary font-medium">Chairman</p>
 <p class="text-gray-600">Sakaar Group</p>
 </div>
 </div>
@@ -252,11 +252,11 @@ In today's dynamic business environment, we remain focused on leveraging technol
 <div class="relative">
 <img src="https://readdy.ai/api/search-image?query=Professional%20portrait%20of%20a%20confident%20Indian%20business%20director%20in%20his%2040s%2C%20wearing%20a%20modern%20gray%20suit%2C%20approachable%20expression%2C%20contemporary%20office%20background%2C%20professional%20corporate%20headshot%2C%20high-end%20photography&width=400&height=500&seq=4&orientation=portrait" alt="Director Portrait" class="w-full rounded-lg shadow-xl">
 <div class="absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-white px-8 py-3 rounded-full shadow-lg">
-<h4 class="text-xl font-bold text-secondary whitespace-nowrap">Mr. Vikram Agarwal</h4>
+<h4 class="text-xl font-bold text-secondary whitespace-nowrap">Dhimant S. Gheewala</h4>
 </div>
 </div>
 <div class="text-center mt-10">
-<p class="text-primary font-medium">Director</p>
+<p class="text-primary font-medium">Managing Director</p>
 <p class="text-gray-600">Sakaar Group</p>
 </div>
 </div>
@@ -274,7 +274,7 @@ In today's dynamic business environment, we remain focused on leveraging technol
 </div>
 <div class="flex flex-col lg:flex-row gap-12">
 <div class="lg:w-1/2">
-<div class="bg-white p-10 rounded-lg shadow-lg h-full hover:shadow-xl transition-shadow duration-300">
+<div class="bg-white p-10 rounded-lg shadow-lg h-full hover:shadow-xl transition-shadow duration-300 border-t-4 border-primary">
 <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
 <i class="ri-eye-line text-primary text-2xl"></i>
 </div>
@@ -308,7 +308,7 @@ In today's dynamic business environment, we remain focused on leveraging technol
 </div>
 </div>
 <div class="lg:w-1/2">
-<div class="bg-white p-10 rounded-lg shadow-lg h-full hover:shadow-xl transition-shadow duration-300">
+<div class="bg-white p-10 rounded-lg shadow-lg h-full hover:shadow-xl transition-shadow duration-300 border-t-4 border-secondary">
 <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
 <i class="ri-heart-line text-primary text-2xl"></i>
 </div>

@@ -77,29 +77,23 @@ box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 
 <nav class="hidden md:flex space-x-8">
 <a href="./index.html" class="text-secondary hover:text-primary font-medium transition-colors">Home</a>
 <a href="./About-Us.html" class="text-secondary hover:text-primary font-medium transition-colors">About Us</a>
-<div class="relative group">
-<a href="./Our-Businesses.html" class="text-secondary hover:text-primary font-medium transition-colors flex items-center">
+<div class="relative group" id="businessDropdown">
+<button class="text-secondary hover:text-primary font-medium transition-colors flex items-center" id="businessDropdownBtn">
 Our Businesses
-<i class="ri-arrow-down-s-line ml-1"></i>
+<i class="ri-arrow-down-s-line ml-1 transition-transform duration-300" id="dropdownArrow"></i>
+</button>
+<div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50" id="dropdownMenu">
+<a href="./Saakar-Corp.html" class="flex items-center px-6 py-4 text-secondary hover:text-primary hover:bg-gray-50 transition-colors">
+<i class="ri-building-line mr-3 text-primary"></i>
+<span>Sakaar Corporation</span>
 </a>
-<div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg py-2 hidden group-hover:block">
-<a href="#" class="block px-4 py-2 text-secondary hover:bg-gray-50 hover:text-primary transition-colors">
-<div class="flex items-center">
-<i class="ri-building-line mr-3"></i>
-<span>Saakar Corp</span>
-</div>
-</a>
-<a href="#" class="block px-4 py-2 text-secondary hover:bg-gray-50 hover:text-primary transition-colors">
-<div class="flex items-center">
-<i class="ri-oil-line mr-3"></i>
+<a href="./Swastik-Oil-Company.html" class="flex items-center px-6 py-4 text-secondary hover:text-primary hover:bg-gray-50 transition-colors">
+<i class="ri-drop-line mr-3 text-primary"></i>
 <span>Swastik Oil Company</span>
-</div>
 </a>
-<a href="#" class="block px-4 py-2 text-secondary hover:bg-gray-50 hover:text-primary transition-colors">
-<div class="flex items-center">
-<i class="ri-store-2-line mr-3"></i>
+<a href="./Kaymig-Agency.html" class="flex items-center px-6 py-4 text-secondary hover:text-primary hover:bg-gray-50 transition-colors">
+<i class="ri-store-2-line mr-3 text-primary"></i>
 <span>Kaymig Agencies</span>
-</div>
 </a>
 </div>
 </div>

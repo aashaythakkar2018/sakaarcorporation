@@ -147,28 +147,22 @@ transform: translateX(26px);
 <nav class="hidden md:flex space-x-8">
 <a href="./index.html" class="text-secondary hover:text-primary font-medium transition-colors">Home</a>
 <a href="./About-Us.html" class="text-secondary hover:text-primary font-medium transition-colors">About Us</a>
-<div class="relative group">
-<a href="./Our-Businesses.html" class="text-secondary hover:text-primary font-medium transition-colors flex items-center">
+<div class="relative group" id="businessDropdown">
+<button class="text-secondary hover:text-primary font-medium transition-colors flex items-center" id="businessDropdownBtn">
 Our Businesses
-<i class="ri-arrow-down-s-line ml-1"></i>
+<i class="ri-arrow-down-s-line ml-1 transition-transform duration-300" id="dropdownArrow"></i>
+</button>
+<div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50" id="dropdownMenu">
+<a href="./Saakar-Corp.html" class="flex items-center px-6 py-4 text-secondary hover:text-primary hover:bg-gray-50 transition-colors">
+<i class="ri-building-line mr-3 text-primary"></i>
+<span>Sakaar Corporation</span>
 </a>
-<div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg py-2 hidden group-hover:block">
-<a href="./Saakar-Corp.html" class="flex items-center px-4 py-2 text-secondary hover:bg-gray-50">
-<div class="w-8 h-8 flex items-center justify-center">
-<i class="ri-building-2-line text-primary"></i>
-</div>
-<span>Sakaar Corp</span>
-</a>
-<a href="./Swastik-Oil-Company.html" class="flex items-center px-4 py-2 text-secondary hover:bg-gray-50">
-<div class="w-8 h-8 flex items-center justify-center">
-<i class="ri-drop-line text-primary"></i>
-</div>
+<a href="./Swastik-Oil-Company.html" class="flex items-center px-6 py-4 text-secondary hover:text-primary hover:bg-gray-50 transition-colors">
+<i class="ri-drop-line mr-3 text-primary"></i>
 <span>Swastik Oil Company</span>
 </a>
-<a href="./Kaymig-Agency.html" class="flex items-center px-4 py-2 text-secondary hover:bg-gray-50">
-<div class="w-8 h-8 flex items-center justify-center">
-<i class="ri-store-2-line text-primary"></i>
-</div>
+<a href="./Kaymig-Agency.html" class="flex items-center px-6 py-4 text-secondary hover:text-primary hover:bg-gray-50 transition-colors">
+<i class="ri-store-2-line mr-3 text-primary"></i>
 <span>Kaymig Agencies</span>
 </a>
 </div>
@@ -234,7 +228,7 @@ Our Businesses
 <div class="container mx-auto px-4 w-full">
 <div class="max-w-3xl text-white">
 <h1 class="text-4xl md:text-6xl font-bold mb-6">Swastik Oil Company</h1>
-<p class="text-xl mb-8 leading-relaxed">Premium edible oils crafted with precision, purity, and passion. Delivering exceptional quality from farm to table since 1992.</p>
+<p class="text-xl mb-8 leading-relaxed">Authorized Industrial Lube Distributor (ILD) of Hindustan Petroleum Corporation Limited (HPCL) for the area of Surat District & Surat City.</p>
 <div class="flex flex-wrap gap-4">
 <a href="#products" class="bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">Explore Our Products</a>
 <a href="#contact" class="bg-white text-secondary px-6 py-3 !rounded-button font-medium hover:bg-gray-100 transition-colors whitespace-nowrap">Business Inquiry</a>
@@ -288,8 +282,8 @@ Our Businesses
 <i class="ri-award-line text-primary text-xl"></i>
 </div>
 <div>
-<h4 class="font-bold text-secondary">30+ Years</h4>
-<p class="text-gray-600">of Excellence</p>
+<h4 class="font-bold text-secondary">20+</h4>
+<p class="text-gray-600">Years of Experience</p>
 </div>
 </div>
 <div class="flex items-center">
@@ -297,8 +291,8 @@ Our Businesses
 <i class="ri-global-line text-primary text-xl"></i>
 </div>
 <div>
-<h4 class="font-bold text-secondary">8 Countries</h4>
-<p class="text-gray-600">Export Markets</p>
+<h4 class="font-bold text-secondary">350+</h4>
+<p class="text-gray-600">Satisfied Clients</p>
 </div>
 </div>
 <div class="flex items-center">
@@ -306,8 +300,8 @@ Our Businesses
 <i class="ri-store-2-line text-primary text-xl"></i>
 </div>
 <div>
-<h4 class="font-bold text-secondary">12,000+</h4>
-<p class="text-gray-600">Retail Partners</p>
+<h4 class="font-bold text-secondary">15+</h4>
+<p class="text-gray-600">Industrial Segments</p>
 </div>
 </div>
 <div class="flex items-center">
@@ -315,8 +309,8 @@ Our Businesses
 <i class="ri-user-heart-line text-primary text-xl"></i>
 </div>
 <div>
-<h4 class="font-bold text-secondary">5 Million+</h4>
-<p class="text-gray-600">Happy Customers</p>
+<h4 class="font-bold text-secondary">5+</h4>
+<p class="text-gray-600">Distribution Vehicle Fleet</p>
 </div>
 </div>
 </div>
@@ -329,7 +323,7 @@ Our Businesses
 <div class="container mx-auto px-4">
 <div class="text-center mb-16">
 <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Our Product Portfolio</h2>
-<p class="text-lg text-gray-600 max-w-3xl mx-auto">Discover our range of premium edible oils crafted to enhance your culinary experience with purity and nutrition.</p>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">Discover our wide range of premium lubricating oils, industrial greases, and superior quality base oils designed to enhance production efficiency and improve machine life.</p>
 <div class="w-24 h-1 bg-primary mx-auto mt-4"></div>
 <div class="flex justify-center mt-8 bg-white rounded-full inline-flex mx-auto shadow-md p-1">
 <button class="px-8 py-2 rounded-full text-white bg-primary" data-tab="retail">Lubricating Oils</button>
@@ -645,7 +639,7 @@ View Details
 <img src="https://static.readdy.ai/image/b262a2b76905a2198fef3b5c4022af50/client-logos/batliboi.png" alt="Batliboi" class="h-16 w-auto">
 </div>
 <div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
-<img src="https://static.readdy.ai/image/b262a2b76905a2198fef3b5c4022af50/client-logos/avvl.png" alt="AVVL Agri Business" class="h-16 w-auto">
+<img src="https://static.readdy.ai/image/b262a2b76905a2198fef3b5c4022af50/client-logos/avvl.png" alt="AWL Agri Business" class="h-16 w-auto">
 </div>
 <div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
 <img src="https://static.readdy.ai/image/b262a2b76905a2198fef3b5c4022af50/client-logos/citizen.png" alt="Citizen" class="h-16 w-auto">

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Us - Saakar Group</title>
+<title>Contact Us - Sakaar Group</title>
 <script src="https://cdn.tailwindcss.com/3.4.16"></script>
 <script>tailwind.config={theme:{extend:{colors:{primary:'#DCA90A',secondary:'#422B0F'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -159,32 +159,24 @@ transform: translateX(26px);
 <nav class="hidden md:flex space-x-8">
 <a href="./index.html" class="text-secondary hover:text-primary font-medium transition-colors">Home</a>
 <a href="./About-Us.html" class="text-secondary hover:text-primary font-medium transition-colors">About Us</a>
-<div class="relative">
-<button id="businessesDropdown" class="text-secondary hover:text-primary font-medium transition-colors flex items-center">
+<div class="relative group" id="businessDropdown">
+<button class="text-secondary hover:text-primary font-medium transition-colors flex items-center" id="businessDropdownBtn">
 Our Businesses
-<i class="ri-arrow-down-s-line ml-1 transition-transform duration-200"></i>
+<i class="ri-arrow-down-s-line ml-1 transition-transform duration-300" id="dropdownArrow"></i>
 </button>
-<div id="businessesMenu" class="hidden absolute top-full left-0 mt-2 w-64 bg-white shadow-lg rounded-lg border border-gray-200 z-50">
-<div class="py-2">
-<a href="./Saakar-Corp.html" class="flex items-center px-4 py-3 hover:bg-gray-50 transition-colors">
-<div class="w-8 h-8 flex items-center justify-center bg-primary bg-opacity-10 rounded mr-3">
-<i class="ri-building-line text-primary"></i>
-</div>
-<span class="text-secondary font-medium">Sakaar Corporation</span>
+<div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50" id="dropdownMenu">
+<a href="./Saakar-Corp.html" class="flex items-center px-6 py-4 text-secondary hover:text-primary hover:bg-gray-50 transition-colors">
+<i class="ri-building-line mr-3 text-primary"></i>
+<span>Sakaar Corporation</span>
 </a>
-<a href="./Swastik-Oil-Company.html" class="flex items-center px-4 py-3 hover:bg-gray-50 transition-colors">
-<div class="w-8 h-8 flex items-center justify-center bg-primary bg-opacity-10 rounded mr-3">
-<i class="ri-drop-line text-primary"></i>
-</div>
-<span class="text-secondary font-medium">Swastik Oil Company</span>
+<a href="./Swastik-Oil-Company.html" class="flex items-center px-6 py-4 text-secondary hover:text-primary hover:bg-gray-50 transition-colors">
+<i class="ri-drop-line mr-3 text-primary"></i>
+<span>Swastik Oil Company</span>
 </a>
-<a href="./Kaymig-Agency.html" class="flex items-center px-4 py-3 hover:bg-gray-50 transition-colors">
-<div class="w-8 h-8 flex items-center justify-center bg-primary bg-opacity-10 rounded mr-3">
-<i class="ri-store-line text-primary"></i>
-</div>
-<span class="text-secondary font-medium">Kaymig Agencies</span>
+<a href="./Kaymig-Agency.html" class="flex items-center px-6 py-4 text-secondary hover:text-primary hover:bg-gray-50 transition-colors">
+<i class="ri-store-2-line mr-3 text-primary"></i>
+<span>Kaymig Agencies</span>
 </a>
-</div>
 </div>
 </div>
 <a href="./Our-Strengths-Overview.html" class="text-secondary hover:text-primary font-medium transition-colors">Our Strengths</a>
@@ -392,6 +384,17 @@ Our Businesses
 <p class="text-gray-600 mt-1">Contact: +91 98255 61300</p>
 </div>
 </div>
+<!-- Kaymig Agencies -->
+<div class="flex items-start">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4">
+<i class="ri-store-2-line text-primary text-xl"></i>
+</div>
+<div>
+<h4 class="font-bold text-secondary mb-1">Kaymig Agencies</h4>
+<p class="text-gray-600 mt-1">Contact: +91 99131 81410</p>
+<p class="text-gray-600 mt-1">Email: kaymigindane10@gmail.com</p>
+</div>
+</div>
 <!-- Business Hours -->
 <div class="flex items-start">
 <div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4">
@@ -404,77 +407,14 @@ Our Businesses
 </div>
 </div>
 </div>
-<!-- Social Media -->
-<div>
-<h4 class="font-bold text-secondary mb-4">Connect With Us</h4>
-<div class="flex space-x-4">
-<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-primary bg-opacity-10 hover:bg-primary hover:text-white transition-colors">
-<i class="ri-linkedin-fill text-primary"></i>
-</a>
-<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-primary bg-opacity-10 hover:bg-primary hover:text-white transition-colors">
-<i class="ri-twitter-fill text-primary"></i>
-</a>
-<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-primary bg-opacity-10 hover:bg-primary hover:text-white transition-colors">
-<i class="ri-facebook-fill text-primary"></i>
-</a>
-<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-primary bg-opacity-10 hover:bg-primary hover:text-white transition-colors">
-<i class="ri-instagram-fill text-primary"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- FAQ Section -->
-<section class="py-16 bg-gray-50">
-<div class="container mx-auto px-4">
-<div class="text-center mb-12">
-<h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Frequently Asked Questions</h2>
-<p class="text-gray-600 max-w-2xl mx-auto">Find answers to common questions about our services and partnerships.</p>
-<div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
-</div>
-<div class="max-w-3xl mx-auto">
-<div class="space-y-6">
-<div class="bg-white rounded-lg shadow-md overflow-hidden">
-<button class="faq-toggle w-full px-6 py-4 text-left font-bold text-secondary flex justify-between items-center">
-<span>How can I become a vendor for Saakar Group?</span>
-<i class="ri-arrow-down-s-line text-primary text-2xl transition-transform"></i>
-</button>
-<div class="faq-content px-6 py-4 border-t border-gray-100 hidden">
-<p class="text-gray-600">To become a vendor, fill out the contact form on this page and select "Vendor Registration" as the subject. Our vendor relations team will review your application and contact you within 3-5 business days to discuss potential partnership opportunities.</p>
-</div>
-</div>
-<div class="bg-white rounded-lg shadow-md overflow-hidden">
-<button class="faq-toggle w-full px-6 py-4 text-left font-bold text-secondary flex justify-between items-center">
-<span>How can I apply for a job at Saakar Group?</span>
-<i class="ri-arrow-down-s-line text-primary text-2xl transition-transform"></i>
-</button>
-<div class="faq-content px-6 py-4 border-t border-gray-100 hidden">
-<p class="text-gray-600">For career opportunities, please visit our Careers page on the website. You can also email your resume to careers@saakargroup.com with the position you're interested in mentioned in the subject line. Our HR team reviews all applications and will contact qualified candidates for further discussion.</p>
-</div>
-</div>
-<div class="bg-white rounded-lg shadow-md overflow-hidden">
-<button class="faq-toggle w-full px-6 py-4 text-left font-bold text-secondary flex justify-between items-center">
-<span>How can I schedule a meeting with your business development team?</span>
-<i class="ri-arrow-down-s-line text-primary text-2xl transition-transform"></i>
-</button>
-<div class="faq-content px-6 py-4 border-t border-gray-100 hidden">
-<p class="text-gray-600">To schedule a meeting with our business development team, please fill out the contact form with your specific requirements and select "Sales Inquiry" as the subject. A team member will reach out to you within 48 hours to arrange a suitable time for a discussion either in person, via video conference, or phone call.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
+
 <!-- Footer -->
 <footer class="bg-secondary text-white pt-16 pb-8">
 <div class="container mx-auto px-4">
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
 <div>
-<h3 class="text-xl font-bold mb-6">About Saakar Group</h3>
-<p class="text-gray-300 mb-6">Saakar Group is a leading Indian conglomerate with diversified businesses across B2B solutions, distribution networks, and consumer products.</p>
+<h3 class="text-xl font-bold mb-6">About Sakaar Group</h3>
+<p class="text-gray-300 mb-6">Sakaar Group is a leading Indian conglomerate with diversified businesses across B2B solutions, distribution networks, and consumer products.</p>
 <div class="flex space-x-4">
 <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white bg-opacity-10 hover:bg-primary transition-colors">
 <i class="ri-linkedin-fill text-xs text-white"></i>
@@ -493,7 +433,7 @@ Our Businesses
 <div>
 <h3 class="text-xl font-bold mb-6">Our Companies</h3>
 <ul class="space-y-3">
-<li><a href="./Saakar-Corp.html" class="text-gray-300 hover:text-primary transition-colors">Saakar Corp</a></li>
+<li><a href="./Saakar-Corp.html" class="text-gray-300 hover:text-primary transition-colors">Sakaar Corp</a></li>
 <li><a href="./Kaymig-Agency.html" class="text-gray-300 hover:text-primary transition-colors">Kaymig Agencies</a></li>
 <li><a href="./Swastik-Oil-Company.html" class="text-gray-300 hover:text-primary transition-colors">Swastik Oil Company</a></li>
 <li><a href="./Our-Businesses.html" class="text-gray-300 hover:text-primary transition-colors">Our Businesses</a></li>
@@ -524,7 +464,7 @@ Our Businesses
 </div>
 <div class="pt-8 border-t border-gray-700">
 <div class="flex flex-col md:flex-row justify-between items-center">
-<p class="text-gray-400 text-sm mb-4 md:mb-0">&copy; 2025 Saakar Group. All rights reserved.</p>
+<p class="text-gray-400 text-sm mb-4 md:mb-0">&copy; 2025 Sakaar Group. All rights reserved.</p>
 <div class="flex space-x-6">
 <a href="#" class="text-gray-400 hover:text-primary text-sm transition-colors">Privacy Policy</a>
 <a href="#" class="text-gray-400 hover:text-primary text-sm transition-colors">Terms of Service</a>

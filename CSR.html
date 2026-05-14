@@ -58,32 +58,26 @@ background: linear-gradient(135deg, #DCA90A 0%, #E6B82A 100%);
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="./index.html" class="text-gray-700 hover:text-primary transition-colors">Home</a>
                     <a href="./About-Us.html" class="text-gray-700 hover:text-primary transition-colors">About Us</a>
-                    <div class="relative group">
-                        <button class="text-gray-700 hover:text-primary transition-colors flex items-center">
-                            Our Businesses
-                            <i class="ri-arrow-down-s-line ml-1"></i>
-                        </button>
-                        <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg py-2 hidden group-hover:block border border-gray-100">
-                            <a href="./Saakar-Corp.html" class="block px-4 py-2 text-secondary hover:bg-gray-50 hover:text-primary transition-colors">
-                                <div class="flex items-center">
-                                    <i class="ri-building-line mr-3"></i>
-                                    <span>Saakar Corp</span>
-                                </div>
-                            </a>
-                            <a href="./Swastik-Oil-Company.html" class="block px-4 py-2 text-secondary hover:bg-gray-50 hover:text-primary transition-colors">
-                                <div class="flex items-center">
-                                    <i class="ri-oil-line mr-3"></i>
-                                    <span>Swastik Oil Company</span>
-                                </div>
-                            </a>
-                            <a href="./Kaymig-Agency.html" class="block px-4 py-2 text-secondary hover:bg-gray-50 hover:text-primary transition-colors">
-                                <div class="flex items-center">
-                                    <i class="ri-store-2-line mr-3"></i>
-                                    <span>Kaymig Agencies</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+                    <div class="relative group" id="businessDropdown">
+<button class="text-secondary hover:text-primary font-medium transition-colors flex items-center" id="businessDropdownBtn">
+Our Businesses
+<i class="ri-arrow-down-s-line ml-1 transition-transform duration-300" id="dropdownArrow"></i>
+</button>
+<div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50" id="dropdownMenu">
+<a href="./Saakar-Corp.html" class="flex items-center px-6 py-4 text-secondary hover:text-primary hover:bg-gray-50 transition-colors">
+<i class="ri-building-line mr-3 text-primary"></i>
+<span>Sakaar Corporation</span>
+</a>
+<a href="./Swastik-Oil-Company.html" class="flex items-center px-6 py-4 text-secondary hover:text-primary hover:bg-gray-50 transition-colors">
+<i class="ri-drop-line mr-3 text-primary"></i>
+<span>Swastik Oil Company</span>
+</a>
+<a href="./Kaymig-Agency.html" class="flex items-center px-6 py-4 text-secondary hover:text-primary hover:bg-gray-50 transition-colors">
+<i class="ri-store-2-line mr-3 text-primary"></i>
+<span>Kaymig Agencies</span>
+</a>
+</div>
+</div>
                     <a href="./Our-Strengths-Overview.html" class="text-gray-700 hover:text-primary transition-colors">Our Strengths</a>
                     <a href="./CSR.html" class="text-primary font-medium">CSR</a>
                     <a href="./Contact-Us.html" class="text-gray-700 hover:text-primary transition-colors">Contact</a>
