@@ -141,18 +141,18 @@ transform: translateX(26px);
 <header class="bg-white shadow-md sticky top-0 z-50">
 <div class="container mx-auto px-4 py-4">
 <div class="flex justify-between items-center">
-<a href="./index.html" class="h-16 w-48">
+<a href="#" class="flex items-center">
             <img src="./assets/logo.png" alt="Sakaar Corporation" class="h-12 w-auto object-contain">
 </a>
 <nav class="hidden md:flex space-x-8">
 <a href="./index.html" class="text-secondary hover:text-primary font-medium transition-colors">Home</a>
 <a href="./About-Us.html" class="text-secondary hover:text-primary font-medium transition-colors">About Us</a>
-<div class="relative group" id="businessDropdown">
+<div class="relative" id="businessDropdown">
 <button class="text-secondary hover:text-primary font-medium transition-colors flex items-center" id="businessDropdownBtn">
 Our Businesses
 <i class="ri-arrow-down-s-line ml-1 transition-transform duration-300" id="dropdownArrow"></i>
 </button>
-<div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50" id="dropdownMenu">
+<div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg opacity-0 invisible transition-all duration-300 z-50" id="dropdownMenu">
 <a href="./Sakaar-Corp.html" class="flex items-center px-6 py-4 text-secondary hover:text-primary hover:bg-gray-50 transition-colors">
 <i class="ri-building-line mr-3 text-primary"></i>
 <span>Sakaar Corporation</span>
@@ -175,8 +175,8 @@ Our Businesses
 <i class="ri-menu-line text-2xl text-secondary"></i>
 </button>
 <div class="hidden md:flex items-center space-x-4">
-<a href="#contact" class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">Business Inquiry</a>
-
+<a href="#contact" class="bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap text-sm w-[160px] text-center">Sales Enquiry</a>
+<a href="#contact" class="bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap text-sm w-[180px] text-center">Become a Vendor</a>
 </div>
 </div>
 </div>
@@ -192,7 +192,7 @@ Our Businesses
 </button>
 </div>
 <nav class="p-4">
-<a href="./index.html" class="block py-3 px-4 text-secondary hover:text-primary font-medium border-b border-gray-100">Home</a>
+<a href="./index.html" class="block py-3 px-4 text-primary font-medium border-b border-gray-100">Home</a>
 <a href="./About-Us.html" class="block py-3 px-4 text-secondary hover:text-primary font-medium border-b border-gray-100">About Us</a>
 <div class="border-b border-gray-100">
 <button class="w-full flex items-center justify-between py-3 px-4 text-secondary hover:text-primary font-medium" id="mobileBusinessToggle">
@@ -200,7 +200,6 @@ Our Businesses
 <i class="ri-arrow-down-s-line transition-transform duration-300" id="mobileBusinessArrow"></i>
 </button>
 <div class="hidden pl-4 pb-2" id="mobileBusinessSub">
-
 <a href="./Sakaar-Corp.html" class="flex items-center py-2 px-4 text-gray-600 hover:text-primary">
 <i class="ri-building-line mr-3 text-primary"></i>Sakaar Corporation
 </a>
