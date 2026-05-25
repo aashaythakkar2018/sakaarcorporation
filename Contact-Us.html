@@ -562,5 +562,27 @@ if (mobileBusinessToggle) {
   });
 }
 </script>
+<script id="businessDropdownScript">
+document.addEventListener('DOMContentLoaded', function() {
+  const businessDropdownBtn = document.getElementById('businessDropdownBtn');
+  const dropdownMenu = document.getElementById('dropdownMenu');
+  const dropdownArrow = document.getElementById('dropdownArrow');
+  if (businessDropdownBtn && dropdownMenu && dropdownArrow) {
+    businessDropdownBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      dropdownMenu.classList.toggle('opacity-0');
+      dropdownMenu.classList.toggle('invisible');
+      dropdownArrow.classList.toggle('rotate-180');
+    });
+    document.addEventListener('click', function(e) {
+      const dropdownContainer = document.getElementById('businessDropdown');
+      if (dropdownContainer && !dropdownContainer.contains(e.target)) {
+        dropdownMenu.classList.add('opacity-0', 'invisible');
+        dropdownArrow.classList.remove('rotate-180');
+      }
+    });
+  }
+});
+</script>
 </body>
 </html>

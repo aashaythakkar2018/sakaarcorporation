@@ -135,6 +135,19 @@ input:checked + .slider:before {
 transform: translateX(26px);
 }
 </style>
+<script>
+function handleLogoError(img) {
+  const domain = img.dataset.domain;
+  const stage = parseInt(img.dataset.stage || "1");
+  if (stage === 1 && domain) {
+    img.dataset.stage = "2";
+    img.src = `https://logos.hunter.io/${domain}`;
+  } else if (stage === 2 && domain) {
+    img.dataset.stage = "3";
+    img.src = `https://www.google.com/s2/favicons?domain=${domain}&sz=128`;
+  }
+}
+</script>
 </head>
 <body class="bg-white">
 <!-- Header Navigation -->
@@ -358,10 +371,7 @@ Our Businesses
 <p class="text-gray-700">Good Oxidation Stability</p>
 </div>
 </div>
-<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
-View Details
-<i class="ri-arrow-right-line ml-2"></i>
-</a>
+
 </div>
 </div>
 <!-- Base Oils - Group 2 -->
@@ -392,10 +402,7 @@ View Details
 <p class="text-gray-700">Excellent Stability</p>
 </div>
 </div>
-<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
-View Details
-<i class="ri-arrow-right-line ml-2"></i>
-</a>
+
 </div>
 </div>
 <!-- Bright Stock -->
@@ -426,181 +433,226 @@ View Details
 <p class="text-gray-700">Excellent Solvency</p>
 </div>
 </div>
-<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
-View Details
-<i class="ri-arrow-right-line ml-2"></i>
-</a>
+
 </div>
 </div>
-<!-- Hydraulic Oils -->
+<!-- Anti Wear Hydraulic Oils -->
 <div class="product-card bg-white rounded-lg overflow-hidden shadow-lg lubricating-oils">
 <div class="h-64 overflow-hidden">
-<img src="https://readdy.ai/api/search-image?query=Industrial%20hydraulic%20oil%20containers%20with%20professional%20packaging%2C%20clear%20amber%20fluid%2C%20technical%20grade%20lubricant%2C%20clean%20manufacturing%20environment%2C%20quality%20control%20testing%20equipment%2C%20industrial%20machinery%20background%2C%20professional%20product%20photography&width=600&height=400&seq=6&orientation=landscape" alt="Hydraulic Oils" class="w-full h-full object-cover object-top">
+<img src="https://readdy.ai/api/search-image?query=Modern%20industrial%20hydraulic%20system%20with%20blue%20metal%20framework%2C%20multiple%20pumps%20and%20control%20units%20arranged%20systematically%2C%20clean%20professional%20environment%2C%20technical%20equipment%20setup%2C%20high-quality%20industrial%20machinery&width=600&height=400&seq=20&orientation=landscape" alt="Anti Wear Hydraulic Oils" class="w-full h-full object-cover object-top">
 </div>
 <div class="p-6">
-<h3 class="text-2xl font-bold text-secondary mb-3">Hydraulic Oils</h3>
-<p class="text-gray-600 mb-4">High-performance hydraulic oils designed for optimal system efficiency and equipment protection.</p>
-<div class="mb-6">
-<div class="flex items-start mb-2">
+<h3 class="text-2xl font-bold text-secondary mb-3">Anti Wear Hydraulic Oils</h3>
+<p class="text-gray-600 mb-4">Includes additives for maximum protection in heavy-duty applications. Provides outstanding resistance to sludge formation and chemical stability.</p>
+<div class="mb-6 space-y-2">
+<div class="flex items-start">
 <div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
 <i class="ri-check-line text-primary text-sm"></i>
 </div>
-<p class="text-gray-700">Anti-Wear Properties</p>
-</div>
-<div class="flex items-start mb-2">
-<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
-<i class="ri-check-line text-primary text-sm"></i>
-</div>
-<p class="text-gray-700">Oxidation Stability</p>
+<p class="text-gray-700">HP ENKLO 32, 44, 68</p>
 </div>
 <div class="flex items-start">
 <div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
 <i class="ri-check-line text-primary text-sm"></i>
 </div>
-<p class="text-gray-700">Multi-Grade Options</p>
-</div>
-</div>
-<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
-View Details
-<i class="ri-arrow-right-line ml-2"></i>
-</a>
-</div>
-</div>
-<!-- Gear Box Oils -->
-<!-- Heat Transfer Oils -->
-<div class="product-card bg-white rounded-lg overflow-hidden shadow-lg lubricating-oils">
-<div class="h-64 overflow-hidden">
-<img src="https://readdy.ai/api/search-image?query=Industrial%20heat%20transfer%20oil%20system%2C%20thermal%20fluid%20containers%2C%20high%20temperature%20resistant%20oil%2C%20industrial%20heating%20equipment%2C%20professional%20manufacturing%20facility%2C%20technical%20grade%20thermal%20oil&width=600&height=400&seq=8&orientation=landscape" alt="Heat Transfer Oils" class="w-full h-full object-cover object-top">
-</div>
-<div class="p-6">
-<h3 class="text-2xl font-bold text-secondary mb-3">Heat Transfer Oils</h3>
-<p class="text-gray-600 mb-4">Specialized oils for efficient heat transfer in industrial processes.</p>
-<div class="mb-6">
-<div class="flex items-start mb-2">
-<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
-<i class="ri-check-line text-primary text-sm"></i>
-</div>
-<p class="text-gray-700">High Temperature Stability</p>
-</div>
-<div class="flex items-start mb-2">
-<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
-<i class="ri-check-line text-primary text-sm"></i>
-</div>
-<p class="text-gray-700">Extended Service Life</p>
+<p class="text-gray-700">HP ENKLO HLP 32, 44, 68</p>
 </div>
 <div class="flex items-start">
 <div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
 <i class="ri-check-line text-primary text-sm"></i>
 </div>
-<p class="text-gray-700">Excellent Heat Conductivity</p>
+<p class="text-gray-700">HP ENKLO HVLP 32, 44, 68</p>
 </div>
 </div>
-<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
-View Details
-<i class="ri-arrow-right-line ml-2"></i>
-</a>
+
 </div>
 </div>
-<!-- Specialty Oils -->
+<!-- Industrial Gearbox Oils -->
 <div class="product-card bg-white rounded-lg overflow-hidden shadow-lg lubricating-oils">
 <div class="h-64 overflow-hidden">
-<img src="https://readdy.ai/api/search-image?query=Specialized%20industrial%20lubricant%20containers%2C%20custom%20formulation%20oils%2C%20high-performance%20technical%20fluids%2C%20advanced%20manufacturing%20facility%2C%20precision%20equipment%2C%20quality%20testing%20laboratory&width=600&height=400&seq=14&orientation=landscape" alt="Specialty Oils" class="w-full h-full object-cover object-top">
+<img src="https://readdy.ai/api/search-image?query=Industrial%20gearbox%20system%20with%20precision%20machinery%2C%20professional%20grade%20equipment%2C%20technical%20installation%2C%20clean%20manufacturing%20environment&width=600&height=400&seq=23&orientation=landscape" alt="Industrial Gearbox Oils" class="w-full h-full object-cover object-top">
 </div>
 <div class="p-6">
-<h3 class="text-2xl font-bold text-secondary mb-3">Gear Box Oils</h3>
-<p class="text-gray-600 mb-4">Custom-formulated oils for specific industrial applications and requirements.</p>
-<div class="mb-6">
-<div class="flex items-start mb-2">
+<h3 class="text-2xl font-bold text-secondary mb-3">Industrial Gearbox Oils</h3>
+<p class="text-gray-600 mb-4">High-performance concentrate suitable for all types of gearboxes, including heavy duty applications. Ideal for both manual and automatic transmissions.</p>
+<div class="mb-6 space-y-2">
+<div class="flex items-start">
 <div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
 <i class="ri-check-line text-primary text-sm"></i>
 </div>
-<p class="text-gray-700">Custom Formulations</p>
-</div>
-<div class="flex items-start mb-2">
-<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
-<i class="ri-check-line text-primary text-sm"></i>
-</div>
-<p class="text-gray-700">Application-Specific Solutions</p>
+<p class="text-gray-700">HP PARTHAN EP 68, 100, 150, 220</p>
 </div>
 <div class="flex items-start">
 <div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
 <i class="ri-check-line text-primary text-sm"></i>
 </div>
-<p class="text-gray-700">Technical Support Available</p>
+<p class="text-gray-700">HP PARTHAN EP 320, 460, 680, 1000</p>
 </div>
 </div>
-<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
-View Details
-<i class="ri-arrow-right-line ml-2"></i>
-</a>
+
+</div>
+</div>
+<!-- Heat Transfer Fluids -->
+<div class="product-card bg-white rounded-lg overflow-hidden shadow-lg lubricating-oils">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Industrial%20heat%20transfer%20system%20with%20complex%20piping%2C%20thermal%20equipment%2C%20professional%20grade%20machinery%2C%20temperature%20control%20units%2C%20technical%20installation%2C%20clean%20industrial%20setting&width=600&height=400&seq=21&orientation=landscape" alt="Heat Transfer Fluids" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-2xl font-bold text-secondary mb-3">Heat Transfer Fluids</h3>
+<p class="text-gray-600 mb-4">A heat transfer fluid that takes part in heat transfer by serving as an intermediary in cooling on one side of a process. High boiling point and high heat capacity.</p>
+<div class="mb-6 space-y-2">
+<div class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary text-sm"></i>
+</div>
+<p class="text-gray-700">HP HYTHERM 500, 600 (MINERAL OIL)</p>
+</div>
+<div class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary text-sm"></i>
+</div>
+<p class="text-gray-700">HP HYTHERM 600 PLUS (SEMI SYNTHETIC OIL)</p>
+</div>
+<div class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary text-sm"></i>
+</div>
+<p class="text-gray-700">HP HYTHERM ALPHA (SYNTHETIC OIL)</p>
+</div>
+<div class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary text-sm"></i>
+</div>
+<p class="text-gray-700">HP HYTHERM GAMMA (SYNTHETIC OIL)</p>
+</div>
+</div>
+
+</div>
+</div>
+<!-- Transformer Oils -->
+<div class="product-card bg-white rounded-lg overflow-hidden shadow-lg lubricating-oils">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Industrial%20power%20transformer%20installation%2C%20high%20voltage%20electrical%20equipment%2C%20professional%20grade%20transformer%20unit%2C%20technical%20machinery%2C%20clean%20industrial%20environment&width=600&height=400&seq=22&orientation=landscape" alt="Transformer Oils" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-2xl font-bold text-secondary mb-3">Transformer Oils</h3>
+<p class="text-gray-600 mb-4">Transformer oil or insulating oil is an oil that is stable at high temperatures and has excellent electrical insulating properties. Used in oil-filled transformers and high-voltage equipment.</p>
+<div class="mb-6 space-y-2">
+<div class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary text-sm"></i>
+</div>
+<p class="text-gray-700">HP TRANSFORMER OIL (exceeds IS 335)</p>
+</div>
+</div>
+
 </div>
 </div>
 <!-- Turbine Oils -->
-<div class="product-card bg-white rounded-lg overflow-hidden shadow-lg">
+<div class="product-card bg-white rounded-lg overflow-hidden shadow-lg lubricating-oils">
 <div class="h-64 overflow-hidden">
-<img src="https://readdy.ai/api/search-image?query=Industrial%20turbine%20oil%20system%2C%20power%20generation%20equipment%2C%20premium%20lubricant%20containers%2C%20technical%20grade%20oil%2C%20professional%20power%20plant%20environment%2C%20quality%20control%20testing&width=600&height=400&seq=9&orientation=landscape" alt="Turbine Oils" class="w-full h-full object-cover object-top">
+<img src="https://readdy.ai/api/search-image?query=Industrial%20turbine%20system%2C%20power%20generation%20equipment%2C%20professional%20grade%20machinery%2C%20technical%20installation%2C%20clean%20manufacturing%20environment&width=600&height=400&seq=28&orientation=landscape" alt="Turbine Oils" class="w-full h-full object-cover object-top">
 </div>
 <div class="p-6">
 <h3 class="text-2xl font-bold text-secondary mb-3">Turbine Oils</h3>
-<p class="text-gray-600 mb-4">Premium turbine oils for reliable power generation equipment performance.</p>
-<div class="mb-6">
-<div class="flex items-start mb-2">
+<p class="text-gray-600 mb-4">Turbine oil formulations are designed simple, they are a mixture of base oil and following ingredients: Base oil, corrosion inhibitors, oxidation inhibitors, defoamants, and demulsifiers.</p>
+<div class="mb-6 space-y-2">
+<div class="flex items-start">
 <div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
 <i class="ri-check-line text-primary text-sm"></i>
 </div>
-<p class="text-gray-700">Superior Oxidation Resistance</p>
-</div>
-<div class="flex items-start mb-2">
-<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
-<i class="ri-check-line text-primary text-sm"></i>
-</div>
-<p class="text-gray-700">Water Separation Properties</p>
+<p class="text-gray-700">HP TURBINOL 32, 46, 68</p>
 </div>
 <div class="flex items-start">
 <div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
 <i class="ri-check-line text-primary text-sm"></i>
 </div>
-<p class="text-gray-700">Anti-Foam Characteristics</p>
+<p class="text-gray-700">HP TURBINOL XT 32, 46, 68</p>
 </div>
 </div>
-<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
-View Details
-<i class="ri-arrow-right-line ml-2"></i>
-</a>
+
 </div>
 </div>
-<!-- Specialty Oils -->
-<div class="product-card bg-white rounded-lg overflow-hidden shadow-lg">
+<!-- Refrigeration Compressor Oils -->
+<div class="product-card bg-white rounded-lg overflow-hidden shadow-lg lubricating-oils">
 <div class="h-64 overflow-hidden">
-<img src="https://readdy.ai/api/search-image?query=Specialized%20industrial%20lubricant%20containers%2C%20custom%20formulation%20oils%2C%20high-performance%20technical%20fluids%2C%20advanced%20manufacturing%20facility%2C%20precision%20equipment%2C%20quality%20testing%20laboratory&width=600&height=400&seq=10&orientation=landscape" alt="Specialty Oils" class="w-full h-full object-cover object-top">
+<img src="https://readdy.ai/api/search-image?query=Industrial%20refrigeration%20compressor%20system%2C%20professional%20cooling%20equipment%2C%20technical%20machinery%2C%20clean%20manufacturing%20environment&width=600&height=400&seq=25&orientation=landscape" alt="Refrigeration Compressor Oils" class="w-full h-full object-cover object-top">
 </div>
 <div class="p-6">
-<h3 class="text-2xl font-bold text-secondary mb-3">Gear Box Oils</h3>
-<p class="text-gray-600 mb-4">Custom-formulated oils for specific industrial applications and requirements.</p>
-<div class="mb-6">
-<div class="flex items-start mb-2">
+<h3 class="text-2xl font-bold text-secondary mb-3">Refrigeration Compressor Oils</h3>
+<p class="text-gray-600 mb-4">The lubricant not only must be able to lubricate all the parts inside the compressor but also handle the refrigerant with which it is in contact in refrigeration and air-conditioning systems.</p>
+<div class="mb-6 space-y-2">
+<div class="flex items-start">
 <div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
 <i class="ri-check-line text-primary text-sm"></i>
 </div>
-<p class="text-gray-700">Custom Formulations</p>
-</div>
-<div class="flex items-start mb-2">
-<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
-<i class="ri-check-line text-primary text-sm"></i>
-</div>
-<p class="text-gray-700">Application-Specific Solutions</p>
+<p class="text-gray-700">HP SEETUL N 68</p>
 </div>
 <div class="flex items-start">
 <div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
 <i class="ri-check-line text-primary text-sm"></i>
 </div>
-<p class="text-gray-700">Technical Support Available</p>
+<p class="text-gray-700">HP SEETUL N 68 (P)</p>
 </div>
 </div>
-<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
-View Details
-<i class="ri-arrow-right-line ml-2"></i>
-</a>
+
+</div>
+</div>
+<!-- Spindle Oils -->
+<div class="product-card bg-white rounded-lg overflow-hidden shadow-lg lubricating-oils">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=High-precision%20spindle%20machinery%2C%20industrial%20spindle%20system%2C%20technical%20equipment%2C%20clean%20manufacturing%20environment&width=600&height=400&seq=26&orientation=landscape" alt="Spindle Oils" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-2xl font-bold text-secondary mb-3">Spindle Oils</h3>
+<p class="text-gray-600 mb-4">Spindle Oil is anti-wear oil that is formulated for use in the lubrication of high speed spindle bearings in precision grinders and other machine tools that require the use of low viscosity oils.</p>
+<div class="mb-6 space-y-2">
+<div class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary text-sm"></i>
+</div>
+<p class="text-gray-700">HP SPINTEK 5, 10, 12, 15, 22</p>
+</div>
+</div>
+
+</div>
+</div>
+<!-- Cutting Fluid -->
+<div class="product-card bg-white rounded-lg overflow-hidden shadow-lg lubricating-oils">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Industrial%20cutting%20fluid%20application%2C%20metalworking%20machinery%2C%20precision%20cutting%20equipment%2C%20clean%20manufacturing%20environment&width=600&height=400&seq=29&orientation=landscape" alt="Cutting Fluid" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-2xl font-bold text-secondary mb-3">Cutting Fluid</h3>
+<p class="text-gray-600 mb-4">Cutting fluid is a type of coolant and lubricant designed specifically for metalworking processes, such as machining and stamping.</p>
+<div class="mb-6 space-y-2">
+<div class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary text-sm"></i>
+</div>
+<p class="text-gray-700">HP KOOLKUT 40, 70</p>
+</div>
+</div>
+
+</div>
+</div>
+<!-- Quenching Oils -->
+<div class="product-card bg-white rounded-lg overflow-hidden shadow-lg lubricating-oils">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Industrial%20metal%20quenching%20system%2C%20heat%20treatment%20equipment%2C%20technical%20machinery%2C%20clean%20manufacturing%20environment&width=600&height=400&seq=27&orientation=landscape" alt="Quenching Oils" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-2xl font-bold text-secondary mb-3">Quenching Oils</h3>
+<p class="text-gray-600 mb-4">The term quenching is used to refer to the controlled cooling of steel components in a fluid to give specified properties. The hardness and other physical properties obtained depend upon the composition of the steel.</p>
+<div class="mb-6 space-y-2">
+<div class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2 mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary text-sm"></i>
+</div>
+<p class="text-gray-700">HP METAQUENCH 39, 42, 40, 43, 44, 85, 86</p>
+</div>
+</div>
+
 </div>
 </div>
 </div>
@@ -615,229 +667,55 @@ View Details
 <div class="w-24 h-1 bg-primary mx-auto mt-4"></div>
 </div>
 <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 mb-12">
-<div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
-<img src="https://www.google.com/s2/favicons?domain=ongcindia.com&sz=128" alt="ONGC" class="h-16 w-auto object-contain">
+<div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow h-24">
+<img src="https://logo.clearbit.com/ongcindia.com" alt="ONGC" class="h-16 w-auto object-contain" data-domain="ongcindia.com" data-stage="1" onerror="handleLogoError(this)">
 </div>
-<div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
-<img src="https://www.google.com/s2/favicons?domain=adaniports.com&sz=128" alt="Adani Ports and Logistics" class="h-16 w-auto object-contain">
+<div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow h-24">
+<img src="https://logo.clearbit.com/adaniports.com" alt="Adani Ports" class="h-16 w-auto object-contain" data-domain="adaniports.com" data-stage="1" onerror="handleLogoError(this)">
 </div>
-<div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
-<img src="https://www.google.com/s2/favicons?domain=ultratechcement.com&sz=128" alt="UltraTech" class="h-16 w-auto object-contain">
+<div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow h-24">
+<img src="https://logo.clearbit.com/ultratechcement.com" alt="UltraTech" class="h-16 w-auto object-contain" data-domain="ultratechcement.com" data-stage="1" onerror="handleLogoError(this)">
 </div>
-<div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
-<img src="https://www.google.com/s2/favicons?domain=larsentoubro.com&sz=128" alt="Larsen & Toubro" class="h-16 w-auto object-contain">
+<div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow h-24">
+<img src="https://logo.clearbit.com/larsentoubro.com" alt="Larsen & Toubro" class="h-16 w-auto object-contain" data-domain="larsentoubro.com" data-stage="1" onerror="handleLogoError(this)">
 </div>
-<div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
-<img src="https://www.google.com/s2/favicons?domain=amns.in&sz=128" alt="AM/NS India" class="h-16 w-auto object-contain">
+<div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow h-24">
+<img src="https://logo.clearbit.com/amns.in" alt="AM/NS India" class="h-16 w-auto object-contain" data-domain="amns.in" data-stage="1" onerror="handleLogoError(this)">
 </div>
-<div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
-<img src="https://www.google.com/s2/favicons?domain=jcb.com&sz=128" alt="JCB" class="h-16 w-auto object-contain">
+<div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow h-24">
+<img src="https://logo.clearbit.com/jcb.com" alt="JCB" class="h-16 w-auto object-contain" data-domain="jcb.com" data-stage="1" onerror="handleLogoError(this)">
 </div>
-<div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
-<img src="https://www.google.com/s2/favicons?domain=batliboi.com&sz=128" alt="Batliboi" class="h-16 w-auto object-contain">
+<div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow h-24">
+<img src="https://logo.clearbit.com/batliboi.com" alt="Batliboi" class="h-16 w-auto object-contain" data-domain="batliboi.com" data-stage="1" onerror="handleLogoError(this)">
 </div>
-<div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
-<img src="https://www.google.com/s2/favicons?domain=adaniwilmar.com&sz=128" alt="AWL Agri Business" class="h-16 w-auto object-contain">
+<div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow h-24">
+<img src="https://logo.clearbit.com/adaniwilmar.com" alt="AWL Agri Business" class="h-16 w-auto object-contain" data-domain="adaniwilmar.com" data-stage="1" onerror="handleLogoError(this)">
 </div>
-<div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
-<img src="https://www.google.com/s2/favicons?domain=citizen.co.in&sz=128" alt="Citizen" class="h-16 w-auto object-contain">
+<div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow h-24">
+<img src="https://logo.clearbit.com/citizen.co.in" alt="Citizen" class="h-16 w-auto object-contain" data-domain="citizen.co.in" data-stage="1" onerror="handleLogoError(this)">
 </div>
-<div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
-<img src="https://www.google.com/s2/favicons?domain=weavetech.com&sz=128" alt="Weavetech" class="h-16 w-auto object-contain">
+<div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow h-24">
+<img src="https://logo.clearbit.com/weavetech.com" alt="Weavetech" class="h-16 w-auto object-contain" data-domain="weavetech.com" data-stage="1" onerror="handleLogoError(this)">
 </div>
-<div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
-<img src="https://www.google.com/s2/favicons?domain=bindalmill.com&sz=128" alt="Bindal" class="h-16 w-auto object-contain">
+<div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow h-24">
+<img src="https://logo.clearbit.com/bindalmill.com" alt="Bindal" class="h-16 w-auto object-contain" data-domain="bindalmill.com" data-stage="1" onerror="handleLogoError(this)">
 </div>
-<div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
-<img src="https://www.google.com/s2/favicons?domain=ctxls.com&sz=128" alt="CTX Lifesciences" class="h-16 w-auto object-contain">
+<div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow h-24">
+<img src="https://logo.clearbit.com/ctxls.com" alt="CTX Lifesciences" class="h-16 w-auto object-contain" data-domain="ctxls.com" data-stage="1" onerror="handleLogoError(this)">
 </div>
-<div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
-<img src="https://www.google.com/s2/favicons?domain=ascolite.in&sz=128" alt="Ascolite" class="h-16 w-auto object-contain">
+<div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow h-24">
+<img src="https://logo.clearbit.com/ascolite.in" alt="Ascolite" class="h-16 w-auto object-contain" data-domain="ascolite.in" data-stage="1" onerror="handleLogoError(this)">
 </div>
-<div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
-<img src="https://www.google.com/s2/favicons?domain=mahavirsynthesis.com&sz=128" alt="Mahavir Synthesis" class="h-16 w-auto object-contain">
+<div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow h-24">
+<img src="https://logo.clearbit.com/mahavirsynthesis.com" alt="Mahavir Synthesis" class="h-16 w-auto object-contain" data-domain="mahavirsynthesis.com" data-stage="1" onerror="handleLogoError(this)">
 </div>
-<div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
-<img src="https://www.google.com/s2/favicons?domain=ranjitbuildcon.in&sz=128" alt="Ranjit Buildcon Limited" class="h-16 w-auto object-contain">
+<div class="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow h-24">
+<img src="https://logo.clearbit.com/ranjitbuildcon.in" alt="Ranjit Buildcon" class="h-16 w-auto object-contain" data-domain="ranjitbuildcon.in" data-stage="1" onerror="handleLogoError(this)">
 </div>
 </div>
 </div>
 </section>
-</section>
-<!-- Customer Testimonials Section -->
 <!-- Contact Section -->
-<section class="py-20 bg-white">
-<div class="container mx-auto px-4">
-<div class="text-center mb-16">
-<h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Product Range</h2>
-<p class="text-lg text-gray-600 max-w-3xl mx-auto">Discover our comprehensive range of industrial oils and fluids engineered for optimal performance and reliability.</p>
-<div class="w-24 h-1 bg-primary mx-auto mt-4"></div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<!-- Anti Wear Hydraulic Oils -->
-<div class="bg-white rounded-lg shadow-lg overflow-hidden">
-<div class="h-64 overflow-hidden">
-<img src="https://readdy.ai/api/search-image?query=Modern%20industrial%20hydraulic%20system%20with%20blue%20metal%20framework%2C%20multiple%20pumps%20and%20control%20units%20arranged%20systematically%2C%20clean%20professional%20environment%2C%20technical%20equipment%20setup%2C%20high-quality%20industrial%20machinery&width=600&height=400&seq=20&orientation=landscape" alt="Anti Wear Hydraulic Oils" class="w-full h-full object-cover">
-</div>
-<div class="p-6">
-<h3 class="text-2xl font-bold text-secondary mb-3">Anti Wear Hydraulic Oils</h3>
-<p class="text-gray-600 mb-4">Includes additives for maximum protection in heavy-duty applications. Provides outstanding resistance to sludge formation and chemical stability.</p>
-<div class="space-y-2 mb-4">
-<p class="text-gray-700">• HP ENKLO 32, 44, 68</p>
-<p class="text-gray-700">• HP ENKLO HLP 32, 44, 68</p>
-<p class="text-gray-700">• HP ENKLO HVLP 32, 44, 68</p>
-</div>
-<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
-Learn More
-<i class="ri-arrow-right-line ml-2"></i>
-</a>
-</div>
-</div>
-<!-- Industrial Gearbox Oils -->
-<div class="bg-white rounded-lg shadow-lg overflow-hidden">
-<div class="h-64 overflow-hidden">
-<img src="https://readdy.ai/api/search-image?query=Industrial%20gearbox%20system%20with%20precision%20machinery%2C%20professional%20grade%20equipment%2C%20technical%20installation%2C%20clean%20manufacturing%20environment&width=600&height=400&seq=23&orientation=landscape" alt="Industrial Gearbox Oils" class="w-full h-full object-cover">
-</div>
-<div class="p-6">
-<h3 class="text-2xl font-bold text-secondary mb-3">Industrial Gearbox Oils</h3>
-<p class="text-gray-600 mb-4">High-performance concentrate suitable for all types of gearboxes, including heavy duty applications. Ideal for both manual and automatic transmissions.</p>
-<div class="space-y-2 mb-4">
-<p class="text-gray-700">• HP PARTHAN EP 68, 100, 150, 220</p>
-<p class="text-gray-700">• HP PARTHAN EP 320, 460, 680, 1000</p>
-</div>
-<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
-Learn More
-<i class="ri-arrow-right-line ml-2"></i>
-</a>
-</div>
-</div>
-<!-- Heat Transfer Fluids -->
-<div class="bg-white rounded-lg shadow-lg overflow-hidden">
-<div class="h-64 overflow-hidden">
-<img src="https://readdy.ai/api/search-image?query=Industrial%20heat%20transfer%20system%20with%20complex%20piping%2C%20thermal%20equipment%2C%20professional%20grade%20machinery%2C%20temperature%20control%20units%2C%20technical%20installation%2C%20clean%20industrial%20setting&width=600&height=400&seq=21&orientation=landscape" alt="Heat Transfer Fluids" class="w-full h-full object-cover">
-</div>
-<div class="p-6">
-<h3 class="text-2xl font-bold text-secondary mb-3">Heat Transfer Fluids</h3>
-<p class="text-gray-600 mb-4">A heat transfer fluid that takes part in heat transfer by serving as an intermediary in cooling on one side of a process. High boiling point and high heat capacity.</p>
-<div class="space-y-2 mb-4">
-<p class="text-gray-700">• HP HYTHERM 500, 600 (MINERAL OIL)</p>
-<p class="text-gray-700">• HP HYTHERM 600 PLUS (SEMI SYNTHETIC OIL)</p>
-<p class="text-gray-700">• HP HYTHERM ALPHA (SYNTHETIC OIL)</p>
-<p class="text-gray-700">• HP HYTHERM GAMMA (SYNTHETIC OIL)</p>
-</div>
-<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
-Learn More
-<i class="ri-arrow-right-line ml-2"></i>
-</a>
-</div>
-</div>
-<!-- Transformer Oils -->
-<div class="bg-white rounded-lg shadow-lg overflow-hidden">
-<div class="h-64 overflow-hidden">
-<img src="https://readdy.ai/api/search-image?query=Industrial%20power%20transformer%20installation%2C%20high%20voltage%20electrical%20equipment%2C%20professional%20grade%20transformer%20unit%2C%20technical%20machinery%2C%20clean%20industrial%20environment&width=600&height=400&seq=22&orientation=landscape" alt="Transformer Oils" class="w-full h-full object-cover">
-</div>
-<div class="p-6">
-<h3 class="text-2xl font-bold text-secondary mb-3">Transformer Oils</h3>
-<p class="text-gray-600 mb-4">Transformer oil or insulating oil is an oil that is stable at high temperatures and has excellent electrical insulating properties. Used in oil-filled transformers and high-voltage equipment.</p>
-<div class="space-y-2 mb-4">
-<p class="text-gray-700">• HP TRANSFORMER OIL (exceeds IS 335)</p>
-</div>
-<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
-Learn More
-<i class="ri-arrow-right-line ml-2"></i>
-</a>
-</div>
-</div>
-<!-- Turbine Oils -->
-<div class="bg-white rounded-lg shadow-lg overflow-hidden">
-<div class="h-64 overflow-hidden">
-<img src="https://readdy.ai/api/search-image?query=Industrial%20turbine%20system%2C%20power%20generation%20equipment%2C%20professional%20grade%20machinery%2C%20technical%20installation%2C%20clean%20manufacturing%20environment&width=600&height=400&seq=28&orientation=landscape" alt="Turbine Oils" class="w-full h-full object-cover">
-</div>
-<div class="p-6">
-<h3 class="text-2xl font-bold text-secondary mb-3">Turbine Oils</h3>
-<p class="text-gray-600 mb-4">Turbine oil formulations are designed simple, they are a mixture of base oil and following ingredients: Base oil, corrosion inhibitors, oxidation inhibitors, defoamants, and demulsifiers.</p>
-<div class="space-y-2 mb-4">
-<p class="text-gray-700">• HP TURBINOL 32, 46, 68</p>
-<p class="text-gray-700">• HP TURBINOL XT 32, 46, 68</p>
-</div>
-<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
-Learn More
-<i class="ri-arrow-right-line ml-2"></i>
-</a>
-</div>
-</div>
-<!-- Refrigeration Compressor Oils -->
-<div class="bg-white rounded-lg shadow-lg overflow-hidden">
-<div class="h-64 overflow-hidden">
-<img src="https://readdy.ai/api/search-image?query=Industrial%20refrigeration%20compressor%20system%2C%20professional%20cooling%20equipment%2C%20technical%20machinery%2C%20clean%20manufacturing%20environment&width=600&height=400&seq=25&orientation=landscape" alt="Refrigeration Compressor Oils" class="w-full h-full object-cover">
-</div>
-<div class="p-6">
-<h3 class="text-2xl font-bold text-secondary mb-3">Refrigeration Compressor Oils</h3>
-<p class="text-gray-600 mb-4">The lubricant not only must be able to lubricate all the parts inside the compressor but also handle the refrigerant with which it is in contact in refrigeration and air-conditioning systems.</p>
-<div class="space-y-2 mb-4">
-<p class="text-gray-700">• HP SEETUL N 68</p>
-<p class="text-gray-700">• HP SEETUL N 68 (P)</p>
-</div>
-<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
-Learn More
-<i class="ri-arrow-right-line ml-2"></i>
-</a>
-</div>
-</div>
-<!-- Spindle Oils -->
-<div class="bg-white rounded-lg shadow-lg overflow-hidden">
-<div class="h-64 overflow-hidden">
-<img src="https://readdy.ai/api/search-image?query=High-precision%20spindle%20machinery%2C%20industrial%20spindle%20system%2C%20technical%20equipment%2C%20clean%20manufacturing%20environment&width=600&height=400&seq=26&orientation=landscape" alt="Spindle Oils" class="w-full h-full object-cover">
-</div>
-<div class="p-6">
-<h3 class="text-2xl font-bold text-secondary mb-3">Spindle Oils</h3>
-<p class="text-gray-600 mb-4">Spindle Oil is anti-wear oil that is formulated for use in the lubrication of high speed spindle bearings in precision grinders and other machine tools that require the use of low viscosity oils.</p>
-<div class="space-y-2 mb-4">
-<p class="text-gray-700">• HP SPINTEK 5, 10, 12, 15, 22</p>
-</div>
-<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
-Learn More
-<i class="ri-arrow-right-line ml-2"></i>
-</a>
-</div>
-</div>
-<!-- Cutting Fluid -->
-<div class="bg-white rounded-lg shadow-lg overflow-hidden">
-<div class="h-64 overflow-hidden">
-<img src="https://readdy.ai/api/search-image?query=Industrial%20cutting%20fluid%20application%2C%20metalworking%20machinery%2C%20precision%20cutting%20equipment%2C%20clean%20manufacturing%20environment&width=600&height=400&seq=29&orientation=landscape" alt="Cutting Fluid" class="w-full h-full object-cover">
-</div>
-<div class="p-6">
-<h3 class="text-2xl font-bold text-secondary mb-3">Cutting Fluid</h3>
-<p class="text-gray-600 mb-4">Cutting fluid is a type of coolant and lubricant designed specifically for metalworking processes, such as machining and stamping.</p>
-<div class="space-y-2 mb-4">
-<p class="text-gray-700">• HP KOOLKUT 40, 70</p>
-</div>
-<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
-Learn More
-<i class="ri-arrow-right-line ml-2"></i>
-</a>
-</div>
-</div>
-<!-- Quenching Oils -->
-<div class="bg-white rounded-lg shadow-lg overflow-hidden">
-<div class="h-64 overflow-hidden">
-<img src="https://readdy.ai/api/search-image?query=Industrial%20metal%20quenching%20system%2C%20heat%20treatment%20equipment%2C%20technical%20machinery%2C%20clean%20manufacturing%20environment&width=600&height=400&seq=27&orientation=landscape" alt="Quenching Oils" class="w-full h-full object-cover">
-</div>
-<div class="p-6">
-<h3 class="text-2xl font-bold text-secondary mb-3">Quenching Oils</h3>
-<p class="text-gray-600 mb-4">The term quenching is used to refer to the controlled cooling of steel components in a fluid to give specified properties. The hardness and other physical properties obtained depend upon the composition of the steel.</p>
-<div class="space-y-2 mb-4">
-<p class="text-gray-700">• HP METAQUENCH 39, 42, 40, 43, 44, 85, 86</p>
-</div>
-<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
-Learn More
-<i class="ri-arrow-right-line ml-2"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-</section>
 <section id="contact" class="py-20 bg-gray-50">
 <div class="container mx-auto px-4">
 <div class="text-center mb-16">
@@ -1060,19 +938,11 @@ document.addEventListener('DOMContentLoaded', function() {
 const tabButtons = document.querySelectorAll('[data-tab]');
 const productGrid = document.getElementById('productGrid');
 const defaultTab = 'retail';
-const lubricatingProducts = document.querySelectorAll('.lubricating-oils');
-const baseOilProducts = document.querySelectorAll('.base-oils');
-const turbineOilProducts = Array.from(document.querySelectorAll('.product-card')).filter(card =>
-card.querySelector('h3')?.textContent.includes('Turbine Oils')
-);
-const gearBoxOilProducts = Array.from(document.querySelectorAll('.product-card')).filter(card =>
-card.querySelector('h3')?.textContent.includes('Gear Box Oils')
-);
 const greaseProducts = `
 <!-- High Temperature Grease -->
 <div class="product-card bg-white rounded-lg overflow-hidden shadow-lg greases">
 <div class="h-64 overflow-hidden">
-<img src="https://readdy.ai/api/search-image?query=Industrial%20high%20temperature%20grease%20in%20professional%20packaging%2C%20technical%20grade%20lubricant%2C%20specialized%20grease%20application%2C%20industrial%20machinery%2C%20clean%20manufacturing%20environment%2C%20quality%20testing%20equipment%2C%20professional%20product%20photography&width=600&height=400&seq=11&orientation=landscape" alt="High Temperature Grease" class="w-full h-full object-cover object-top">
+<img src="./assets/high_temp_grease.png" alt="High Temperature Grease" class="w-full h-full object-cover object-top">
 </div>
 <div class="p-6">
 <h3 class="text-2xl font-bold text-secondary mb-3">High Temperature Grease</h3>
@@ -1097,10 +967,7 @@ const greaseProducts = `
 <p class="text-gray-700">Extended Service Life</p>
 </div>
 </div>
-<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
-View Details
-<i class="ri-arrow-right-line ml-2"></i>
-</a>
+
 </div>
 </div>
 <!-- Multi Purpose Grease -->
@@ -1131,10 +998,7 @@ View Details
 <p class="text-gray-700">Water Resistance</p>
 </div>
 </div>
-<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
-View Details
-<i class="ri-arrow-right-line ml-2"></i>
-</a>
+
 </div>
 </div>
 <!-- Lithium Complex Grease -->
@@ -1165,10 +1029,7 @@ View Details
 <p class="text-gray-700">Shear Stability</p>
 </div>
 </div>
-<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
-View Details
-<i class="ri-arrow-right-line ml-2"></i>
-</a>
+
 </div>
 </div>
 `;
@@ -1182,6 +1043,9 @@ button.classList.remove('bg-primary', 'text-white');
 button.classList.add('text-secondary', 'hover:text-primary');
 }
 });
+if (!productGrid.querySelector('.greases')) {
+productGrid.insertAdjacentHTML('beforeend', greaseProducts);
+}
 const lubricatingOils = productGrid.querySelectorAll('.lubricating-oils');
 const greases = productGrid.querySelectorAll('.greases');
 const baseOils = productGrid.querySelectorAll('.base-oils');
@@ -1189,33 +1053,19 @@ if (tabId === 'retail') {
 lubricatingOils.forEach(card => card.style.display = 'block');
 greases.forEach(card => card.style.display = 'none');
 baseOils.forEach(card => card.style.display = 'none');
-if (!productGrid.querySelector('.greases')) {
-productGrid.insertAdjacentHTML('beforeend', greaseProducts);
-productGrid.querySelectorAll('.greases').forEach(card => card.style.display = 'none');
-}
 } else if (tabId === 'bulk') {
 lubricatingOils.forEach(card => card.style.display = 'none');
+greases.forEach(card => card.style.display = 'block');
 baseOils.forEach(card => card.style.display = 'none');
-if (!productGrid.querySelector('.greases')) {
-productGrid.insertAdjacentHTML('beforeend', greaseProducts);
-}
-productGrid.querySelectorAll('.greases').forEach(card => card.style.display = 'block');
 } else if (tabId === 'private') {
 lubricatingOils.forEach(card => card.style.display = 'none');
 greases.forEach(card => card.style.display = 'none');
 baseOils.forEach(card => card.style.display = 'block');
-document.querySelectorAll('.product-card').forEach(card => {
-const title = card.querySelector('h3').textContent;
-if (title.includes('Turbine Oils') || title.includes('Gear Box Oils')) {
-card.style.display = 'none';
-}
-});
 }
 }
 tabButtons.forEach(button => {
 button.addEventListener('click', () => {
-const tabId = button.dataset.tab;
-showTab(tabId);
+showTab(button.dataset.tab);
 });
 });
 showTab(defaultTab);
@@ -1269,6 +1119,28 @@ if (mobileBusinessToggle) {
     mobileBusinessArrow.classList.toggle('rotate-180');
   });
 }
+</script>
+<script id="businessDropdownScript">
+document.addEventListener('DOMContentLoaded', function() {
+  const businessDropdownBtn = document.getElementById('businessDropdownBtn');
+  const dropdownMenu = document.getElementById('dropdownMenu');
+  const dropdownArrow = document.getElementById('dropdownArrow');
+  if (businessDropdownBtn && dropdownMenu && dropdownArrow) {
+    businessDropdownBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      dropdownMenu.classList.toggle('opacity-0');
+      dropdownMenu.classList.toggle('invisible');
+      dropdownArrow.classList.toggle('rotate-180');
+    });
+    document.addEventListener('click', function(e) {
+      const dropdownContainer = document.getElementById('businessDropdown');
+      if (dropdownContainer && !dropdownContainer.contains(e.target)) {
+        dropdownMenu.classList.add('opacity-0', 'invisible');
+        dropdownArrow.classList.remove('rotate-180');
+      }
+    });
+  }
+});
 </script>
 </body>
 </html>
