@@ -33,6 +33,12 @@ background-image: linear-gradient(to right, rgba(255, 255, 255, 0.95) 40%, rgba(
 background-size: cover;
 background-position: center right;
 }
+@media (max-width: 767px) {
+  .contact-header {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.9) 100%), url('https://readdy.ai/api/search-image?query=Professional%2520corporate%2520office%2520environment%2520with%2520customer%2520service%2520representatives%2520at%2520desks%252C%2520modern%2520interior%2520design%252C%2520warm%2520lighting%252C%2520clean%2520and%2520organized%2520workspace%252C%2520business%2520professionals%2520in%2520formal%2520attire%252C%2520communication%2520technology%252C%2520professional%2520photography%252C%2520high-quality%2520corporate%2520image&width=1920&height=600&seq=11&orientation=landscape');
+    background-position: center;
+  }
+}
 .custom-radio {
 display: flex;
 align-items: center;
@@ -233,7 +239,7 @@ Our Businesses
 </div>
 </div>
 </div>
-<section class="contact-header w-full h-[300px] flex items-center">
+<section class="contact-header w-full min-h-[200px] md:h-[300px] flex items-center py-8 md:py-0">
 <div class="container mx-auto px-4">
 <div class="max-w-2xl">
 <h1 class="text-4xl md:text-5xl font-bold text-secondary mb-4">Contact Us</h1>
@@ -463,28 +469,6 @@ if (window.scrollY > 100) {
 header.classList.add('shadow-md');
 } else {
 header.classList.remove('shadow-md');
-}
-});
-// Businesses Dropdown
-const businessesDropdown = document.getElementById('businessesDropdown');
-const businessesMenu = document.getElementById('businessesMenu');
-const dropdownIcon = businessesDropdown.querySelector('i');
-businessesDropdown.addEventListener('click', function(e) {
-e.preventDefault();
-const isHidden = businessesMenu.classList.contains('hidden');
-if (isHidden) {
-businessesMenu.classList.remove('hidden');
-dropdownIcon.style.transform = 'rotate(180deg)';
-} else {
-businessesMenu.classList.add('hidden');
-dropdownIcon.style.transform = 'rotate(0deg)';
-}
-});
-// Close dropdown when clicking outside
-document.addEventListener('click', function(e) {
-if (!businessesDropdown.contains(e.target) && !businessesMenu.contains(e.target)) {
-businessesMenu.classList.add('hidden');
-dropdownIcon.style.transform = 'rotate(0deg)';
 }
 });
 // Form Submission Handler

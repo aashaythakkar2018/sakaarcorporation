@@ -24,6 +24,12 @@ background-image: linear-gradient(to right, rgba(255, 255, 255, 0.95) 50%, rgba(
 background-size: cover;
 background-position: center right;
 }
+@media (max-width: 767px) {
+  .hero-section {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.9) 100%), url('https://readdy.ai/api/search-image?query=Happy%20children%20studying%20in%20a%20bright%20classroom%20with%20books%20and%20educational%20materials%2C%20diverse%20students%20learning%20together%2C%20educational%20environment%2C%20natural%20lighting%2C%20inspiring%20learning%20atmosphere%2C%20modern%20classroom%20setting%2C%20children%20from%20different%20backgrounds%20engaged%20in%20learning%2C%20educational%20support%20visualization&width=1920&height=1080&seq=1&orientation=landscape');
+    background-position: center;
+  }
+}
 .process-card {
 transition: all 0.3s ease;
 }
@@ -133,7 +139,7 @@ Our Businesses
 </div>
 </div>
 </div>
-<section class="hero-section w-full h-[600px] flex items-center mt-20">
+<section class="hero-section w-full min-h-[500px] md:h-[600px] flex items-center py-12 md:py-0 mt-20">
 <div class="container mx-auto px-4 w-full">
 <div class="max-w-3xl">
 <h1 class="text-4xl md:text-5xl font-bold text-secondary mb-6">Education Sponsorship Program</h1>

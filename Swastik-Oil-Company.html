@@ -27,6 +27,11 @@ background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0,
 background-size: cover;
 background-position: center;
 }
+@media (max-width: 767px) {
+  .hero-section {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.7) 100%), url('https://readdy.ai/api/search-image?query=Modern%2520edible%2520oil%2520production%2520facility%2520with%2520stainless%2520steel%2520equipment%252C%2520clean%2520manufacturing%2520environment%252C%2520golden%2520oil%2520processing%252C%2520quality%2520control%2520systems%252C%2520professional%2520workers%2520in%2520food-grade%2520uniforms%252C%2520bright%2520well-lit%2520facility%252C%2520state-of-the-art%2520technology%252C%2520premium%2520oil%2520bottling%2520line%252C%2520high-quality%2520industrial%2520photography&width=1920&height=800&seq=1&orientation=landscape');
+  }
+}
 .product-card {
 transition: all 0.3s ease;
 }
@@ -145,6 +150,15 @@ function handleLogoError(img) {
   } else if (stage === 2 && domain) {
     img.dataset.stage = "3";
     img.src = `https://www.google.com/s2/favicons?domain=${domain}&sz=128`;
+  } else {
+    const parent = img.parentElement;
+    if (parent) {
+      const altText = img.alt || (domain ? domain.split('.')[0].toUpperCase() : 'CLIENT');
+      const textFallback = document.createElement('div');
+      textFallback.className = "w-full h-full flex items-center justify-center bg-gray-50 rounded-lg text-secondary font-bold text-xs text-center px-1 border border-gray-100 uppercase tracking-wide";
+      textFallback.textContent = altText;
+      parent.replaceChild(textFallback, img);
+    }
   }
 }
 </script>
@@ -235,7 +249,7 @@ Our Businesses
 </div>
 </div>
 <!-- Hero Section -->
-<section class="hero-section w-full h-[600px] flex items-center">
+<section class="hero-section w-full min-h-[500px] md:h-[600px] flex items-center py-12 md:py-0">
 <div class="container mx-auto px-4 w-full">
 <div class="max-w-3xl text-white">
 <h1 class="text-4xl md:text-6xl font-bold mb-6">Swastik Oil Company</h1>

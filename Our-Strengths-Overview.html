@@ -35,6 +35,11 @@ background-image: linear-gradient(to right, rgba(255, 255, 255, 0.95) 40%, rgba(
 background-size: cover;
 background-position: center;
 }
+@media (max-width: 767px) {
+  .hero-section {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.9) 100%), url('https://readdy.ai/api/search-image?query=Modern%2520corporate%2520office%2520with%2520professional%2520team%2520working%2520on%2520advanced%2520technology%252C%2520elegant%2520interior%2520design%252C%2520glass%2520walls%252C%2520natural%2520lighting%252C%2520state-of-the-art%2520equipment%252C%2520collaborative%2520environment%252C%2520business%2520professionals%2520in%2520formal%2520attire%252C%2520high-quality%2520corporate%2520photography&width=1920&height=1080&seq=32&orientation=landscape');
+  }
+}
 .strength-card {
 transition: all 0.3s ease;
 }
@@ -147,7 +152,7 @@ Our Businesses
 </div>
 </div>
 <!-- Hero Section -->
-<section class="hero-section w-full h-[600px] flex items-center">
+<section class="hero-section w-full min-h-[500px] md:h-[600px] flex items-center py-12 md:py-0">
 <div class="container mx-auto px-4">
 <div class="max-w-2xl">
 <h1 class="text-4xl md:text-6xl font-bold text-secondary mb-6">Our Strengths</h1>

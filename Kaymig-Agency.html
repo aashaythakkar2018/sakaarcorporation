@@ -25,6 +25,11 @@ background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0,
 background-size: cover;
 background-position: center;
 }
+@media (max-width: 767px) {
+  .hero-section {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.7) 100%), url('https://readdy.ai/api/search-image?query=Modern%2520distribution%2520center%2520with%2520organized%2520warehouse%2520operations%252C%2520logistics%2520management%252C%2520workers%2520managing%2520inventory%252C%2520clean%2520environment%252C%2520efficient%2520supply%2520chain%2520operations%252C%2520professional%2520business%2520photography%252C%2520high-quality%2520corporate%2520image%2520with%2520neutral%2520background%252C%2520wide%2520angle%2520shot%2520showing%2520the%2520scale%2520of%2520operations&width=1920&height=1080&seq=5&orientation=landscape');
+  }
+}
 .card-hover {
 transition: all 0.3s ease;
 }
@@ -138,7 +143,7 @@ Our Businesses
 </div>
 </div>
 <!-- Hero Section -->
-<section class="hero-section w-full h-[600px] flex items-center">
+<section class="hero-section w-full min-h-[500px] md:h-[600px] flex items-center py-12 md:py-0">
 <div class="container mx-auto px-4 w-full">
 <div class="max-w-3xl text-white">
 <h1 class="text-4xl md:text-6xl font-bold mb-6">Kaymig Agencies</h1>
@@ -488,7 +493,9 @@ Our Businesses
 <script>
 document.addEventListener('DOMContentLoaded', function() {
 // Network Growth Chart
-const networkChart = echarts.init(document.getElementById('network-growth-chart'));
+const chartDom = document.getElementById('network-growth-chart');
+if (chartDom) {
+const networkChart = echarts.init(chartDom);
 const networkOption = {
 animation: false,
 tooltip: {
@@ -571,6 +578,7 @@ networkChart.setOption(networkOption);
 window.addEventListener('resize', function() {
 networkChart.resize();
 });
+}
 });
 document.addEventListener('DOMContentLoaded', function() {
 // Sticky Header

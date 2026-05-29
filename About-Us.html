@@ -25,6 +25,11 @@ background-image: linear-gradient(to right, rgba(255, 255, 255, 0.95) 40%, rgba(
 background-size: cover;
 background-position: center;
 }
+@media (max-width: 767px) {
+  .hero-section {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.9) 100%), url('https://readdy.ai/api/search-image?query=Modern%2520minimalist%2520corporate%2520office%2520interior%2520with%2520elegant%2520design%252C%2520glass%2520walls%252C%2520natural%2520lighting%252C%2520contemporary%2520workspace%252C%2520clean%2520lines%252C%2520professional%2520atmosphere%252C%2520warm%2520ambient%2520lighting%252C%2520high-end%2520finishes%252C%2520architectural%2520photography%252C%2520high-quality%2520corporate%2520image&width=1920&height=1080&seq=31&orientation=landscape');
+  }
+}
 .team-card {
 transition: all 0.3s ease;
 }
@@ -170,7 +175,7 @@ Our Businesses
 </div>
 </div>
 <!-- Hero Section -->
-<section class="hero-section w-full h-[600px] flex items-center">
+<section class="hero-section w-full min-h-[500px] md:h-[600px] flex items-center py-12 md:py-0">
 <div class="container mx-auto px-4">
 <div class="max-w-2xl">
 <h1 class="text-4xl md:text-6xl font-bold text-secondary mb-6">About Sakaar Group</h1>
