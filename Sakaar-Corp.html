@@ -12,7 +12,36 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+<script src="https://fast.wistia.com/player.js" async></script>
+<script src="https://fast.wistia.com/embed/32bvf7y1z3.js" async type="module"></script>
+<script>
+  window._wq = window._wq || [];
+  _wq.push({
+    id: "32bvf7y1z3",
+    options: {
+      playbar: false,
+      playButton: false,
+      smallPlayButton: false,
+      volumeControl: false,
+      fullscreenButton: false,
+      controlsVisibleOnLoad: false,
+      autoPlay: true,
+      silentAutoPlay: true,
+      endVideoBehavior: "loop",
+      muted: true
+    },
+    onReady: function(video) {
+      video.mute();
+      video.play();
+    }
+  });
+</script>
 <style>
+wistia-player {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 :where([class^="ri-"])::before { content: "\f3c2"; }
 body {
 font-family: 'Poppins', sans-serif;
@@ -152,27 +181,23 @@ Our Businesses
 </div>
 </div>
 <!-- Hero Section -->
-<section class="hero-section w-full min-h-[600px] py-16 flex items-center">
-<div class="container mx-auto px-4">
-<div class="flex flex-col lg:flex-row items-center gap-12">
-<div class="lg:w-3/5 text-white">
-<h1 class="text-4xl md:text-6xl font-bold mb-6">Sakaar Corporation</h1>
-<p class="text-xl md:text-2xl mb-8 leading-relaxed">Custom Centric Real Estate Development where Dreams are shaped into Realty.</p>
-</div>
-<div class="lg:w-2/5 w-full">
-<div class="bg-white p-3 rounded-2xl shadow-2xl overflow-hidden border border-white border-opacity-20 aspect-video">
-  <script src="https://fast.wistia.com/player.js" async></script>
-  <script src="https://fast.wistia.com/embed/32bvf7y1z3.js" async type="module"></script>
-  <style>wistia-player[media-id='32bvf7y1z3']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/32bvf7y1z3/swatch'); display: block; filter: blur(5px); padding-top:56.56%; }</style>
-  <wistia-player media-id="32bvf7y1z3" aspect="1.7679558011049723" class="w-full h-full rounded-xl"></wistia-player>
-</div>
-<div class="mt-4 pl-2 text-white">
-  <span class="text-xs uppercase tracking-wider text-primary font-bold block mb-0.5">Video Showcase</span>
-  <h4 class="text-lg font-bold">Unknown</h4>
-</div>
-</div>
-</div>
-</div>
+<section class="hero-section w-full min-h-[600px] flex items-center relative overflow-hidden">
+  <!-- Background Wistia Video -->
+  <div class="absolute inset-0 w-full h-full z-0 overflow-hidden pointer-events-none">
+    <div class="absolute inset-0 bg-[#422B0F] bg-opacity-75 mix-blend-multiply z-10"></div>
+    <wistia-player media-id="32bvf7y1z3" fit-strategy="cover" class="w-full h-full scale-[1.02]"></wistia-player>
+  </div>
+  
+  <div class="container mx-auto px-4 relative z-20 text-white">
+    <div class="max-w-3xl">
+      <div class="inline-flex items-center space-x-2 bg-primary/20 backdrop-blur-sm border border-primary/30 px-4 py-1.5 rounded-full mb-6">
+        <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+        <span class="text-xs uppercase tracking-wider text-primary font-bold">Video Showcase: Unknown</span>
+      </div>
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">Sakaar Corporation</h1>
+      <p class="text-xl md:text-2xl mb-8 leading-relaxed">Custom Centric Real Estate Development where Dreams are shaped into Realty.</p>
+    </div>
+  </div>
 </section>
 <!-- Overview Section -->
 <section id="overview" class="py-20 bg-gray-50">
